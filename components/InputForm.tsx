@@ -75,7 +75,7 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
     };
 
     return (
-        <div className="w-full max-w-md mx-auto">
+        <div className="w-full max-w-md md:max-w-xl mx-auto">
             {/* Progress Bar (Segmented) */}
             <div className="mb-8">
                 <div className="flex justify-between text-xs font-bold text-teal-600 mb-2">

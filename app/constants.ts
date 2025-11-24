@@ -2,28 +2,28 @@
 
 export const LOVE_TYPES = [
     { label: '--- L(リード) × C(甘えたい) ---', value: '', disabled: true },
-    { value: 'LCRO', label: 'LCRO (ボス猫)', desc: 'マイペースな甘えん坊' },
-    { value: 'LCRE', label: 'LCRE (隠れベイビー)', desc: '誠実で不器用' },
-    { value: 'LCPO', label: 'LCPO (主役体質)', desc: '世渡り上手な人気者' },
-    { value: 'LCPE', label: 'LCPE (ツンデレヤンキー)', desc: '仲間想いの暴れん坊' },
+    { value: 'LCRO', label: 'LCRO (ボス猫)', desc: 'マイペースで我が道を行くタイプ。独特の愛嬌があり、実は繊細な一面も持っています。' },
+    { value: 'LCRE', label: 'LCRE (隠れベイビー)', desc: '正直で信頼されますが、天然で不器用なところがあり、そのギャップが愛されるタイプです。' },
+    { value: 'LCPO', label: 'LCPO (主人公タイプ)', desc: '自然と目立ち、周囲に影響を与える華やかな人。悩みを見せずに乗り切る強さもあります。' },
+    { value: 'LCPE', label: 'LCPE (ツンデレヤンキー)', desc: '元気で子供っぽいですが、仲間思いで情に厚いタイプ。愛情深く、同じだけの愛を求めます。' },
 
     { label: '--- L(リード) × A(受け止めたい) ---', value: '', disabled: true },
-    { value: 'LARO', label: 'LARO (憧れの先輩)', desc: 'サッパリした頼れる人' },
-    { value: 'LARE', label: 'LARE (カリスマバランサー)', desc: '完璧なリーダー' },
-    { value: 'LAPO', label: 'LAPO (パーフェクトカメレオン)', desc: '変幻自在の天才' },
-    { value: 'LAPE', label: 'LAPE (キャプテンライオン)', desc: '器の大きい親分肌' },
+    { value: 'LARO', label: 'LARO (憧れの先輩)', desc: '大人っぽく爽やかで、自由なマイペース人間。なぜか周囲から信頼を集める不思議な魅力があります。' },
+    { value: 'LARE', label: 'LARE (カリスマバランサー)', desc: 'バランス感覚に優れたリーダータイプ。人間性が素晴らしく頼れますが、弱みを見せるのが苦手です。' },
+    { value: 'LAPO', label: 'LAPO (完全無欠のカメレオン)', desc: '多才で完璧なタイプ。普段は自分の世界にいますが、スイッチが入ると本領を発揮します。' },
+    { value: 'LAPE', label: 'LAPE (キャプテンライオン)', desc: '優しさと強さを兼ね備えた器の大きい人。どんな立場や相手でも能力を発揮できます。' },
 
     { label: '--- F(合わせる) × C(甘えたい) ---', value: '', disabled: true },
-    { value: 'FCRO', label: 'FCRO (ロマンスマジシャン)', desc: '距離感の魔術師' },
-    { value: 'FCRE', label: 'FCRE (ちゃっかりうさぎ)', desc: '冷静な甘え上手' },
-    { value: 'FCPO', label: 'FCPO (恋愛モンスター)', desc: '愛されお調子者' },
-    { value: 'FCPE', label: 'FCPE (忠犬ハチ公)', desc: '素直で一途な従者' },
+    { value: 'FCRO', label: 'FCRO (恋愛マジシャン)', desc: '人との距離感が巧みな世渡り上手。人間観察が得意で、生き抜くセンスを持っています。' },
+    { value: 'FCRE', label: 'FCRE (ちゃっかりウサギ)', desc: '愛想と度胸を武器に生きるタイプ。感性が鋭く危機察知能力が高いため、良いパートナーを見つけます。' },
+    { value: 'FCPO', label: 'FCPO (恋愛モンスター)', desc: '明るい愛されキャラ。恋愛に忙しく気分屋ですが、根は優しく、人を愛し愛されることで輝きます。' },
+    { value: 'FCPE', label: 'FCPE (忠犬ハチ公)', desc: '正直で人懐っこく、純粋で可愛いタイプ。仕事は真面目で頼りになり、情に厚いです。' },
 
     { label: '--- F(合わせる) × A(受け止めたい) ---', value: '', disabled: true },
-    { value: 'FARO', label: 'FARO (不思議生命体)', desc: '独特な世界観の持ち主' },
-    { value: 'FARE', label: 'FARE (敏腕マネージャー)', desc: '冷静なサポート役' },
-    { value: 'FAPO', label: 'FAPO (デビル天使)', desc: '優しさと自由の融合' },
-    { value: 'FAPE', label: 'FAPE (最後の恋人)', desc: '令和のマザーテレサ' },
+    { value: 'FARO', label: 'FARO (謎の生命体)', desc: '一見普通に見えて独特な個性を持つタイプ。周囲に馴染みつつも独自の世界観があり、気になる存在です。' },
+    { value: 'FARE', label: 'FARE (敏腕マネージャー)', desc: '冷静で人を見る目があり、周囲を上手にサポートします。誰とでもうまくやれるバランス感覚を持ちます。' },
+    { value: 'FAPO', label: 'FAPO (デビルエンジェル)', desc: '優しさと自由のハイブリッド。普段は天使のようですが、意外と自由奔放なギャップが魅力です。' },
+    { value: 'FAPE', label: 'FAPE (最後の恋人)', desc: '優しく寛大で、どこか儚げな雰囲気を持つタイプ。純粋で最も優しい性格で、「令和のマザーテレサ」とも。' },
 ];
 
 export const MBTI_TYPES = [

@@ -16,7 +16,7 @@ type ResultViewProps = {
 
 export default function ResultView({ result, onConsult }: ResultViewProps) {
     return (
-        <div className="w-full max-w-lg mx-auto pb-20">
+        <div className="w-full max-w-2xl mx-auto pb-20">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ type: "spring", delay: 0.5 }}
-                                className="text-6xl font-black drop-shadow-md"
+                                className="text-6xl font-black drop-shadow-md flex items-baseline justify-center"
                             >
                                 {result.score}
                                 <span className="text-2xl ml-1">%</span>
@@ -113,7 +113,7 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.8 }}
-                className="mt-8 px-4 grid grid-cols-2 gap-4"
+                className="mt-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-4"
             >
                 <button
                     onClick={() => onConsult("この人とのデートで気をつけるべきことや、おすすめのデートプランを教えて！")}

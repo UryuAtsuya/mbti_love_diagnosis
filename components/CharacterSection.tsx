@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LOVE_TYPES, MBTI_TYPES } from '@/app/constants';
 
@@ -80,9 +81,13 @@ export default function CharacterSection() {
                             >
                                 {LOVE_TYPES.filter(t => !t.disabled).map((type) => (
                                     <div key={type.value} className="bg-white border border-teal-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow hover:border-teal-200 group">
-                                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">
-                                            {/* Icon placeholder based on type value prefix? Or just generic hearts for now */}
-                                            {type.value.startsWith('L') ? '🦁' : '🐰'}
+                                        <div className="relative w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-50">
+                                            <Image
+                                                src={`/images/love_types/${type.value}.png`}
+                                                alt={type.label}
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
                                         </div>
                                         <h3 className="font-bold text-gray-700 text-sm mb-1">{type.label.split('(')[0]}</h3>
                                         <p className="text-xs text-teal-600 font-bold mb-2">{type.label.split('(')[1]?.replace(')', '')}</p>
