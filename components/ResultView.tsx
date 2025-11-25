@@ -36,29 +36,30 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                     </motion.p>
 
                     {/* Score Circle */}
-                    <div className="relative w-48 h-48 mx-auto mb-6 flex items-center justify-center">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 flex items-center justify-center">
                         <svg className="w-full h-full transform -rotate-90">
                             <circle
-                                cx="96"
-                                cy="96"
-                                r="88"
+                                cx="50%"
+                                cy="50%"
+                                r="45%"
                                 stroke="currentColor"
                                 strokeWidth="12"
                                 fill="transparent"
                                 className="text-teal-300/30"
                             />
                             <motion.circle
-                                cx="96"
-                                cy="96"
-                                r="88"
+                                cx="50%"
+                                cy="50%"
+                                r="45%"
                                 stroke="white"
                                 strokeWidth="12"
                                 fill="transparent"
-                                strokeDasharray={2 * Math.PI * 88}
-                                initial={{ strokeDashoffset: 2 * Math.PI * 88 }}
-                                animate={{ strokeDashoffset: 2 * Math.PI * 88 * (1 - result.score / 100) }}
+                                strokeDasharray={2 * Math.PI * 45} // approx radius percentage
+                                initial={{ pathLength: 0 }}
+                                animate={{ pathLength: result.score / 100 }}
                                 transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
                                 strokeLinecap="round"
+                                style={{ pathLength: 0 }} // Reset for animation
                             />
                         </svg>
                         <div className="absolute inset-0 flex items-center justify-center flex-col">
@@ -66,10 +67,10 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ type: "spring", delay: 0.5 }}
-                                className="text-6xl font-black drop-shadow-md flex items-baseline justify-center"
+                                className="text-5xl md:text-6xl font-black drop-shadow-md flex items-baseline justify-center"
                             >
                                 {result.score}
-                                <span className="text-2xl ml-1">%</span>
+                                <span className="text-xl md:text-2xl ml-1">%</span>
                             </motion.span>
                         </div>
                     </div>
@@ -78,15 +79,15 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="inline-block bg-white/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/30"
+                        className="inline-block bg-white/20 backdrop-blur-md px-6 py-2 rounded-full border border-white/30 max-w-full"
                     >
-                        <h2 className="text-xl font-bold">{result.title}</h2>
+                        <h2 className="text-lg md:text-xl font-bold break-words">{result.title}</h2>
                     </motion.div>
                 </div>
 
                 {/* Content Section */}
-                <div className="p-8 bg-white">
-                    <div className="prose prose-teal prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
+                <div className="p-6 md:p-8 bg-white">
+                    <div className="prose prose-teal prose-base md:prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap break-words overflow-wrap-anywhere">
                         {result.message}
                     </div>
                 </div>
