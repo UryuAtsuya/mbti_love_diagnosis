@@ -25,25 +25,42 @@ export default function DiagnosisHero() {
                     本当の自分と、運命の相手を見つけるためのヒントがここに。
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-lg mx-auto">
-                    {/* Button A: MBTI */}
+                <div className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto">
+                    {/* Main CTA: Start Diagnosis */}
                     <Link
-                        href="/diagnosis?type=mbti"
-                        className="group w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 bg-white text-teal-600 border-2 border-teal-100 px-8 py-4 rounded-xl font-bold text-lg shadow-sm hover:shadow-md hover:border-teal-200 hover:-translate-y-0.5 transition-all duration-200"
+                        href="/diagnosis"
+                        className="w-full sm:w-auto min-w-[280px] inline-flex items-center justify-center gap-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-5 rounded-full font-bold text-xl shadow-lg shadow-teal-200 hover:shadow-xl hover:shadow-teal-300 hover:-translate-y-1 transition-all duration-200 animate-pulse-slow"
                     >
-                        <Brain className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                        <span>MBTI診断を受ける</span>
+                        <Heart className="w-6 h-6 fill-white" />
+                        <span>相性診断を始める</span>
+                        <ArrowRight className="w-6 h-6" />
                     </Link>
 
-                    {/* Button B: Love Type */}
-                    <Link
-                        href="/diagnosis?type=lovetype"
-                        className="group w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-teal-200 hover:shadow-xl hover:shadow-teal-300 hover:-translate-y-0.5 transition-all duration-200"
-                    >
-                        <Heart className="w-5 h-5 fill-white/20 group-hover:scale-110 transition-transform" />
-                        <span>ラブタイプ診断を受ける</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+                        {/* Button A: MBTI (External) */}
+                        <a
+                            href="https://www.16personalities.com/ja"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 bg-white text-gray-600 border border-gray-200 px-6 py-3 rounded-xl font-medium text-sm shadow-sm hover:bg-gray-50 hover:text-teal-600 hover:border-teal-200 transition-all duration-200"
+                        >
+                            <Brain className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                            <span>MBTI診断を受ける</span>
+                            <span className="text-xs text-gray-400 ml-1">(外部)</span>
+                        </a>
+
+                        {/* Button B: Love Type (External) */}
+                        <a
+                            href="https://lovetype16.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 bg-white text-gray-600 border border-gray-200 px-6 py-3 rounded-xl font-medium text-sm shadow-sm hover:bg-gray-50 hover:text-pink-500 hover:border-pink-200 transition-all duration-200"
+                        >
+                            <Heart className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                            <span>ラブタイプ診断を受ける</span>
+                            <span className="text-xs text-gray-400 ml-1">(外部)</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
