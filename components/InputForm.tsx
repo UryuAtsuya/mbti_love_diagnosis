@@ -20,10 +20,9 @@ type InputFormProps = {
     onStartDiagnosis: (data: FormData) => void;
     loading: boolean;
     onMBTIChange: (userColor: string, partnerColor: string) => void;
-    mode?: 'mbti' | 'lovetype';
 };
 
-export default function InputForm({ onStartDiagnosis, loading, onMBTIChange, mode }: InputFormProps) {
+export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: InputFormProps) {
     const [step, setStep] = useState(0); // 0: User, 1: Partner
     const [direction, setDirection] = useState(0);
     const [formData, setFormData] = useState<FormData>({
@@ -48,26 +47,11 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange, mod
     };
 
     const handleSubmit = () => {
-        let isUserValid = false;
-        let isPartnerValid = false;
-
-        if (mode === 'mbti') {
-            isUserValid = !!formData.user_mbti;
-            isPartnerValid = !!formData.partner_mbti;
-        } else if (mode === 'lovetype') {
-            isUserValid = !!formData.user_love_type;
-            isPartnerValid = !!formData.partner_love_type;
-        } else {
-            // Default: require at least one
-            isUserValid = !!formData.user_mbti || !!formData.user_love_type;
-            isPartnerValid = !!formData.partner_mbti || !!formData.partner_love_type;
-        }
+        const isUserValid = formData.user_mbti || formData.user_love_type;
+        const isPartnerValid = formData.partner_mbti || formData.partner_love_type;
 
         if (!isUserValid || !isPartnerValid) {
-            const msg = mode === 'mbti' ? 'MBTIを選択してください' :
-                mode === 'lovetype' ? 'Love Typeを選択してください' :
-                    'MBTIまたはLove Typeのどちらかは入力してください';
-            alert(`あなたとお相手、それぞれ${msg}！`);
+            alert('あなたとお相手、それぞれMBTIまたはLove Typeのどちらかは入力してください！');
             return;
         }
         onStartDiagnosis(formData);
@@ -171,57 +155,51 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange, mod
                             </select>
                         </div>
 
-                        {/* MBTI Select - Show if mode is undefined or 'mbti' */}
-                        {(!mode || mode === 'mbti') && (
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-gray-500 ml-1">MBTI</label>
-                                <select
-                                    value={step === 0 ? formData.user_mbti : formData.partner_mbti}
-                                    onChange={(e) => {
-                                        const newVal = e.target.value;
-                                        const newFormData = {
-                                            ...formData,
-                                            [step === 0 ? 'user_mbti' : 'partner_mbti']: newVal
-                                        };
-                                        setFormData(newFormData);
-
-                                        // Update colors
-                                        const userType = MBTI_TYPES.find(t => t.value === newFormData.user_mbti);
-                                        const partnerType = MBTI_TYPES.find(t => t.value === newFormData.partner_mbti);
-                                        onMBTIChange(
-                                            userType ? userType.color : '#f0fdfa', // default teal-50
-                                            partnerType ? partnerType.color : '#ecfdf5' // default emerald-50
-                                        );
-                                    }}
-                                    className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700"
-                                >
-                                    <option value="">選択してください</option>
-                                    {MBTI_TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
-                                </select>
-                            </div>
-                        )}
-
-                        {/* Love Type Select - Show if mode is undefined or 'lovetype' */}
-                        {(!mode || mode === 'lovetype') && (
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-gray-500 ml-1">Love Type</label>
-                                <select
-                                    value={step === 0 ? formData.user_love_type : formData.partner_love_type}
-                                    onChange={(e) => setFormData({
+                        <div className="space-y-2">
+                            <label className="text-xs font-bold text-gray-500 ml-1">MBTI</label>
+                            <select
+                                value={step === 0 ? formData.user_mbti : formData.partner_mbti}
+                                onChange={(e) => {
+                                    const newVal = e.target.value;
+                                    const newFormData = {
                                         ...formData,
-                                        [step === 0 ? 'user_love_type' : 'partner_love_type']: e.target.value
-                                    })}
-                                    className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700 text-sm"
-                                >
-                                    <option value="">選択してください</option>
-                                    {LOVE_TYPES.map((t, i) => (
-                                        <option key={i} value={t.value} disabled={t.disabled}>
-                                            {t.label}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        )}
+                                        [step === 0 ? 'user_mbti' : 'partner_mbti']: newVal
+                                    };
+                                    setFormData(newFormData);
+
+                                    // Update colors
+                                    const userType = MBTI_TYPES.find(t => t.value === newFormData.user_mbti);
+                                    const partnerType = MBTI_TYPES.find(t => t.value === newFormData.partner_mbti);
+                                    onMBTIChange(
+                                        userType ? userType.color : '#f0fdfa', // default teal-50
+                                        partnerType ? partnerType.color : '#ecfdf5' // default emerald-50
+                                    );
+                                }}
+                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700"
+                            >
+                                <option value="">選択してください</option>
+                                {MBTI_TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                            </select>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-xs font-bold text-gray-500 ml-1">Love Type</label>
+                            <select
+                                value={step === 0 ? formData.user_love_type : formData.partner_love_type}
+                                onChange={(e) => setFormData({
+                                    ...formData,
+                                    [step === 0 ? 'user_love_type' : 'partner_love_type']: e.target.value
+                                })}
+                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700 text-sm"
+                            >
+                                <option value="">選択してください</option>
+                                {LOVE_TYPES.map((t, i) => (
+                                    <option key={i} value={t.value} disabled={t.disabled}>
+                                        {t.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>
