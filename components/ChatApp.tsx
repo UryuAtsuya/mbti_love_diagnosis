@@ -20,7 +20,11 @@ type DiagnosisResult = {
     message: string;
 };
 
-export default function ChatApp() {
+type ChatAppProps = {
+    mode?: 'mbti' | 'lovetype';
+};
+
+export default function ChatApp({ mode }: ChatAppProps) {
     // --- State管理 ---
     const [step, setStep] = useState<'input' | 'diagnosing' | 'result' | 'chat'>('input');
     const [loading, setLoading] = useState(false);
@@ -184,6 +188,7 @@ export default function ChatApp() {
                             onStartDiagnosis={handleStartDiagnosisWrapper}
                             loading={loading}
                             onMBTIChange={(user, partner) => setBgColors({ user, partner })}
+                            mode={mode}
                         />
                     </motion.div>
                 )}
