@@ -8,12 +8,13 @@ export default function DiagnosisHero() {
     return (
         <section className="w-full bg-white pb-12">
             {/* Hero Image Container */}
-            <div className="relative w-full aspect-[16/9] md:aspect-[21/9] max-h-[600px]">
+            <div className="w-full max-w-5xl mx-auto">
                 <Image
                     src="/images/hero_bg.png"
                     alt="MBTI × Love Type 相関性まとめ"
-                    fill
-                    className="object-contain md:object-cover"
+                    width={1024}
+                    height={572}
+                    className="w-full h-auto"
                     priority
                 />
             </div>
