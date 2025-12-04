@@ -27,6 +27,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
           crossOrigin="anonymous"
         ></script>
+        <meta name="google-adsense-account" content="ca-pub-8206190214868370" />
       </head>
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">

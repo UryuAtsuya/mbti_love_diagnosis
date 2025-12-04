@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircleHeart, Share2 } from 'lucide-react';
+import AffiliateRecommendation from './AffiliateRecommendation';
 
 type DiagnosisResult = {
     score: number;
@@ -89,6 +90,11 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                 <div className="p-6 md:p-8 bg-white">
                     <div className="prose prose-teal prose-base md:prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap break-words overflow-wrap-anywhere">
                         {result.message}
+                    </div>
+
+                    {/* Affiliate Recommendation */}
+                    <div className="px-6 pb-6 md:px-8 md:pb-8 bg-white">
+                        <AffiliateRecommendation />
                     </div>
                 </div>
             </motion.div>

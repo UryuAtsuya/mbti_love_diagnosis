@@ -16,6 +16,9 @@ export default function Footer() {
                     <Link href="/policy" className="text-gray-600 hover:text-teal-500 text-sm transition-colors">
                         プライバシーポリシー
                     </Link>
+                    <Link href="/contact" className="text-gray-600 hover:text-teal-500 text-sm transition-colors">
+                        お問い合わせ
+                    </Link>
                     <div className="flex items-center gap-4 ml-4 border-l pl-4 border-gray-200">
                         <a href="#" className="text-gray-400 hover:text-teal-500 transition-colors">
                             <Twitter className="w-5 h-5" />

@@ -23,7 +23,7 @@ export default function PolicyPage() {
             <section className="mb-8">
                 <h2 className="text-xl font-bold text-teal-600 mb-4">3. お問い合わせ</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    当サイトに関するお問い合わせは、公式SNS（Twitter/Instagram）のDMまでお願いいたします。
+                    当サイトに関するお問い合わせは、<a href="/contact" className="text-teal-600 hover:underline">お問い合わせページ</a>よりお願いいたします。
                 </p>
             </section>
 
