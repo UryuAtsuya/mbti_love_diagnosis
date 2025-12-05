@@ -33,6 +33,9 @@ export default function ChatApp() {
     // チャット履歴
     const [messages, setMessages] = useState<Message[]>([]);
 
+    // フォームデータ (診断に使用したデータ)
+    const [formData, setFormData] = useState<any>(null);
+
     // --- API通信処理 ---
     const callDify = async (queryText: string, inputs: any = {}) => {
         setLoading(true);
@@ -113,9 +116,10 @@ export default function ChatApp() {
     };
 
     // --- Phase 1 -> 2: 診断実行 (ラッパー) ---
-    const handleStartDiagnosisWrapper = async (formData: any) => {
+    const handleStartDiagnosisWrapper = async (data: any) => {
+        setFormData(data);
         setStep('diagnosing');
-        await handleStartDiagnosis(formData);
+        await handleStartDiagnosis(data);
     };
 
     // --- Phase 2 -> 3: 相談チャットへ ---
@@ -162,7 +166,7 @@ export default function ChatApp() {
 
     return (
         <div
-            className="min-h-screen flex items-center justify-center p-4 transition-colors duration-700"
+            className="min-h-screen w-full flex items-center justify-center p-4 transition-colors duration-700"
             style={{
                 background: `linear-gradient(135deg, ${bgColors.user} 0%, ${bgColors.partner} 100%)`
             }}
@@ -194,7 +198,7 @@ export default function ChatApp() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="flex flex-col items-center justify-center h-[600px]"
+                        className="flex flex-col items-center justify-center w-full max-w-md mx-auto py-20"
                     >
                         <div className="relative">
                             <div className="absolute inset-0 bg-teal-200 rounded-full animate-ping opacity-20"></div>
@@ -215,7 +219,7 @@ export default function ChatApp() {
                         exit={{ opacity: 0, scale: 1.05 }}
                         transition={{ duration: 0.4 }}
                     >
-                        <ResultView result={diagnosisResult} onConsult={handleConsult} />
+                        <ResultView result={diagnosisResult} onConsult={handleConsult} formData={formData} />
                     </motion.div>
                 )}
 

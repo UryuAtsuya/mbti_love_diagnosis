@@ -13,9 +13,10 @@ type DiagnosisResult = {
 type ResultViewProps = {
     result: DiagnosisResult;
     onConsult: (initialMessage?: string) => void;
+    formData?: any;
 };
 
-export default function ResultView({ result, onConsult }: ResultViewProps) {
+export default function ResultView({ result, onConsult, formData }: ResultViewProps) {
     return (
         <div className="w-full max-w-2xl mx-auto pb-20">
             <motion.div
@@ -94,32 +95,20 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
 
                     {/* Affiliate Recommendation */}
                     <div className="px-6 pb-6 md:px-8 md:pb-8 bg-white">
-                        <AffiliateRecommendation />
+                        <AffiliateRecommendation
+                            userMBTI={formData?.user_mbti}
+                            partnerMBTI={formData?.partner_mbti}
+                            partnerLoveType={formData?.partner_love_type}
+                        />
                     </div>
                 </div>
-            </motion.div>
-
-            {/* Floating Action Button */}
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5 }}
-                className="fixed bottom-8 left-0 right-0 px-4 flex justify-center z-50"
-            >
-                <button
-                    onClick={() => onConsult()}
-                    className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-4 rounded-full shadow-xl shadow-teal-300/50 font-bold text-lg flex items-center gap-3 hover:scale-105 active:scale-95 transition-transform"
-                >
-                    <MessageCircleHeart className="w-6 h-6" />
-                    AIアドバイザーに相談する
-                </button>
             </motion.div>
 
             {/* Quick Action Buttons (Bottom Sheet style) */}
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.8 }}
+                transition={{ delay: 1.5 }}
                 className="mt-8 px-4 grid grid-cols-1 md:grid-cols-2 gap-4"
             >
                 <button
@@ -137,6 +126,22 @@ export default function ResultView({ result, onConsult }: ResultViewProps) {
                     <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">🙅‍♀️</span>
                     <span className="font-bold text-gray-700 text-sm">NG行動</span>
                     <span className="block text-xs text-teal-500 mt-1">地雷を踏まないために</span>
+                </button>
+            </motion.div>
+
+            {/* Main Consultation Button (Repositioned) */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.8 }}
+                className="mt-8 px-4 pb-8 flex justify-center"
+            >
+                <button
+                    onClick={() => onConsult()}
+                    className="w-full md:w-auto bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-4 rounded-full shadow-xl shadow-teal-300/50 font-bold text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-transform"
+                >
+                    <MessageCircleHeart className="w-6 h-6" />
+                    AIアドバイザーに相談する
                 </button>
             </motion.div>
         </div>
