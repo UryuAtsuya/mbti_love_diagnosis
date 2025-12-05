@@ -21,7 +21,19 @@ export default function PolicyPage() {
             </section>
 
             <section className="mb-8">
-                <h2 className="text-xl font-bold text-teal-600 mb-4">3. お問い合わせ</h2>
+                <h2 className="text-xl font-bold text-teal-600 mb-4">3. 広告配信について</h2>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                    当サイトでは、第三者配信の広告サービス（Googleアドセンス）を利用しています。
+                    このような広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、当サイトや他サイトへのアクセスに関する情報「Cookie」（氏名、住所、メール アドレス、電話番号は含まれません）を使用することがあります。
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                    またGoogleアドセンスに関して、このプロセスの詳細やこのような情報が広告配信事業者に使用されないようにする方法については、
+                    <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">Googleのポリシーと規約</a>をご覧ください。
+                </p>
+            </section>
+
+            <section className="mb-8">
+                <h2 className="text-xl font-bold text-teal-600 mb-4">4. お問い合わせ</h2>
                 <p className="text-gray-600 leading-relaxed">
                     当サイトに関するお問い合わせは、<a href="/contact" className="text-teal-600 hover:underline">お問い合わせページ</a>よりお願いいたします。
                 </p>
