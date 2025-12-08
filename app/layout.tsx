@@ -24,6 +24,11 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <meta name="google-adsense-account" content="ca-pub-8206190214868370" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
+          crossOrigin="anonymous"
+        ></script>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7G66GB972Z"
@@ -62,12 +67,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
