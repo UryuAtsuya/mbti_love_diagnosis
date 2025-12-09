@@ -23,12 +23,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-8206190214868370" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
-          crossOrigin="anonymous"
-        ></script>
+        {/* admax */}
+        <script src="https://adm.shinobi.jp/s/ea556030d348073765e839541010e18e"></script>
+        {/* admax */}
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7G66GB972Z"
