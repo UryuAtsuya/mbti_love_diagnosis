@@ -24,6 +24,111 @@ export default function ArticlesIndex() {
             slug: 'romance-strategy',
             icon: <Activity className="w-6 h-6 text-orange-500" />,
             tag: '恋愛攻略・実戦'
+        },
+        {
+            title: '【決定版】INFJ（提唱者）の性格・恋愛傾向を徹底解説',
+            description: '深い洞察力と強い信念を持つINFJの恋愛スタイルを、ラブキャラ診断でさらに深く掘り下げます。',
+            slug: 'infj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ENFP（広報運動家）の性格・恋愛傾向を徹底解説',
+            description: '自由と情熱を愛するENFPの魅力を解剖。彼らが真に求めるパートナーシップとは？',
+            slug: 'enfp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ENFJ（主人公）の性格・恋愛傾向を徹底解説',
+            description: '天性のリーダーENFJ。周囲を導き、献身的に尽くす彼らの愛し方を詳しく解説します。',
+            slug: 'enfj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】INTJ（建築家）の性格・恋愛傾向を徹底解説',
+            description: '冷静沈着な戦略家、INTJ。知的な共鳴を求める彼らの恋愛観と攻略法を伝授。',
+            slug: 'intj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ENTJ（指揮官）の性格・恋愛傾向を徹底解説',
+            description: '圧倒的な決断力を持つENTJ。彼らと対等な「戦友」になるための戦略を公開。',
+            slug: 'entj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】INTP（論理学者）の性格・恋愛傾向を徹底解説',
+            description: '独自の論理で生きるINTP。掴みどころのない彼らの心を射止めるためのヒント。',
+            slug: 'intp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ENTP（討論者）の性格・恋愛傾向を徹底解説',
+            description: '常に変化と刺激を求めるENTP。彼らを飽きさせない、知的な駆け引きの極意。',
+            slug: 'entp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ISFP（冒険家）の性格・恋愛傾向を徹底解説',
+            description: '独自の感性で世界を彩るISFP。言葉を超えた深い繋がりを築く方法。',
+            slug: 'isfp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ESFP（エンターテイナー）の性格・恋愛傾向を徹底解説',
+            description: '今この瞬間を全力で楽しむESFP。彼らの明るさの裏にある繊細な内面を解説。',
+            slug: 'esfp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ISTP（巨匠）の性格・恋愛傾向を徹底解説',
+            description: '冷静で実利的なISTP。不器用な優しさを持つ彼らの「沼る」攻略ポイント。',
+            slug: 'istp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ISTJ（管理者）の性格・恋愛傾向を徹底解説',
+            description: '誠実で安定感抜群のISTJ。将来を見据えた、堅実な愛を育むためのステップ。',
+            slug: 'istj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ISFJ（擁護者）の性格・恋愛傾向を徹底解説',
+            description: '究極の優しさを誇るISFJ。彼らの献身を支え、深い絆を結ぶためのアドバイス。',
+            slug: 'isfj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ESTJ（幹部）の性格・恋愛傾向を徹底解説',
+            description: '頼れるリーダーESTJ。秩序を重んじる彼らの信頼を勝ち取るための具体的戦略。',
+            slug: 'estj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ESFJ（領事）の性格・恋愛傾向を徹底解説',
+            description: '社交的で思いやりに満ちたESFJ。彼らの承認欲求を満たし、深い信頼を得る方法。',
+            slug: 'esfj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】ESTP（起業家）の性格・恋愛傾向を徹底解説',
+            description: 'スリルを愛する冒険家、ESTP。最高に刺激的で最強の「戦友」になる方法。',
+            slug: 'estp',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
         }
     ];
 
