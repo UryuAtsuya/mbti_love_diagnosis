@@ -7,8 +7,34 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MBTI×ラブタイプ相性診断",
-  description: "AIが二人の相性を徹底分析！",
+  title: "MBTI×ラブタイプ相性診断 | AIが解き明かす運命の相性",
+  description: "AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析！16タイプ別の解説コラムも充実。あなたの恋愛を科学する相性診断サイト。",
+  metadataBase: new URL('https://mbti-lovetype.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'MBTI×ラブタイプ相性診断',
+    description: 'AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析！',
+    url: 'https://mbti-lovetype.com',
+    siteName: 'AI Love Matcher',
+    images: [
+      {
+        url: '/Love_type.png',
+        width: 1200,
+        height: 630,
+        alt: 'MBTI × Love Type Correlation Chart',
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MBTI×ラブタイプ相性診断',
+    description: 'AIが二人の相性を徹底分析！16タイプ別の解説コラムも充実。',
+    images: ['/Love_type.png'],
+  },
   icons: {
     icon: '/Icon.svg',
     apple: '/Icon.svg',
