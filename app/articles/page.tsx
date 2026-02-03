@@ -1,9 +1,23 @@
 import Link from 'next/link';
-import { BookOpen, Heart, Activity } from 'lucide-react';
+import { BookOpen, Heart, Activity, ShieldCheck } from 'lucide-react';
 import { ArrowLeft } from 'lucide-react';
 
 export default function ArticlesIndex() {
     const articles = [
+        {
+            title: '【完全網羅】MBTI×ラブキャラ診断・全16タイプの「相性ランキング」決定版',
+            description: 'どのタイプとどのタイプが最強？MBTIの基本相性に、ラブキャラの補完性を加味した独自の相性ランキングを公開。',
+            slug: 'mbti-compatibility-ranking',
+            icon: <Activity className="w-6 h-6 text-rose-500" />,
+            tag: 'ランキング'
+        },
+        {
+            title: '【理論編】ラブキャラ64診断とは？MBTIを超える「愛の解析学」',
+            description: '「性格が良いのにうまくいかない」のはなぜ？恋愛特化型の診断理論「ラブキャラ64」の核心に迫ります。',
+            slug: 'love-character-theory',
+            icon: <ShieldCheck className="w-6 h-6 text-indigo-500" />,
+            tag: '理論・解説'
+        },
         {
             title: 'MBTI×ラブキャラ診断で解き明かす「運命の相性」の真実',
             description: 'なぜ性格診断だけでは恋愛がうまくいかないのか？MBTIとラブキャラの複合診断で、あなたの恋愛が劇的に変わる理由を徹底解説。',
@@ -43,6 +57,13 @@ export default function ArticlesIndex() {
             title: '【決定版】ENFJ（主人公）の性格・恋愛傾向を徹底解説',
             description: '天性のリーダーENFJ。周囲を導き、献身的に尽くす彼らの愛し方を詳しく解説します。',
             slug: 'enfj',
+            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
+            tag: '16タイプ解説'
+        },
+        {
+            title: '【決定版】INFP（仲介者）の性格・恋愛傾向を徹底解説',
+            description: '感受性豊かな理想主義者、INFP。魂の共鳴を求める彼らの愛の形。',
+            slug: 'infp',
             icon: <BookOpen className="w-6 h-6 text-teal-500" />,
             tag: '16タイプ解説'
         },
