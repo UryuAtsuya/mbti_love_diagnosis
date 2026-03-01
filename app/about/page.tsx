@@ -1,5 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Heart, Brain, Users } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: '運営者情報 | AI Love Matcher',
+    description: 'AI Love Matcher の運営者情報、サイトの目的、運営方針についてご案内します。',
+    alternates: {
+        canonical: '/about',
+    },
+};
 
 export default function AboutPage() {
     return (
@@ -13,72 +22,38 @@ export default function AboutPage() {
                     ホームに戻る
                 </Link>
 
-                <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-teal-500 pb-4">当サイトについて</h1>
+                <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-teal-500 pb-4">運営者情報</h1>
 
-                <div className="space-y-10 text-gray-700 leading-relaxed">
+                <div className="space-y-8 text-gray-700 leading-relaxed">
                     <section>
-                        <h2 className="text-xl font-bold text-teal-700 mb-4 flex items-center">
-                            <Heart className="w-5 h-5 mr-2" />
-                            AI Love Matcherの目的
-                        </h2>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">運営者</h2>
+                        <p>AI Love Matcher 運営事務局</p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">所在地</h2>
+                        <p>日本国内</p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">サイトの目的</h2>
                         <p>
-                            「AI Love Matcher」は、最新のAI技術を活用して、MBTI（16タイプ性格診断）と恋愛キャラクターという2つの視点から、人々のより良い人間関係の構築を支援するために生まれました。<br /><br />
-                            「なぜあの人とうまくいかないのか？」「自分に本当に合う人はどんな人か？」という普遍的な問いに対して、単なる相性診断以上の深みを持った分析を提供することを目指しています。
+                            AI Love Matcher は、MBTI と恋愛傾向（Love Type）をもとに、相性の見方やコミュニケーションのヒントを分かりやすく整理して届けるための情報サイトです。診断結果を表示するだけでなく、結果の読み方や恋愛場面ごとの考え方まで含めて、自サイト内で価値提供を完結させることを目指しています。
                         </p>
                     </section>
 
-                    <section className="bg-teal-50 p-6 rounded-xl border border-teal-100">
-                        <h2 className="text-xl font-bold text-teal-700 mb-4 flex items-center">
-                            <Brain className="w-5 h-5 mr-2" />
-                            コンテンツ制作方針
-                        </h2>
-                        <ul className="space-y-4">
-                            <li className="flex items-start">
-                                <span className="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0">1</span>
-                                <div>
-                                    <span className="font-bold">AI技術と専門知見の融合：</span>
-                                    <p className="text-sm mt-1">当サイトの記事は、最新のAI（人工知能）を活用してドラフトを生成し、人間による事実確認（ファクトチェック）と専門的な解釈を加えて制作しています。AIならではの網羅性と、人間ならではの繊細な心理描写を掛け合わせています。</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0">2</span>
-                                <div>
-                                    <span className="font-bold">独自の指標「Love Character 64」：</span>
-                                    <p className="text-sm mt-1">既存の性格診断だけでは捉えきれない「恋愛における振る舞い」を64通りのキャラクターに分類。よりパーソナライズされた深い体験を提供します。</p>
-                                </div>
-                            </li>
-                        </ul>
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">運営方針</h2>
+                        <p>
+                            当サイトでは、誇張や断定的な表現を避け、傾向や参考情報として理解しやすいコンテンツ作りを重視しています。広告や外部リンクの掲載がある場合も、ユーザーにとって役立つ説明や比較情報を先に提示し、広告のみを目的としたページは作成しません。
+                        </p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-bold text-teal-700 mb-4 flex items-center">
-                            <Users className="w-5 h-5 mr-2" />
-                            運営者情報
-                        </h2>
-                        <div className="border border-gray-100 rounded-lg overflow-hidden">
-                            <table className="w-full text-left table-auto border-collapse">
-                                <tbody className="bg-white">
-                                    <tr className="border-b border-gray-50">
-                                        <th className="px-6 py-4 bg-gray-50 font-bold text-gray-700 w-1/3">サイト名</th>
-                                        <td className="px-6 py-4 text-gray-600">AI Love Matcher (MBTI×ラブキャラ相性診断)</td>
-                                    </tr>
-                                    <tr className="border-b border-gray-50">
-                                        <th className="px-6 py-4 bg-gray-50 font-bold text-gray-700">運営チーム</th>
-                                        <td className="px-6 py-4 text-gray-600">AI Love Matcher 制作委員会</td>
-                                    </tr>
-                                    <tr className="border-b border-gray-50">
-                                        <th className="px-6 py-4 bg-gray-50 font-bold text-gray-700">URL</th>
-                                        <td className="px-6 py-4 text-gray-600">https://mbti-lovetype.com/</td>
-                                    </tr>
-                                    <tr>
-                                        <th className="px-6 py-4 bg-gray-50 font-bold text-gray-700">お問い合わせ</th>
-                                        <td className="px-6 py-4 text-gray-600">
-                                            <Link href="/contact" className="text-teal-600 hover:underline">お問い合わせフォーム</Link> よりお願いいたします
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">お問い合わせ</h2>
+                        <p>
+                            ご質問やご要望は、<Link href="/contact" className="text-teal-600 hover:underline">お問い合わせページ</Link>よりお願いいたします。
+                        </p>
                     </section>
                 </div>
             </div>

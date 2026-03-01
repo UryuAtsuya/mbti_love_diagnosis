@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Twitter, Instagram } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -25,14 +24,6 @@ export default function Footer() {
                     <Link href="/contact" className="text-gray-600 hover:text-teal-500 text-sm transition-colors">
                         お問い合わせ
                     </Link>
-                    <div className="flex items-center gap-4 ml-0 md:ml-4 border-l-0 md:border-l md:pl-4 border-gray-200">
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-teal-500 transition-colors">
-                            <Twitter className="w-5 h-5" />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
-                            <Instagram className="w-5 h-5" />
-                        </a>
-                    </div>
                 </div>
             </div>
             <div className="max-w-4xl mx-auto px-4 mt-6 text-center">
