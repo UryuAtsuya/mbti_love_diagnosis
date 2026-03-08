@@ -1,11 +1,19 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, Zap, Heart, MessageCircle, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Info, Sparkles, Zap } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'ENTP（討論者）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'ENTPの恋愛傾向を、刺激を求める理由、議論と本音の違い、飽きやすさとの付き合い方まで整理します。',
+    alternates: {
+        canonical: '/articles/entp',
+    },
+};
 
 export default function ENTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-amber-600 to-orange-500 h-32 flex items-center justify-center">
                     <Zap className="text-white w-12 h-12" />
                 </div>
@@ -20,131 +28,157 @@ export default function ENTPArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】ENTP（討論者）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-amber-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、知性と好奇心の「遊戯的な愛」～</span>
+                        ENTP（討論者）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-amber-600 mt-3 font-medium">刺激と自由を重視する人が、恋愛で本当に離れたくない相手</span>
                     </h1>
 
                     <div className="prose prose-amber max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-amber-50 p-6 rounded-2xl border border-amber-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-amber-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-amber-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 常識を疑い、新しい可能性を追求する「知の冒険家」。持ち前のウィットと弁舌で周囲を煙に巻く。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 束縛を極端に嫌い、互いの脳を刺激し合える「対等なライバル」のような関係を好む。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 自由奔放な「ボス猫（LCRO）」や、鋭い洞察力の「カリスマバランサー（LARE）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 否定ではなく「議論」で返すこと。彼らの突飛なアイデアを面白がる心の余裕を持つ。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-amber-700">
+                                <li>ENTPは、新しい視点や可能性を見つけるのが得意で、同じ状態が続きすぎると退屈を感じやすいタイプです。</li>
+                                <li>恋愛では、会話の面白さ、自由度、相手の柔軟さをかなり重視します。</li>
+                                <li>議論好きでも、必ずしも相手を否定したいわけではなく、考えを広げたい気持ちで話していることがあります。</li>
+                                <li>束縛や感情的なコントロールには弱く、対等にやり取りできる相手だと関係が続きやすくなります。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">1. ENTPの基本性格: 面白い可能性にすぐ反応する</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENTPは、既存の前提をそのまま受け入れるより、「別のやり方はないか」「もっと面白くできないか」を考えやすいタイプです。発想の飛び方が大きく、会話でも次々に論点を広げるため、刺激的で頭の回転が速い人として見られやすいでしょう。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                その一方で、興味があるものとないものの差がはっきりしやすく、退屈や窮屈さにはかなり敏感です。自由に考え、試し、変化できる余地があるほど生き生きしやすく、固定的な関係やルールには息苦しさを感じやすい面があります。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">ENTPが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>反論していても、人格否定をしているとは限らない</li>
+                                    <li>軽く見えても、本当に面白い相手はしっかり見ている</li>
+                                    <li>気分屋に見えても、自由を守りたい意識が強い</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">1. ENTP（討論者）という「知的なトリックスター」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENTP（討論者）は、16タイプの中で最も「変化」を愛するタイプです。現状維持は彼らにとって死を意味します。常に「もっと面白い方法はないか？」「なぜこれが正しいとされているのか？」と問い続け、既存の枠組みを壊して新しい価値を創造します。<br /><br />
-                            その姿は時に不遜に見えることもありますが、本質は非常にピュアな知的好奇心。相手を批判したいのではなく、真理に近づくための「多角的な視点」を提示しているだけなのです。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">ENTPが持つ「愛すべき矛盾」</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div className="p-3 bg-white rounded-lg border border-gray-100 shadow-sm">
-                                    <span className="font-bold text-amber-600 block mb-1">深い思考と、飽き性の同居</span>
-                                    <p>哲学的な議論には何時間でも没頭しますが、日常のルーティンや事務作業は数分で投げ出します。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">2. ENTPが恋愛で大切にしやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENTPは、恋愛でも「一緒にいて頭が動くか」「関係が閉じすぎていないか」をよく見ています。楽しいだけではなく、互いに新しい考え方や体験を持ち込める相手だと飽きにくく、長い目で見ても関係が続きやすくなります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-amber-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-amber-700 mb-2">会話の広がり</h3>
+                                    <p className="text-sm mb-0">正解探しより、視点が増える会話に魅力を感じやすいタイプです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-gray-100 shadow-sm">
-                                    <span className="font-bold text-amber-600 block mb-1">冷徹な分析と、無邪気な冒険心</span>
-                                    <p>状況を鋭く分析しながら、最後には「面白そうだから」という直感で火の中に飛び込む危うさがあります。</p>
+                                <div className="border border-amber-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-amber-700 mb-2">自由な裁量</h3>
+                                    <p className="text-sm mb-0">行動や考え方の余白がある関係だと、自然体でいられます。</p>
+                                </div>
+                                <div className="border border-amber-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-amber-700 mb-2">柔軟な反応</h3>
+                                    <p className="text-sm mb-0">予定変更や新しい提案を、ある程度面白がれる相手だと噛み合いやすいです。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                ENTPが本気になりやすいのは、議論を怖がらず、それでいて必要なときには地に足のついた対話ができる相手です。自由を奪わないのに、放置でもない。そのバランスが重要になります。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">2. 恋愛傾向：100回のデートより、1回の「脳内火花」</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENTPの恋愛を一言で言えば「知的なスリル」です。マンネリ化した付き合いを最も苦手とし、常に自分を驚かせてくれる、あるいは自分と渡り合える知性を持った相手を求めています。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">ENTPが「飽きない」相手の条件</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-amber-200">「正論」に屈しない強さ：</span>
-                                    <p className="text-sm mt-1">彼らが議論を吹っかけてきた際、泣いたり怒ったりするのではなく「それはこういう視点が抜けてるんじゃない？」と返せる相手に惚れ込みます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">議論が喧嘩に見えやすい</h3>
+                                    <p className="text-sm mb-0">
+                                        ENTPにとっては思考のキャッチボールでも、相手にとっては否定や詰めに感じられることがあります。意図のズレを放置すると、関係の温度差が広がりやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-amber-200">自立した「個」の尊重：</span>
-                                    <p className="text-sm mt-1">お互いに別の趣味を持ち、一人の時間を楽しめる関係が理想。24時間一緒にいたいと言われると逃げ出したくなります。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">刺激を求めすぎて落ち着きがなく見える</h3>
+                                    <p className="text-sm mb-0">
+                                        新しさを求める気持ちが強いため、同じパターンが続くと集中が切れやすくなることがあります。相手からは真剣さが足りないように見えることもあります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">ユーモアのセンス：</span>
-                                    <p className="text-sm mt-1">皮肉やジョークを理解し、高度な言葉遊びが楽しめるかどうかは、彼らにとって死活問題です。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">縛られると一気に離れたくなる</h3>
+                                    <p className="text-sm mb-0">
+                                        愛情確認の頻度や細かなルールが増えすぎると、ENTPは管理されている感覚を持ちやすいです。気持ちがなくなる前に、窮屈さから距離を置きたくなる場合があります。
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">3. ラブキャラ診断で見るENTP：変幻自在なエネルギー</h2>
-                        <p className="mb-6">「ラブキャラ64」で分析すると、ENTPの「掴みどころのなさ」の正体が見えます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">4. ラブキャラ診断で見るENTP</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENTPは、当サイトのラブキャラでは「ボス猫（LCRO）」や「カリスマバランサー（LARE）」として説明しやすい場面があります。前者は独創性とマイペースさ、後者は状況を見ながら器用に動く頭の良さとして現れやすいイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                    <h3 className="text-lg font-bold text-amber-800 mb-2">ボス猫（LCRO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        自分の感覚で動きながら、独特の魅力で相手を惹きつけるパターンです。コントロールされるのは苦手でも、自分から関わるときの熱量はかなり高いのが特徴です。
+                                    </p>
+                                </div>
+                                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+                                    <h3 className="text-lg font-bold text-orange-800 mb-2">カリスマバランサー（LARE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        場の空気や相手の反応を読みながら、最適な言い方や動き方を選ぶ器用さが出るイメージです。軽く見えても、必要なときには状況整理がうまい面が表れます。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
-                                <h3 className="text-lg font-bold text-amber-800 mb-2 flex items-center text-sm">
-                                    <Lightbulb className="w-4 h-4 mr-2" />
-                                    ボス猫（LCRO）
-                                    <span className="text-xs ml-3 text-white bg-amber-500 px-2 py-0.5 rounded-full">独創的なカリスマ</span>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">5. ENTPと関係を深めるコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-amber-700">1. 議論と否定を分けて受け取る</span>
+                                    <p className="text-sm mt-2 mb-0">相手の人格を否定されたのか、単に視点を広げているのかを分けて見ると、衝突を減らしやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-amber-700">2. 窮屈なルールより合意を作る</span>
+                                    <p className="text-sm mt-2 mb-0">細かく縛るより、「ここだけは守ろう」と最低限の合意を置く方が長続きしやすいです。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-amber-700">3. 新しい刺激を一緒に作る</span>
+                                    <p className="text-sm mt-2 mb-0">新しい店、話題、学びなどを持ち込めると、ENTPは関係に新鮮さを感じやすくなります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-orange-50 p-6 rounded-xl border border-orange-200 mb-10">
+                                <h3 className="text-lg font-bold text-orange-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    ENTPに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-amber-900">
-                                    独自の感性（RO）で未来を見通し、周囲を惹きつける（LC）エネルギーを持つENTP。恋愛でも、相手を自分の世界に連れ去っていくような強引さと魅力があります。
-                                </p>
+                                <ul className="text-sm space-y-2 text-orange-900 list-disc list-inside mb-0">
+                                    <li>議論をすべて人格否定として返すこと</li>
+                                    <li>予定や行動を細かく管理しようとすること</li>
+                                    <li>不安を理由に自由を奪うこと</li>
+                                    <li>ユーモアや発想の広がりを頭ごなしに潰すこと</li>
+                                </ul>
                             </div>
-                            <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                                <h3 className="text-lg font-bold text-orange-800 mb-2 flex items-center text-sm">
-                                    <Zap className="w-4 h-4 mr-2" />
-                                    カリスマバランサー（LARE）
-                                    <span className="text-xs ml-3 text-white bg-orange-500 px-2 py-0.5 rounded-full">策略家のリーダー</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-orange-900">
-                                    他人の心理を鋭く察知し（LA）、状況を冷静に俯瞰する（RE）力。このタイプが出会うと、相手の「落とし方」をゲームのように楽しみながら、完璧にエスコートする名軍師となります。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">4. 実習：ENTPを「飽きさせない」究極の魔法</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENTPと長続きするための秘訣は、あなた自身が<span className="font-bold text-amber-600">「終わらない謎」であり続けること</span>です。<br /><br />
-                            自分の底をすべて見せるのではなく、常に新しい学びや変化を彼らに見せてください。「あなたのことは全部わかってる」と言われた瞬間、彼らの興味は他へ移ってしまいます。逆に、「今日もこいつ、変なこと言ってるな（面白いな）」と思わせれば勝ちです。彼らの不規則で刺激的なペースを楽しみ、共に人生という名の巨大な実験場を遊び尽くしてください。
-                        </p>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-amber-600 to-orange-500 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">知的なスリルを求める、あなたのための診断</h2>
+                            <h2 className="text-2xl font-bold mb-4">刺激を求める恋のパターンを整理する</h2>
                             <p className="mb-8 font-medium">
-                                あなたの鋭すぎる発想についてこれて、<br />
-                                唯一無二の「脳内火花」を散らしてくれる相手は？
+                                ENTPらしい自由さや、<br />
+                                すれ違いやすい論点を診断で言語化できます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-amber-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                スリル満点の相性診断へ
+                                無料診断をスタートする
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-amber-300" />
-                        <span>「議論が喧嘩にならない相手、やっと見つけた気がします。」（30代女性）</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

@@ -1,11 +1,19 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, PartyPopper, Heart, MessageCircle, Star } from 'lucide-react';
+import { ArrowLeft, Info, PartyPopper, Sparkles } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'ESFP（エンターテイナー）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'ESFPの恋愛傾向を、明るさの裏の繊細さ、好意の伝え方、反応を重視する理由、長続きのコツまで整理します。',
+    alternates: {
+        canonical: '/articles/esfp',
+    },
+};
 
 export default function ESFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-pink-50 to-yellow-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-pink-500 to-yellow-400 h-32 flex items-center justify-center">
                     <PartyPopper className="text-white w-12 h-12" />
                 </div>
@@ -20,131 +28,157 @@ export default function ESFPArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】ESFP（エンターテイナー）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-pink-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、輝きと愛の「人生賛歌」～</span>
+                        ESFP（エンターテイナー）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-pink-600 mt-3 font-medium">明るく見える人が、恋愛でちゃんと受け取ってほしいもの</span>
                     </h1>
 
                     <div className="prose prose-pink max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-pink-50 p-6 rounded-2xl border border-pink-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-pink-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-pink-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 周囲を笑顔にする「光の源」。今この瞬間を最大限に楽しみ、五感で世界を愛でる情熱家。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 圧倒的なサービス精神と愛情表現。サプライズも日常のスキンシップも欠かさない「愛し愛される天才」。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 相手を魔法にかける「ロマンスマジシャン（FCRO）」や、究極の慈愛「聖母（LACE）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 一緒に全力ではしゃぐこと. 彼らが作り出す楽しい雰囲気を「当たり前」と思わず、感謝を言葉にし続ける。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-pink-700">
+                                <li>ESFPは、目の前の人を楽しませたり、場を明るくしたりする力が強いタイプです。</li>
+                                <li>恋愛では、反応の良さ、一緒に体験を楽しめること、感情を素直に共有できることを重視しやすくなります。</li>
+                                <li>明るさの裏では意外と傷つきやすく、自分の表現が雑に扱われると急にしぼみやすい面があります。</li>
+                                <li>ちゃんと喜んでくれる相手、楽しさだけでなく弱い時期も受け止めてくれる相手だと長続きしやすいです。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">1. ESFPの基本性格: いま目の前にある温度に強い</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFPは、その場の空気や相手の反応をすばやく感じ取り、場を盛り上げたり、和らげたりするのが得意なタイプです。難しく考えすぎるより、まず動いてみる、試してみるという行動力があり、人からは華やかで親しみやすい印象を持たれやすいでしょう。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                ただし、ただノリがいいだけではなく、相手が楽しんでいるか、喜んでくれているかをかなり見ています。表現が明るいぶん、反応が薄い相手や冷たい空気には想像以上に傷つきやすい面があります。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">ESFPが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>社交的でも、雑に扱われると一気に引きやすい</li>
+                                    <li>明るいからといって、悩みが浅いわけではない</li>
+                                    <li>勢いで動いているように見えても、相手の反応はよく見ている</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">1. ESFP（エンターテイナー）という「地上の太陽」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFP（エンターテイナー）は、16タイプの中で最も「人生の喜び」を体現している人々です. 彼らが部屋に入ってくるだけで、空気がパッと明るく華やぎます。鋭い美的センスと五感の鋭さ（Se）を持ち、美味しい料理、美しいファッション、賑やかな音楽を通じて、人生を彩る術を心得ています。<br /><br />
-                            また、彼らは単に浮かれているわけではありません。内面には非常に繊細な感情（Fi）を秘めており、大切な人が悲しんでいる時には、誰よりも早くその変化に気づき、そっと寄り添う優しさを持っています。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">ESFPが放つ「無自覚なカリスマ」</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div className="p-3 bg-white rounded-lg border border-pink-100 shadow-sm">
-                                    <span className="font-bold text-pink-500 block mb-1">即興の天才</span>
-                                    <p>計画がないことを「不安」ではなく「自由」と捉えます。その場その場で最高の楽しみを見つけ出す天才です。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">2. ESFPが恋愛で大切にしやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFPは、恋愛においても「一緒にいて楽しいか」「気持ちがちゃんと返ってくるか」をかなり大切にします。大げさな理想より、会っている時間の楽しさや、感情がちゃんと循環している実感があるかどうかが重要です。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-pink-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-pink-700 mb-2">反応の良さ</h3>
+                                    <p className="text-sm mb-0">自分の気遣いや表現に反応が返ると、ESFPは安心して愛情を出しやすくなります。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-pink-100 shadow-sm">
-                                    <span className="font-bold text-pink-500 block mb-1">圧倒的な「人たらし」</span>
-                                    <p>壁を作らず、誰に対してもオープン. その素直な自己開示が、多くの人の心を開かせてしまいます。</p>
+                                <div className="border border-pink-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-pink-700 mb-2">体験の共有</h3>
+                                    <p className="text-sm mb-0">会話だけでなく、外出やイベントなど一緒に楽しめる時間に価値を感じやすいです。</p>
+                                </div>
+                                <div className="border border-pink-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-pink-700 mb-2">感情の素直さ</h3>
+                                    <p className="text-sm mb-0">駆け引きより、嬉しい・寂しいを自然に言い合える関係の方が合いやすいタイプです。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                ESFPが本気になりやすいのは、楽しさを共有できるだけでなく、自分が落ちている日でも空気を変えずにいてくれる相手です。盛り上がる時間と落ち着く時間の両方を持てる関係はかなり強いです。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">2. 恋愛傾向：毎日が「ハネムーン」のような情熱</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFPの恋愛は、非常にカラフルで刺激的です. マンネリという言葉は彼らの辞書にはありません。愛する人を喜ばせることが自分にとって最大の喜びであり、全力で愛を表現します。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">ESFPが恋に「夢中になる」3つの原動力</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-pink-200">溢れるような愛情表現：</span>
-                                    <p className="text-sm mt-1">言葉、ギフト、スキンシップ。あらゆる手段を使って「大好き」を伝えます。同じように情熱的に返してくれる相手を好みます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">反応が薄いと一気に不安になる</h3>
+                                    <p className="text-sm mb-0">
+                                        ESFPは相手の表情や返事をよく見ています。気持ちが返ってこない感覚が続くと、「自分だけが頑張っている」と感じやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-pink-200">体験の共有（冒険心）：</span>
-                                    <p className="text-sm mt-1">お家デートもいいけれど、外の世界へ飛び出して一緒に何かを「体験」することに最高の愛を感じます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">勢いが軽さに見られやすい</h3>
+                                    <p className="text-sm mb-0">
+                                        ノリよく関われるぶん、真剣さがないと誤解されることがあります。本人は本気でも、言葉や行動の速さが軽く見える場面があります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-pink-200">心の聖域への触れ合い：</span>
-                                    <p className="text-sm mt-1">普段の明るさの裏にある「弱さ」や「不安」を察し、批判せずに受け止めてくれる相手には、一生モノの愛を誓います。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">落ち込む時期を見せにくい</h3>
+                                    <p className="text-sm mb-0">
+                                        普段明るい人ほど、弱ったときにその差が大きくなります。元気役を期待され続けると、ひとりで抱え込みやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">3. ラブキャラ診断で見るESFP：愛の魔術師と守護者</h2>
-                        <p className="mb-6">「ラブキャラ64」で紐解くと、ESFPの「魅力」のメカニズムが分かります。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">4. ラブキャラ診断で見るESFP</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFPは、当サイトのラブキャラでは「ロマンスマジシャン（FCRO）」や「聖母（LACE）」として説明しやすい場面があります。前者は場を惹きつける魅力、後者は相手を丸ごと明るく包むやさしさとして出やすいイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
+                                    <h3 className="text-lg font-bold text-pink-800 mb-2">ロマンスマジシャン（FCRO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        出会った瞬間の空気づくりや、相手を楽しませる演出力が強く出るパターンです。華やかさだけでなく、相手の反応を見ながら距離を縮める器用さも含まれます。
+                                    </p>
+                                </div>
+                                <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
+                                    <h3 className="text-lg font-bold text-yellow-800 mb-2">聖母（LACE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        明るさの奥にある受容力が出るイメージです。相手の気分が落ちているときにも前向きさを押しつけず、そばで温度を上げてくれる魅力として現れます。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
-                                <h3 className="text-lg font-bold text-pink-800 mb-2 flex items-center text-sm">
-                                    <Star className="w-4 h-4 mr-2" />
-                                    ロマンスマジシャン（FCRO）
-                                    <span className="text-xs ml-3 text-white bg-pink-500 px-2 py-0.5 rounded-full">魅惑の演出家</span>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">5. ESFPと関係を深めるコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">1. 喜びや感謝を表情と言葉で返す</span>
+                                    <p className="text-sm mt-2 mb-0">受け取った気持ちをきちんと返すことで、ESFPは安心して関われるようになります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">2. 一緒に楽しむ時間を意識して作る</span>
+                                    <p className="text-sm mt-2 mb-0">特別なイベントでなくても、共通体験があるほど関係の温度は上がりやすいです。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">3. 元気な日だけで判断しない</span>
+                                    <p className="text-sm mt-2 mb-0">落ちている時期も自然に扱えると、ESFPはかなり深く信頼しやすくなります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-amber-50 p-6 rounded-xl border border-amber-200 mb-10">
+                                <h3 className="text-lg font-bold text-amber-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    ESFPに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-pink-900">
-                                    自分の感情を輝かせ（FC）、独自のペースで相手を惹きつける（RO）力. このタイプが出るESFPは、出会った瞬間に相手の心を奪う不思議な魔力を持っています。
-                                </p>
+                                <ul className="text-sm space-y-2 text-amber-900 list-disc list-inside mb-0">
+                                    <li>反応をほとんど返さず、気持ちを受け取らないこと</li>
+                                    <li>表現の大きさを「軽い」で片づけること</li>
+                                    <li>楽しさを与える役だけを期待すること</li>
+                                    <li>人前で感性やテンションを茶化すこと</li>
+                                </ul>
                             </div>
-                            <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
-                                <h3 className="text-lg font-bold text-yellow-800 mb-2 flex items-center text-sm">
-                                    <Heart className="w-4 h-4 mr-2" />
-                                    聖母（LACE）
-                                    <span className="text-xs ml-3 text-white bg-yellow-500 px-2 py-0.5 rounded-full">比類なき慈愛</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-yellow-900">
-                                    相手のありのままを肯定し（LA）、慈しむ（CE）心. 楽しいだけでなく、パートナーの人生そのものを全力で肯定し、支える大きな愛の形です。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">4. 実習：ESFPの「光」を絶やさないための接し方</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFPと最高に幸せな関係を築く鍵は、<span className="font-bold text-pink-600">「彼らのサービスを当たり前と思わないこと」</span>です。<br /><br />
-                            彼らは相手の笑顔のためにエネルギーを注ぎますが、それに対する反応がないと、深く傷つき、次第に輝きを失ってしまいます。どんな小さな気遣いにも「ありがとう」「楽しいね！」と大げさなくらい喜んであげてください。彼らの表現を全力で受け止め、共に人生という舞台を謳歌する。その連帯感こそが、ESFPがあなたに捧げる永遠の愛の報酬です。
-                        </p>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-pink-600 to-yellow-500 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">世界をピンク色に変える、あなたの恋。</h2>
+                            <h2 className="text-2xl font-bold mb-4">楽しさと繊細さの両方を整理する</h2>
                             <p className="mb-8 font-medium">
-                                ESFP of your heart's desire,<br />
-                                Who will be the star of your life?
+                                ESFPらしい愛情表現や、<br />
+                                傷つきやすい場面を診断で見直せます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-pink-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                魅惑の相性診断を受ける
+                                無料診断をスタートする
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-pink-300" />
-                        <span>「彼女が笑うだけで、嫌なことも全部忘れられる。彼女は僕にとって、歩くパワースポットです。」（20代男性）</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

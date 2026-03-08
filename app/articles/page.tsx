@@ -1,40 +1,49 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, Heart, Activity, ShieldCheck } from 'lucide-react';
 import { ArrowLeft } from 'lucide-react';
 
+export const metadata: Metadata = {
+    title: '恋愛・相性コラム | AI Love Matcher',
+    description: 'MBTIとラブタイプを組み合わせた恋愛・相性コラム一覧です。16タイプ別の恋愛傾向、相性ランキング、理論解説をまとめて読めます。',
+    alternates: {
+        canonical: '/articles',
+    },
+};
+
 export default function ArticlesIndex() {
     const articles = [
         {
-            title: '【完全網羅】MBTI×ラブキャラ診断・全16タイプの「相性ランキング」決定版',
-            description: 'どのタイプとどのタイプが最強？MBTIの基本相性に、ラブキャラの補完性を加味した独自の相性ランキングを公開。',
+            title: 'MBTI×ラブタイプ相性ランキングTOP5と読み解き方',
+            description: '会話の噛み合いやすさ、生活リズム、支え合いの観点から相性の高い組み合わせを整理。ランキングの見方と注意点も解説します。',
             slug: 'mbti-compatibility-ranking',
             icon: <Activity className="w-6 h-6 text-rose-500" />,
             tag: 'ランキング'
         },
         {
-            title: '【理論編】ラブキャラ64診断とは？MBTIを超える「愛の解析学」',
-            description: '「性格が良いのにうまくいかない」のはなぜ？恋愛特化型の診断理論「ラブキャラ64」の核心に迫ります。',
+            title: '【理論編】ラブキャラ64診断とは? MBTIと合わせて読む恋愛ガイド',
+            description: 'ラブキャラ64が何を見る整理軸か、MBTIとどう役割分担するのかを、恋愛の実例に沿って解説します。',
             slug: 'love-character-theory',
             icon: <ShieldCheck className="w-6 h-6 text-indigo-500" />,
             tag: '理論・解説'
         },
         {
-            title: 'MBTI×ラブキャラ診断で解き明かす「運命の相性」の真実',
-            description: 'なぜ性格診断だけでは恋愛がうまくいかないのか？MBTIとラブキャラの複合診断で、あなたの恋愛が劇的に変わる理由を徹底解説。',
+            title: 'MBTI×ラブキャラで見直す、相性の考え方',
+            description: '性格が似ていても恋愛でズレる理由を、会話・距離感・安心ポイントの観点から整理します。',
             slug: 'truth-of-compatibility',
             icon: <BrainIcon className="w-6 h-6 text-purple-500" />,
             tag: '相性の真実'
         },
         {
-            title: 'MBTI 16タイプ別・相性の良い芸能人とアイドル徹底解説',
-            description: '推しとの「ラブキャラ」的な親和性は？性格の不一致があっても、ラブキャラの補完関係を知れば「一生推せる推し活」が可能に！',
+            title: 'MBTI 16タイプ別・推しに惹かれやすい理由を解説',
+            description: '自分がどんな芸能人やアイドルに惹かれやすいのかを、MBTIとラブキャラの視点で読み解きます。',
             slug: 'idol-compatibility',
             icon: <Heart className="w-6 h-6 text-pink-500" />,
             tag: '推し活・アイドル'
         },
         {
-            title: '【実戦編】MBTI×ラブキャラで落とす！意中の相手を「沼らせる」最強の恋愛攻略マトリクス',
-            description: 'MBTIによる「心の開き方」と、ラブキャラ64による「愛の受け取り方」を掛け合わせた、ターゲット別の最強攻略戦略。',
+            title: '【実践編】MBTI×ラブキャラで読み解く恋愛コミュニケーション',
+            description: '距離の縮め方、会話の合わせ方、すれ違い後の修復まで、タイプ別の実践ポイントを整理します。',
             slug: 'romance-strategy',
             icon: <Activity className="w-6 h-6 text-orange-500" />,
             tag: '恋愛攻略・実戦'

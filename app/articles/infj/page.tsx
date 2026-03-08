@@ -1,11 +1,19 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Heart, Sparkles, MessageCircle, Info } from 'lucide-react';
+import { ArrowLeft, BookOpen, Info, Sparkles } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'INFJ（提唱者）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'INFJの恋愛傾向を、距離感、安心ポイント、すれ違いやすい場面、ラブキャラの見方まで含めて整理します。',
+    alternates: {
+        canonical: '/articles/infj',
+    },
+};
 
 export default function INFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-teal-600 to-teal-400 h-32 flex items-center justify-center">
                     <BookOpen className="text-white w-12 h-12" />
                 </div>
@@ -20,127 +28,147 @@ export default function INFJArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】INFJ（提唱者）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-teal-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、最古で最新の「愛の哲学」～</span>
+                        INFJ（提唱者）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-teal-600 mt-3 font-medium">静かに深く相手を見つめる人が、恋愛で大切にしていること</span>
                     </h1>
 
                     <div className="prose prose-teal max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-teal-50 p-6 rounded-2xl border border-teal-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-teal-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-teal-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 全人口の1%未満とされる超希少タイプ。深い洞察力を持つ理想主義者。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 表面的な遊びよりも、魂が共鳴する精神的な繋がりを最優先。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 包容力の権化「憧れの先輩（LARO）」や「カリスマバランサー（LARE）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 誠実な対話と、彼らの静かな情熱への全肯定。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-teal-700">
+                                <li>INFJは、表面的な楽しさよりも、気持ちや価値観が通い合う感覚を重視しやすいタイプです。</li>
+                                <li>誰にでもやさしく見えても、本当に心を開く相手はかなり慎重に選ぶ傾向があります。</li>
+                                <li>恋愛では「誠実さ」「言葉の一貫性」「安心して本音を出せる空気」が特に重要です。</li>
+                                <li>疲れているときほど一人で抱え込みやすいので、静かな配慮がある関係だと安定しやすくなります。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">1. INFJの基本性格: やさしさと観察力が同時に強い</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INFJは、相手の表情や空気の変化を敏感に受け取りやすく、場に必要な配慮を自然に考えることが多いタイプです。そのため「話しやすい」「落ち着く」と思われやすい一方で、本人の内側ではかなり多くの情報を処理しています。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                また、ただ人に合わせているだけではなく、自分なりの理想や基準を強く持っているのもINFJらしさです。穏やかに見えても、「ここは譲れない」と感じる線がはっきりしており、その線を越えられると急に距離を取ることがあります。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">INFJが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>やさしいから何でも受け止められるように見えるが、実際はかなり消耗しやすい</li>
+                                    <li>話を聞くのが上手でも、自分の本音は簡単には見せない</li>
+                                    <li>急に静かになったときは、怒っているというより整理中のことが多い</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">1. INFJ（提唱者）という「静かなる革命家」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            INFJ（提唱者）は、全16タイプの中で最も複雑で掴みどころがないタイプと言われます。その最大の特徴は、内向的でありながら非常に強い「外向きの使命感」を持っている点にあります。<br /><br />
-                            彼らは単なる夢想家ではありません。自身の理想（Ni：内向的直感）を、現実社会の調和（Fe：外向的感情）のためにどう活かすかを常に考えています。この「静かなる革命」と言えるマインドセットが、周囲には神秘的で知的な魅力として映るのです。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">INFJ特有の「矛盾」する二面性</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-teal-600 block mb-1">社交的な孤独感</span>
-                                    <p>誰とでも合わせられる社交性を持ちながら、内面では「誰も自分を分かっていない」という深い孤独を感じています。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">2. 恋愛で大切にしやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INFJは、恋愛をその場の勢いだけで進めるよりも、「この人とはどんな関係を築けそうか」を静かに見ています。会話が続くかどうかだけでなく、価値観のズレが大きすぎないか、安心して弱さを出せる相手かどうかを確認しながら距離を縮める傾向があります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-teal-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-teal-700 mb-2">深い会話</h3>
+                                    <p className="text-sm mb-0">雑談が苦手というより、意味のある会話に安心しやすいタイプです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-teal-600 block mb-1">冷徹なまでの温かさ</span>
-                                    <p>深い愛情を持つ一方で、一度「信頼に値しない」と判断した相手を即座に断絶する（ドアスラム）厳しい一面も。</p>
+                                <div className="border border-teal-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-teal-700 mb-2">言葉の一貫性</h3>
+                                    <p className="text-sm mb-0">その場しのぎの甘い言葉より、行動と合っている言葉を信頼します。</p>
+                                </div>
+                                <div className="border border-teal-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-teal-700 mb-2">心理的安全性</h3>
+                                    <p className="text-sm mb-0">評価や否定を恐れずに話せる相手だと、関係が深まりやすくなります。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                INFJが本気になりやすいのは、派手に盛り上げてくれる人よりも、気持ちを丁寧に扱ってくれる人です。「ちゃんと分かろうとしてくれている」と感じると、少しずつ自分の内側を見せてくれるようになります。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">2. 恋愛傾向：100の遊びより、1の「運命」を</h2>
-                        <p className="mb-6">
-                            INFJの恋愛観を一言で表すなら「魂の融合」です。マッチングアプリや合コンでの表面的なコミュニケーションに虚しさを感じやすく、お互いの人生のビジョンや価値観が合流する瞬間を待っています。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">INFJが恋に落ちる「3つのトリガー」</h3>
-                        <ol className="space-y-4 mb-10">
-                            <li className="flex items-start">
-                                <span className="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold">知的な共鳴：</span>
-                                    <p className="text-sm mt-1">世間話ではなく、哲学、芸術、社会貢献といった深いテーマで議論できる相手に強く惹かれます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">気を遣いすぎて本音が遅れる</h3>
+                                    <p className="text-sm mb-0">
+                                        その場を壊したくない気持ちが強く、違和感を抱えてもすぐには言わないことがあります。表面上は穏やかでも、限界を超えると突然距離を取る形で表れやすいです。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold">裏表のない誠実さ：</span>
-                                    <p className="text-sm mt-1">「この人の言葉に嘘がない」と直感したとき、INFJは初めて鉄壁のガードを緩めます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">言葉より空気を読みすぎる</h3>
+                                    <p className="text-sm mb-0">
+                                        相手の表情や温度感から意味を読み取りすぎて、不安が大きくなることがあります。相手が説明不足なタイプだと、誤解が膨らみやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-teal-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold">「守りたい」と思わせる脆さ：</span>
-                                    <p className="text-sm mt-1">強がっている人が時折見せる素の表情や弱さに、INFJの深い母性（父性）が反応します。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">回復に一人時間が必要</h3>
+                                    <p className="text-sm mb-0">
+                                        感情が動いたあと、すぐその場で結論を出すのが苦手なことがあります。話し合いを避けているのではなく、整理の時間が必要なケースも少なくありません。
+                                    </p>
                                 </div>
-                            </li>
-                        </ol>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">3. ラブキャラ診断で見るINFJ：憧れと調和の象徴</h2>
-                        <p className="mb-6">当サイト独自の「ラブキャラ64」で分析すると、INFJの恋愛における「役割」はさらに明確になります。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">4. ラブキャラ診断で見るINFJ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                当サイトのラブキャラでは、INFJは「憧れの先輩（LARO）」や「カリスマバランサー（LARE）」の要素で説明しやすい場面があります。どちらも、<span className="font-bold text-teal-600">相手を落ち着かせる力と、自分の内側を簡単には見せない慎重さ</span>を持つ点が共通しています。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                                    <h3 className="text-lg font-bold text-blue-800 mb-2">憧れの先輩（LARO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        物腰がやわらかくても、自分の世界観や判断軸をしっかり持っているため、周囲から「落ち着いていて頼れる人」と見られやすいです。近づきやすさと近づきにくさが同居しているのが特徴です。
+                                    </p>
+                                </div>
+                                <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                                    <h3 className="text-lg font-bold text-emerald-800 mb-2">カリスマバランサー（LARE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        相手の状態を読みながら空気を整えるのが得意で、感情的な場面でも比較的落ち着いて対応しやすいタイプです。ただし、その分だけ自分の疲れに気づきにくい面もあります。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                <h3 className="text-lg font-bold text-blue-800 mb-2 flex items-center">
-                                    <Sparkles className="w-4 h-4 mr-2" />
-                                    憧れの先輩（LARO）
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">5. INFJと関係を深めるコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-teal-700">1. 急がず、言葉と行動を揃える</span>
+                                    <p className="text-sm mt-2 mb-0">早く仲良くなることより、安心して信頼できる人だと伝わることの方が重要です。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-teal-700">2. 気持ちを雑に処理しない</span>
+                                    <p className="text-sm mt-2 mb-0">「考えすぎ」「気にしすぎ」で片づけると、理解されない感覚が強まります。まず受け止める姿勢が効きます。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-teal-700">3. 一人時間を拒絶と受け取らない</span>
+                                    <p className="text-sm mt-2 mb-0">静かな時間は、関係を終わらせたいサインではなく、整え直すための時間であることも多いです。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-amber-50 p-6 rounded-xl border border-amber-200 mb-10">
+                                <h3 className="text-lg font-bold text-amber-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    INFJに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-blue-900">
-                                    INFJの持つ「どこか俗世から離れた雰囲気」がこのキャラに集約されます。自分の世界観を持ちつつ、周囲には優しく接するその姿は、多くの異性から「手の届かない憧れ」として映ります。本人は自由でいたい（RO）という欲求が強いのですが、無意識に相手の心をリード（LA）してしまいます。
-                                </p>
+                                <ul className="text-sm space-y-2 text-amber-900 list-disc list-inside mb-0">
+                                    <li>本音を試すような駆け引き</li>
+                                    <li>説明なしに感情だけをぶつけること</li>
+                                    <li>準備なく大勢の場へ引っ張ること</li>
+                                    <li>繊細さを弱さとして軽く扱うこと</li>
+                                </ul>
                             </div>
-                            <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
-                                <h3 className="text-lg font-bold text-emerald-800 mb-2 flex items-center">
-                                    <Heart className="w-4 h-4 mr-2" />
-                                    カリスマバランサー（LARE）
-                                </h3>
-                                <p className="text-sm leading-relaxed text-emerald-900">
-                                    パートナーが不安定なときほど力を発揮するのがこのタイプ。相手の感情の荒波を、まるで凪（なぎ）のように鎮める圧倒的な包容力を持っています。しかし、自分自身のケアを（RE：受け止める）後回しにしがちな点が注意が必要です。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">4. INFJを「沼らせる」最強の付き合い方</h2>
-                        <p className="mb-6 leading-relaxed">
-                            INFJと付き合いたい、あるいは長続きさせたいなら、<span className="font-bold text-teal-600">「心の安全基地」</span>になることが唯一の正解です。<br /><br />
-                            彼らは日々、他人の感情の機微を読み取りすぎて疲弊しています。あなたが彼らに対して「ここでは何を言ってもいい、何もしなくてもいい」という無条件の肯定を示すことができれば、INFJはあなたに依存と言えるほどの深い愛を捧げるようになります。
-                        </p>
-
-                        <div className="bg-amber-50 p-6 rounded-xl border border-amber-200 mb-10">
-                            <h3 className="text-lg font-bold text-amber-800 mb-3 flex items-center">
-                                <Info className="w-5 h-5 mr-2" />
-                                ここに注意！INFJの「禁忌」
-                            </h3>
-                            <ul className="text-sm space-y-2 text-amber-900 list-disc list-inside">
-                                <li>「考えすぎだよ」と言って話を切り上げる（彼らにとって思考は生命線です）。</li>
-                                <li>サプライズで大勢の場に連れて行く（事前の心理的準備が必要です）。</li>
-                                <li>感情的な駆け引きや試すような行動（誠実さを最も重んじます）。</li>
-                            </ul>
-                        </div>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-teal-500 to-emerald-500 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">あなたの本当の相性は？</h2>
+                            <h2 className="text-2xl font-bold mb-4">自分の安心ポイントを知る</h2>
                             <p className="mb-8 font-medium">
-                                INFJのあなたには、どのタイプが「運命の相手」なのか。<br />
-                                64キャラ×16タイプのマトリクスで、科学的に解き明かします。
+                                INFJらしい恋愛の傾向を、<br />
+                                MBTIとラブタイプの組み合わせで整理できます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-teal-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
                                 無料診断をスタートする
@@ -149,12 +177,8 @@ export default function INFJArticle() {
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-teal-400" />
-                        <span>読者の声：「自分の説明書そのものでした」</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

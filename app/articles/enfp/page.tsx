@@ -1,13 +1,21 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, Heart, Zap, MessageCircle, AlertCircle } from 'lucide-react';
+import { AlertCircle, ArrowLeft, Sparkles, Zap } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'ENFP（広報運動家）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'ENFPの恋愛傾向を、ワクワクの作り方、飽きやすさとの付き合い方、ラブキャラの見方、長続きのコツまで整理します。',
+    alternates: {
+        canonical: '/articles/enfp',
+    },
+};
 
 export default function ENFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-teal-400 to-pink-400 h-32 flex items-center justify-center">
-                    <Zap className="text-white w-12 h-12 animate-pulse" />
+                    <Zap className="text-white w-12 h-12" />
                 </div>
 
                 <div className="p-8 sm:p-12">
@@ -20,144 +28,140 @@ export default function ENFPArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】ENFP（広報運動家）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-pink-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、自由と情熱の「冒険譚」～</span>
+                        ENFP（広報運動家）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-pink-600 mt-3 font-medium">自由さと熱量を持つ人が、恋愛で大切にしていること</span>
                     </h1>
 
                     <div className="prose prose-teal max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-pink-50 p-6 rounded-2xl border border-pink-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-pink-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-pink-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 好奇心旺盛で、周囲を明るく照らすエネルギッシュな冒険家。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 運命を信じ、ドラマチックな展開と「共に成長できる関係」を追求。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 自由奔放な「デビルエンジェル（FAPO）」や、情熱的な「主人公タイプ（LCPO）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 可能性を共に楽しみ、彼らの「自由な翼」を守る寛容さを見せる。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-pink-700">
+                                <li>ENFPは、新しい可能性や人の魅力を見つけるのが得意で、関係に活気を持ち込みやすいタイプです。</li>
+                                <li>恋愛では、束縛よりも信頼、退屈しない会話、相手の自立性を重視しやすくなります。</li>
+                                <li>明るく見えても、理解されない感覚や温度差に意外と傷つきやすい面があります。</li>
+                                <li>長続きの鍵は、自由を奪わず、同時に雑に扱わないことです。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">1. ENFPの基本性格: 人にも未来にも反応しやすい</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFPは、目の前の人の魅力や、これから起こり得る面白い可能性に反応しやすいタイプです。会話の中から相手の良さを見つけたり、まだ形になっていないアイデアに熱中したりすることが多く、周囲からは明るくエネルギッシュに見られやすいでしょう。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                一方で、好奇心が強いぶん刺激に敏感で、心が動かない状態が続くと急に元気がなくなることがあります。飽きっぽいというより、<span className="font-bold text-pink-600">意味や熱量が感じられない状態に長く留まるのが苦手</span>だと考えた方が実態に近いです。
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">2. 恋愛で重視しやすいこと</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">一緒にいて会話が広がるか</h3>
+                                    <p className="text-sm mb-0">話しているうちに発想が広がる相手、自分のアイデアを面白がってくれる相手に惹かれやすい傾向があります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">自由と信頼が両立するか</h3>
+                                    <p className="text-sm mb-0">近い関係になっても、行動を細かく管理されると息苦しさを感じやすいです。放任ではなく、信頼されている感覚が重要です。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">感情の温度が共有できるか</h3>
+                                    <p className="text-sm mb-0">反応が薄すぎると「受け取ってもらえていない」と感じやすく、逆に温度が近いと一気に距離が縮まることがあります。</p>
+                                </div>
+                            </div>
+                            <p className="mb-0 leading-relaxed">
+                                ENFPは自立した相手に惹かれやすい一方で、気持ちをちゃんと返してくれる関係を求めています。自由と放置は違う、という感覚を持っている人が多いです。
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">3. ENFPが疲れやすい恋愛パターン</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">常識や型で押さえつけられる</h3>
+                                    <p className="text-sm mb-0">「普通はこうする」「それは変だよ」と繰り返されると、自分らしさを否定された感覚になりやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">反応が返ってこない</h3>
+                                    <p className="text-sm mb-0">盛り上がりたいわけではなくても、好意や興味が見えない状態が続くと、一人で関係を回しているように感じて疲れます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">刺激だけでつながる</h3>
+                                    <p className="text-sm mb-0">楽しいことが多くても、安心や誠実さが伴わない関係は長期的には消耗しやすくなります。</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">4. ラブキャラ診断で見るENFP</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFPは、ラブキャラでは「デビルエンジェル（FAPO）」や「主人公タイプ（LCPO）」として説明しやすい場面があります。どちらも、空気を明るく動かす力と、自分の熱量で周囲を巻き込む力が出やすいイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
+                                    <h3 className="text-lg font-bold text-pink-800 mb-2">デビルエンジェル（FAPO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        親しみやすさと自由さが同時にあり、近いのに掴みきれない魅力として映ることがあります。やさしいのにマイペース、このギャップが印象に残りやすいタイプです。
+                                    </p>
+                                </div>
+                                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+                                    <h3 className="text-lg font-bold text-orange-800 mb-2">主人公タイプ（LCPO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        楽しい空気を自分から作り、相手にもその楽しさを共有したくなるタイプです。関係を前へ進める勢いがあり、恋愛でも分かりやすい熱量として出やすくなります。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">5. ENFPと長続きしやすい関わり方</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">1. 管理ではなく信頼でつながる</span>
+                                    <p className="text-sm mt-2 mb-0">行動を縛るより、なぜ不安なのかを言葉にした方が関係は安定しやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">2. 反応を返す</span>
+                                    <p className="text-sm mt-2 mb-0">大げさでなくてもいいので、面白かった、うれしかった、助かったという反応があると安心しやすいです。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-pink-700">3. 小さな変化を一緒に楽しむ</span>
+                                    <p className="text-sm mt-2 mb-0">新しい場所、話題、習慣などを少しずつ増やすと、関係の鮮度を保ちやすくなります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-red-50 p-6 rounded-xl border border-red-200 mb-10">
+                                <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
+                                    <AlertCircle className="w-5 h-5 mr-2" />
+                                    ENFPに対して避けたい接し方
+                                </h3>
+                                <ul className="text-sm space-y-2 text-red-900 list-disc list-inside mb-0">
+                                    <li>自由を奪うような細かな管理</li>
+                                    <li>興味やアイデアをすぐに否定すること</li>
+                                    <li>気持ちを読ませるだけで説明しないこと</li>
+                                    <li>楽しい時だけ近く、重い時に放置すること</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">1. ENFP（広報運動家）という「無限の可能性」の体現者</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFP（広報運動家）は、退屈な日常をワクワクする冒険へと変えてしまう魔法使いのような存在です。彼らの視線は常に「今ここ」ではなく「何が起こり得るか」という未来の可能性に向けられています。<br /><br />
-                            彼らにとって人生とは、未発見の宝物を探す旅そのもの。高いコミュニケーション能力と直感力を駆使して、人々の心を動かし、新しい世界を切り拓いていくパイオニアなのです。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">ENFPが持つ「光と影」</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-pink-600 block mb-1">底なしの楽観性と繊細さ</span>
-                                    <p>明るく悩みがないように見えて、実は他人の批判や不調和に誰よりも敏感。夜一人で深く落ち込むこともあります。</p>
-                                </div>
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-pink-600 block mb-1">多才ゆえの「飽き性」</span>
-                                    <p>興味が次々と移るため、一つのことを継続するのが苦手。恋愛においてもマンネリが最大の敵となります。</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">2. 恋愛傾向：運命を加速させる「熱量の魔法」</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFPの恋愛は、まさにジェットコースターです。「運命の人に出会った！」と感じた瞬間の爆発的なアプローチは、相手を驚かせることもありますが、その純粋な情熱に抗える人は多くありません。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">ENFPが「本気」になる相手の条件</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold underline decoration-pink-300 decoration-4">自分の価値観を面白がってくれる：</span>
-                                    <p className="text-sm mt-1">突飛なアイデアや未来の話を、「面白いね！」と笑い飛ばさず受け入れてくれる安心感を求めます。</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold underline decoration-pink-300 decoration-4">自立した「自分」を持っている：</span>
-                                    <p className="text-sm mt-1">依存されるのを嫌うため、自分自身の趣味や目標に打ち込んでいる自立した人に惹かれます。</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold underline decoration-pink-300 decoration-4">束縛の気配がない：</span>
-                                    <p className="text-sm mt-1">「これしなきゃダメだよ」という義務感を感じた瞬間、彼らの心の熱は急速に冷めてしまいます。</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">3. ラブキャラ診断で見るENFP：感情のスペシャリスト</h2>
-                        <p className="mb-6">「ラブキャラ64」で分析すると、ENFPの持つ「人を惹きつける力」の正体が明らかになります。</p>
-
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
-                                <h3 className="text-lg font-bold text-pink-800 mb-2 flex items-center">
-                                    <Zap className="w-4 h-4 mr-2" />
-                                    デビルエンジェル（FAPO）
-                                    <span className="text-xs ml-3 text-pink-500 bg-white px-2 py-0.5 rounded-full border border-pink-200">主な特徴</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-pink-900">
-                                    天使のような明るさで近づいてきたかと思えば、突然自分の世界に戻って一人を謳歌する。その「予測不能な自由さ（PO）」が、相手を「もっと知りたい」と思わせる強力なスパイスになります。相手をリード（LA）するよりは、自分の楽しさに相手を巻き込む（FA）天才です。
-                                </p>
-                            </div>
-                            <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                                <h3 className="text-lg font-bold text-orange-800 mb-2 flex items-center">
-                                    <Heart className="w-4 h-4 mr-2" />
-                                    主人公タイプ（LCPO）
-                                    <span className="text-xs ml-3 text-orange-500 bg-white px-2 py-0.5 rounded-full border border-orange-200">隠れた顔</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-orange-900">
-                                    恋愛においても「この物語の主役」でありたいという願望が強いENFP。ドラマチックな演出、サプライズ、ストレートな愛の言葉。これらを全力で提供し、相手にもそれを望む情熱的なリーダーシップを発揮します。
-                                </p>
-                            </div>
-                        </div>
-
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">4. 実習：ENFPと「一生飽きない」パートナーシップを築く術</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFPのパートナーは、時にその移り変わりの早さに不安を感じるかもしれません。しかし、解決策はシンプルです。<span className="font-bold text-pink-600">「一緒に新しい遊びを開発し続けること」</span>です。<br /><br />
-                            彼らにとって、変化は裏切りではなく「進化」です。新しいレストラン、新しい趣味、新しい旅行先……常に変化を取り入れ、「次は何をしようか？」とワクワクを共有し続けることが、彼らの心を繋ぎ止める最大の魔法となります。
-                        </p>
-
-                        <div className="bg-red-50 p-6 rounded-xl border border-red-200 mb-10">
-                            <h3 className="text-lg font-bold text-red-800 mb-3 flex items-center">
-                                <AlertCircle className="w-5 h-5 mr-2" />
-                                これだけはNG！ENFPの地雷
-                            </h3>
-                            <ul className="text-sm space-y-2 text-red-900 list-disc list-inside">
-                                <li>「普通はこうするでしょ」という常識の押し付け（彼らにとって死刑宣告に近い言葉です）。</li>
-                                <li>スケジュールのガチガチな管理（その場のノリ＝直感を大切にするのが彼らの正義です）。</li>
-                                <li>感情的な冷遇（「理由を言わず不機嫌になる」ことが最も不安を煽ります）。</li>
-                            </ul>
-                        </div>
-
-                        {/* CTA */}
-                        <section className="bg-gradient-to-br from-pink-500 to-rose-400 p-10 rounded-3xl text-center text-white shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-20"><Heart className="w-20 h-20" /></div>
-                            <h2 className="text-2xl font-bold mb-4 relative z-10">あなたの「運命の歯車」を回そう</h2>
-                            <p className="mb-8 font-medium relative z-10">
-                                ENFPのあなたにぴったりの、<br />
-                                「自由を尊重しつつ熱く愛してくれる相手」は誰？
+                        <section className="bg-gradient-to-br from-pink-500 to-rose-400 p-10 rounded-3xl text-center text-white shadow-2xl">
+                            <h2 className="text-2xl font-bold mb-4">自分の熱量の扱い方を知る</h2>
+                            <p className="mb-8 font-medium">
+                                ENFPらしい恋愛の強みと、<br />
+                                すれ違いやすい場面を組み合わせ診断で整理できます。
                             </p>
-                            <Link href="/diagnosis" className="inline-block bg-white text-pink-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg relative z-10">
-                                今すぐ相性診断を開始！
+                            <Link href="/diagnosis" className="inline-block bg-white text-pink-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
+                                今すぐ相性診断を開始
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-pink-300" />
-                        <span>「この記事を読んでから、彼への見方が180度変わりました！」（30代女性）</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

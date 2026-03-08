@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
             <div className="max-w-4xl mx-auto px-4 mt-6 text-center">
                 <p className="text-[10px] text-gray-400">
-                    ※当サイトのコンテンツはAIを活用して生成され、情報の正確性に配慮して監修されています。診断結果は統計的な傾向を示すものであり、特定の事実を保証するものではありません。
+                    ※記事の企画・構成・編集補助にAIツールを利用する場合がありますが、公開前に内容確認と表現調整を行っています。診断結果や記事内容は一般的な傾向を紹介するものであり、特定の結果や事実を保証するものではありません。
                 </p>
             </div>
         </footer>

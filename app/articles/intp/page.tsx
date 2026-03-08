@@ -1,13 +1,21 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, Lightbulb, Coffee, MessageCircle, Search } from 'lucide-react';
+import { ArrowLeft, Info, Lightbulb, Sparkles } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'INTP（論理学者）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'INTPの恋愛傾向を、距離感、知的な相性、本音が見えにくい理由、長く付き合うコツまで整理します。',
+    alternates: {
+        canonical: '/articles/intp',
+    },
+};
 
 export default function INTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-purple-600 to-blue-500 h-32 flex items-center justify-center">
-                    <Lightbulb className="text-white w-12 h-12 animate-pulse" />
+                    <Lightbulb className="text-white w-12 h-12" />
                 </div>
 
                 <div className="p-8 sm:p-12">
@@ -20,135 +28,157 @@ export default function INTPArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】INTP（論理学者）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-purple-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、知的好奇心の「深淵」～</span>
+                        INTP（論理学者）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-purple-600 mt-3 font-medium">静かに考える時間が長い人が、恋愛で求めている自由と理解</span>
                     </h1>
 
                     <div className="prose prose-purple max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-purple-50 p-6 rounded-2xl border border-purple-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-purple-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-purple-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 常識を疑い、真理を追求する天才肌。マイペースで独自の世界観を持つ。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 束縛を極端に嫌い、知的な刺激と「放っておいてくれる優しさ」を求める。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 世渡り上手な「恋愛マジシャン（FCRO）」や、一風変わった「謎の生命体（FARO）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 面倒な駆け引きは避け、直球の誠実さと「一人の時間」の完全保障を提示する。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-purple-700">
+                                <li>INTPは、感情より先に仕組みや理由を考えやすく、気持ちを言葉にするまで時間がかかるタイプです。</li>
+                                <li>恋愛では、知的な刺激、無理のない距離感、ひとりで考える時間の確保を大切にしやすくなります。</li>
+                                <li>冷たく見えても、興味を持った相手には長く観察し、独自の形で関心を示していることがあります。</li>
+                                <li>感情を強くぶつけられるより、落ち着いて整理して話せる関係の方が信頼につながりやすいです。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">1. INTPの基本性格: まず考え、納得してから動く</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INTPは、物事をすぐに結論づけるより、構造や理由を探りながら理解したいタイプです。会話でも人間関係でも、「なぜそうなるのか」が見えてくると安心しやすく、表面的なノリだけでは深く入りにくい傾向があります。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                また、自分の頭の中で考える時間がとても重要です。そのため、反応が遅い、突然ひとりになりたがる、会話の途中で別の思考に飛ぶといった場面もありますが、これは無関心というより処理のしかたの違いであることが少なくありません。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">INTPが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>言葉数が少ないときでも、相手に興味がないとは限らない</li>
+                                    <li>感情表現が控えめでも、頭の中ではかなり考えている</li>
+                                    <li>自由を求めるが、信頼した相手との関係を軽く見ているわけではない</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">1. INTP（論理学者）という「孤独な真理探究者」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            INTP（論理学者）を一言で表すなら「歩くデータベース」あるいは「概念の破壊者」です。彼らは世の中の当たり前をそのまま受け入れることはありません。常に「その根拠は？」「もっと効率的な方法はないか？」と自問自答し、頭の中で複雑なパズルを解き続けています。<br /><br />
-                            周囲からは「何を考えているか分からない」「冷淡」と思われることもありますが、一度興味を持った分野に対しては、寝食を忘れるほどの凄まじい集中力（Ti：内向的思考）を発揮します。この純粋すぎる好奇心こそが、彼らの最大の魅力なのです。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">INTPが大切にする3つの聖域</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                                <div className="p-3 bg-white rounded-lg border border-purple-100 text-center">
-                                    <span className="font-bold text-purple-600 block mb-1">思考の自由</span>
-                                    <p>誰にも定義されない、独自の思考プロセスを邪魔されることを最も嫌います。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">2. INTPが恋愛で重視しやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INTPは、恋愛でも自分の思考や生活リズムを大きく壊さずにいられる関係を好みます。常に濃い連絡を取り合うことより、必要なときにちゃんと話せること、面白い視点を共有できること、無理に演じなくていいことが重要になりやすいです。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-purple-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-purple-700 mb-2">知的な会話</h3>
+                                    <p className="text-sm mb-0">単なる世間話より、考え方や発想を交換できる相手に惹かれやすいです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-purple-100 text-center">
-                                    <span className="font-bold text-purple-600 block mb-1">物理的な孤独</span>
-                                    <p>人間関係に疲弊しやすいため、充電のための一人の時間は生活必需品です。</p>
+                                <div className="border border-purple-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-purple-700 mb-2">自律した距離感</h3>
+                                    <p className="text-sm mb-0">四六時中つながるより、互いの時間を持ちながら関係を続けられる方が合いやすいです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-purple-100 text-center">
-                                    <span className="font-bold text-purple-600 block mb-1">無意味の排除</span>
-                                    <p>形式的な挨拶や、結論のない世間話（スモールトーク）に苦痛を感じやすいです。</p>
+                                <div className="border border-purple-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-purple-700 mb-2">整理できる対話</h3>
+                                    <p className="text-sm mb-0">感情があっても、論点が見える会話だと安心して向き合いやすくなります。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                INTPが本気になりやすいのは、変に合わせさせようとせず、その人らしい考え方やペースを尊重してくれる相手です。「理解しようとしてくれる人」だと感じると、少しずつ深い部分まで見せやすくなります。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">2. 恋愛傾向：最も「攻略難易度が高い」と言われる理由</h2>
-                        <p className="mb-6 leading-relaxed">
-                            INTPの恋愛は、非常にマイペースです。感情の起伏をあまり表に出さないため、相手は「好かれているのか不安」になりがちですが、彼らにとって「一緒にいて疲れない＝最高の求愛」だったりします。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">INTPが心を許す相手の条件</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-purple-200">知的好奇心が高い：</span>
-                                    <p className="text-sm mt-1">自分のマニアックな話を「面白そう！」と面白がってくれる相手を、無意識に探しています。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">返事が遅く、温度差に見える</h3>
+                                    <p className="text-sm mb-0">
+                                        INTPは考えてから返したいタイプなので、感情が高まっている場面ほど反応が遅くなりやすいです。相手からは「冷たい」「向き合ってくれない」と受け取られやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-purple-200">束縛を一切しない：</span>
-                                    <p className="text-sm mt-1">「週末は必ず会う」「LINEは即レス」といったルールを押し付けない、自立した人を好みます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">感情だけのやり取りでフリーズする</h3>
+                                    <p className="text-sm mb-0">
+                                        強い口調や察してほしい圧が続くと、どう対応すればいいか分からず閉じやすくなります。逃げているというより、処理が追いついていない状態に近いです。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-purple-200">感情的に爆発しない：</span>
-                                    <p className="text-sm mt-1">論理的な話し合いができる相手なら信頼しますが、泣いたり怒鳴ったりする感情的なアプローチにはフリーズしてしまいます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">自由時間を拒絶と誤解される</h3>
+                                    <p className="text-sm mb-0">
+                                        ひとりの時間は、気持ちが離れたサインではなく、頭を整えるための必要時間であることが多いです。そこが噛み合わないと、相互不信になりやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">3. ラブキャラ診断で見るINTP：器用と不器用の同居</h2>
-                        <p className="mb-6">「ラブキャラ64」で分析すると、INTPのミステリアスな魅力が増幅されます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">4. ラブキャラ診断で見るINTP</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INTPは、当サイトのラブキャラでは「恋愛マジシャン（FCRO）」や「謎の生命体（FARO）」として説明しやすい場面があります。前者は気づかれにくい器用さ、後者は独自の世界観と距離感の強さを表すイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100">
+                                    <h3 className="text-lg font-bold text-purple-800 mb-2">恋愛マジシャン（FCRO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        普段は静かでも、相手のツボや必要な配慮を意外とよく見ていて、さりげなく喜ばせる器用さが出るパターンです。分かりやすくはないものの、観察の深さが愛情として表れます。
+                                    </p>
+                                </div>
+                                <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                                    <h3 className="text-lg font-bold text-blue-800 mb-2">謎の生命体（FARO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        自分の世界に集中しているときのINTPを説明しやすいイメージです。近づきにくく見えても、無理に崩そうとせず尊重してくれる相手には少しずつ心を開きやすくなります。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100">
-                                <h3 className="text-lg font-bold text-purple-800 mb-2 flex items-center">
-                                    <Coffee className="w-4 h-4 mr-2" />
-                                    恋愛マジシャン（FCRO）
-                                    <span className="text-xs ml-3 text-white bg-purple-400 px-2 py-0.5 rounded-full">意外な一面</span>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">5. INTPと長く付き合うためのコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-purple-700">1. 反応の速さだけで気持ちを判断しない</span>
+                                    <p className="text-sm mt-2 mb-0">考える時間が必要なタイプだと分かっているだけで、無用な不安を減らしやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-purple-700">2. 結論だけでなく、理由も共有する</span>
+                                    <p className="text-sm mt-2 mb-0">「なぜそう感じたか」が見えると、INTPは向き合いやすくなり、納得感を持って動けます。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-purple-700">3. 自由時間を前提に関係を設計する</span>
+                                    <p className="text-sm mt-2 mb-0">べったりより、適度な距離感がある方が、かえって長期では安定しやすいことがあります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 mb-10">
+                                <h3 className="text-lg font-bold text-blue-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    INTPに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-purple-900">
-                                    実は人間観察が趣味であるINTP。相手のニーズを先回りして（FA）計算づくで動く「ずる賢い（RO）」な側面が恋愛で発揮されることがあります。さらっと相手の喜ぶことを言い、気づけば自分の世界に引き込んでしまう、文字通りマジシャンのような魅力です。
-                                </p>
+                                <ul className="text-sm space-y-2 text-blue-900 list-disc list-inside mb-0">
+                                    <li>即レスや頻繁な連絡を愛情の証明として強く求めること</li>
+                                    <li>感情の察し合いだけで結論を出そうとすること</li>
+                                    <li>ひとり時間や没頭時間を軽く扱うこと</li>
+                                    <li>「普通はこうでしょ」で思考を閉じること</li>
+                                </ul>
                             </div>
-                            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                <h3 className="text-lg font-bold text-blue-800 mb-2 flex items-center">
-                                    <Search className="w-4 h-4 mr-2" />
-                                    謎の生命体（FARO）
-                                    <span className="text-xs ml-3 text-white bg-blue-500 px-2 py-0.5 rounded-full">本来の姿</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-blue-900">
-                                    自分の研究（趣味）に没頭している時のINTP。周囲を気にせず自分の世界を突き進む姿は、一部の人にとって強烈なフェチズムを刺激します。理解しようとするのではなく「放っておいてくれる」ことが最高の愛情表現となります。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">4. 実習：INTPと「知的な幸福」を末永く享受するコツ</h2>
-                        <p className="mb-6 leading-relaxed">
-                            INTPは、言葉による愛情表現が極端に少ないタイプです。しかし、彼らがあなたに「面白い動画のURL」を送ってきたり、一緒に無言で過ごすことを許容し始めたら、それは彼らなりの最大級の「愛してる」のサインです。<br /><br />
-                            正論で追い詰めず、彼らの突飛な発想を一緒に楽しむこと。そして何より、彼らを<span className="font-bold text-purple-600">「変人として放置する」</span>寛容さがあれば、INTPにとってあなたは唯一無二の、一生手放したくないパートナーになるでしょう。
-                        </p>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-purple-600 to-blue-600 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">複雑なあなたを解き明かすデータ診断</h2>
+                            <h2 className="text-2xl font-bold mb-4">考えすぎる恋のクセを整理する</h2>
                             <p className="mb-8 font-medium">
-                                INTPのあなたの脳内を刺激し、<br />
-                                互いの自由を尊重できる「共鳴相手」は誰？
+                                INTPらしい距離感や、<br />
+                                本音が見えにくい理由を診断で確かめられます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-purple-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                科学的な相性診断を試みる
+                                無料診断をスタートする
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-purple-300" />
-                        <span>「彼がLINEを返さない理由がようやく理解できました…（笑）」</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

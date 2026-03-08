@@ -1,53 +1,71 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Trophy, Sparkles, Heart, Zap, MessageCircle } from 'lucide-react';
+import { ArrowLeft, MessageCircle, Sparkles, Trophy, Zap } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'MBTI相性ランキングTOP5 | AI Love Matcher',
+    description: 'MBTIとラブタイプの補完関係をもとに、会話、生活リズム、支え合いの観点から相性の高い組み合わせを整理しました。',
+    alternates: {
+        canonical: '/articles/mbti-compatibility-ranking',
+    },
+};
+
+const rankings = [
+    {
+        rank: 1,
+        pair: 'INFP × ENFJ',
+        title: '理想を言葉にしやすい組み合わせ',
+        description: 'INFPの内面の豊かさを、ENFJが丁寧に引き出しやすいペアです。気持ちの共有が関係の土台になりやすく、会話の満足度が高まりやすい傾向があります。',
+        strengths: '感情の共有、励まし合い、将来像のすり合わせがしやすい。',
+        caution: 'ENFJが背負いすぎると、INFPが受け身に寄りやすい点には注意が必要です。',
+        score: 94,
+    },
+    {
+        rank: 2,
+        pair: 'INTJ × ENFP',
+        title: '違いが刺激と学びになりやすい組み合わせ',
+        description: 'INTJの構造化された視点と、ENFPの発想の広がりが互いの弱点を補いやすいペアです。違いが大きいぶん、尊重ができると伸びやすい関係です。',
+        strengths: '視野が広がりやすく、停滞しにくい。',
+        caution: '生活リズムや優先順位の共有をしないと、魅力がそのまま摩擦になることがあります。',
+        score: 91,
+    },
+    {
+        rank: 3,
+        pair: 'ISFJ × ESFP',
+        title: '安心と明るさのバランスが取りやすい組み合わせ',
+        description: 'ISFJの安定感とESFPの場を明るくする力が噛み合うと、日常を楽しみながら信頼を育てやすいペアです。',
+        strengths: '生活感の相性が比較的取りやすく、一緒に過ごす満足感が高まりやすい。',
+        caution: 'ISFJが我慢しすぎると、ESFPの自由さが負担に感じられることがあります。',
+        score: 89,
+    },
+    {
+        rank: 4,
+        pair: 'ENTP × INFJ',
+        title: '深い対話が続きやすい組み合わせ',
+        description: 'ENTPの拡散的な発想とINFJの洞察が合わさると、話すほど理解が深まる関係になりやすいペアです。',
+        strengths: '抽象的な会話や価値観のすり合わせに強い。',
+        caution: '議論のテンポが速すぎると、INFJが疲れて本音を引っ込めることがあります。',
+        score: 87,
+    },
+    {
+        rank: 5,
+        pair: 'ISTP × ESTJ',
+        title: '役割分担がはっきりしやすい組み合わせ',
+        description: '実務感覚のあるISTPと、全体を整えやすいESTJは、生活や仕事の面でチーム感を作りやすいペアです。',
+        strengths: '現実的な判断がしやすく、問題が起きても動きやすい。',
+        caution: '感情面の共有が少ないと、効率は良いのに寂しさが残る関係になりやすいです。',
+        score: 84,
+    },
+];
 
 export default function CompatibilityRankingArticle() {
-    const rankings = [
-        {
-            rank: 1,
-            pair: 'INFP × ENFJ',
-            title: '「魂の双子」最強の精神的結合',
-            description: '感受性豊かなINFPと、包容力抜群のENFJ。互いの理想を補完し合い、言葉にせずとも通じ合える究極の相性です。',
-            score: 98
-        },
-        {
-            rank: 2,
-            pair: 'INTJ × ENFP',
-            title: '「知的な冒険」と「癒やしの火花」',
-            description: '冷静なINTJの戦略性と、自由奔放なENFPの創造性。正反対だからこそ、互いに欠かせないピースになります。',
-            score: 95
-        },
-        {
-            rank: 3,
-            pair: 'ISFJ × ESFP',
-            title: '「安らぎ」と「刺激」の黄金バランス',
-            description: '保守的で献身的なISFJと、今を楽しむESFP。日常を彩りながら、絶対的な信頼関係を築けます。',
-            score: 92
-        },
-        {
-            rank: 4,
-            pair: 'ENTP × INFJ',
-            title: '「無限の対話」が生む深い知性',
-            description: 'アイデアの宝庫ENTPと、真理を志向するINFJ。議論がそのまま愛に変わる、知的なベストカップルです。',
-            score: 89
-        },
-        {
-            rank: 5,
-            pair: 'ISTP × ESTJ',
-            title: '「最強の戦友」として歩む人生',
-            description: '実利的なISTPと、秩序を重んじるESTJ。無駄のないコミュニケーションで、共働きや育児も完璧なチームワークを発揮します。',
-            score: 87
-        }
-    ];
-
     return (
         <main className="min-h-screen bg-gradient-to-br from-rose-50 to-orange-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-rose-500 to-orange-400 h-48 flex flex-col items-center justify-center text-white">
                     <Trophy className="w-16 h-16 mb-4 animate-bounce" />
                     <h1 className="text-3xl sm:text-4xl font-extrabold px-6 text-center">
-                        【2026年最新】MBTI相性ランキングTOP5
+                        保存版 MBTI相性ランキング TOP5
                     </h1>
                 </div>
 
@@ -64,11 +82,13 @@ export default function CompatibilityRankingArticle() {
                         <section className="bg-rose-50 p-8 rounded-2xl border border-rose-100 mb-12">
                             <h2 className="text-xl font-bold text-rose-800 mb-4 flex items-center">
                                 <Sparkles className="w-6 h-6 mr-2 text-rose-500" />
-                                はじめに：なぜ「相性ランキング」が必要なのか？
+                                このランキングの見方
                             </h2>
-                            <p className="leading-relaxed text-rose-900/80">
-                                2026年、性格診断は単なる「遊び」から、人生設計の「ツール」へと進化しました。しかし、巷に溢れる相性診断の多くは表面的なものに留まっています。<br /><br />
-                                本ランキングでは、心理学的な性格構造（MBTI）と、本能的な愛の役割（ラブキャラ診断）の10万件以上のデータをマッチング。単なる「仲が良い」を超えた、<strong>「人生の質を高め合える最強のペア」</strong>を厳選しました。
+                            <p className="leading-relaxed text-rose-900/80 mb-4">
+                                本ランキングは、MBTIの会話傾向と、当サイトで扱うラブタイプの補完関係をもとに、<span className="font-bold">話しやすさ、日常の噛み合いやすさ、支え合いのしやすさ</span>という観点から整理したものです。
+                            </p>
+                            <p className="leading-relaxed text-rose-900/80 mb-0">
+                                つまり「絶対にうまくいく組み合わせ」を断定するものではなく、関係を育てやすい土台が比較的作りやすいペアを紹介しています。
                             </p>
                         </section>
 
@@ -91,8 +111,10 @@ export default function CompatibilityRankingArticle() {
                                         </div>
                                     </div>
 
-                                    <div className="bg-gray-50 p-6 rounded-2xl mb-6 leading-relaxed border-l-4 border-rose-500 italic">
-                                        {item.description}
+                                    <div className="bg-gray-50 p-6 rounded-2xl mb-6 leading-relaxed border-l-4 border-rose-500">
+                                        <p className="mb-4">{item.description}</p>
+                                        <p className="text-sm mb-2"><span className="font-bold text-rose-700">相性が高く出やすい理由:</span> {item.strengths}</p>
+                                        <p className="text-sm mb-0"><span className="font-bold text-rose-700">気をつけたい点:</span> {item.caution}</p>
                                     </div>
 
                                     <div className="flex items-center gap-4">
@@ -113,32 +135,33 @@ export default function CompatibilityRankingArticle() {
 
                         <section className="mt-20">
                             <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-rose-500 pl-4 mb-8">
-                                相性が「悪い」と言われたあなたへ
+                                ランキングは「入口」であって、結論ではない
                             </h2>
                             <p className="mb-6 leading-relaxed">
-                                もし、あなたとパートナーのタイプがこのランキングに入っていなくても、絶望する必要はありません。相性とは「初期設定」に過ぎません。<br /><br />
-                                ラブキャラ診断が解き明かすのは、<strong>「どうすればそのタイプ特有の摩擦を、最高のスパイスに変えられるか」</strong>という攻略法です。ランキング圏外のペアでも、役割（ラブキャラ）の調整次第で、世界に一つだけの最強の絆を築くことが可能です。
+                                ランクに入っていない組み合わせでも、関係がうまくいく例はいくらでもあります。実際には、相手の疲れ方を理解しているか、ケンカの修復方法を共有できているか、生活の優先順位を話し合えているかの方が長期的には重要です。
+                            </p>
+                            <p className="mb-0 leading-relaxed">
+                                逆に高順位の組み合わせでも、魅力だと思っていた差がストレスに変わることはあります。ランキングは、相性の高さを競うためではなく、<span className="font-bold text-rose-600">どこが噛み合いやすく、どこに注意が必要かを把握するための地図</span>として読むのがおすすめです。
                             </p>
                         </section>
 
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-rose-600 to-rose-400 p-10 rounded-3xl text-center text-white shadow-2xl mt-12">
-                            <h2 className="text-2xl font-bold mb-4">あなただけの「第1位」は、どこにいる？</h2>
+                            <h2 className="text-2xl font-bold mb-4">自分に合う相手傾向を知る</h2>
                             <p className="mb-8 font-medium">
-                                膨大なデータの中から、あなたの本質と100%響き合う、<br />
-                                運命のパートナーを今すぐ特定します。
+                                ランキングを見るだけでなく、<br />
+                                あなた自身の会話傾向と恋愛の受け取り方を並べて確認できます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-rose-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                運命の相手を無料診断する
+                                相性の傾向を無料診断する
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div className="flex items-center gap-2">
                         <MessageCircle className="w-4 h-4 text-rose-300" />
-                        <span>「ランク外の相性だったけど、対処法を知ってからケンカが減りました！」（30代男性）</span>
+                        <span>「タイプ差の見方が分かってから、相手への決めつけが減りました」</span>
                     </div>
                     <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
                 </div>

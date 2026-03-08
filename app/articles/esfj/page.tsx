@@ -1,11 +1,19 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, Users, Heart, MessageCircle, Coffee } from 'lucide-react';
+import { ArrowLeft, Info, Sparkles, Users } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'ESFJ（領事）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'ESFJの恋愛傾向を、愛情表現の多さ、承認を求めやすい理由、傷つきやすい場面、長続きのコツまで整理します。',
+    alternates: {
+        canonical: '/articles/esfj',
+    },
+};
 
 export default function ESFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
                 <div className="bg-gradient-to-r from-orange-500 to-pink-500 h-32 flex items-center justify-center">
                     <Users className="text-white w-12 h-12" />
                 </div>
@@ -20,135 +28,157 @@ export default function ESFJArticle() {
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】ESFJ（領事）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-orange-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、慈愛と共鳴の「太陽の愛」～</span>
+                        ESFJ（領事）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-orange-600 mt-3 font-medium">人に尽くしやすい人が、恋愛でちゃんと返してほしい安心感</span>
                     </h1>
 
                     <div className="prose prose-orange max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
                         <section className="bg-orange-50 p-6 rounded-2xl border border-orange-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-orange-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-orange-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 溢れるホスピタリティを持つ「社交の達人」。周囲の笑顔を原動力に、調和を保つ努力を惜しまない。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 承認と共感を何よりも重視し、パートナーを「世界一幸せな人」にしようと尽力する。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 包容力の権化「憧れの先輩（LARO）」や、献身的な「忠犬ハチ公（FCPE）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 彼らの配慮に気づき、大げさなほど感謝すること。記念日や思い出を大切にする姿勢。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-orange-700">
+                                <li>ESFJは、人に喜んでもらうことや、関係の温度を保つことにエネルギーを注ぎやすいタイプです。</li>
+                                <li>恋愛では、分かりやすい愛情表現、感謝、安心できるつながり、周囲との調和を重視しやすくなります。</li>
+                                <li>尽くす力が強い反面、反応が薄かったり雑に扱われたりするとかなり傷つきやすい面があります。</li>
+                                <li>気持ちを受け取り返してくれる相手、自分だけが与える役にならない相手だと長続きしやすいです。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">1. ESFJの基本性格: 人との温度を整える力が強い</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFJは、人の気持ちや場の空気に敏感で、関係を良い状態に保とうと動きやすいタイプです。誰が困っているか、何をすれば場がうまく回るかを自然に見ていて、思いやりのある人として周囲に認識されやすいでしょう。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                一方で、相手の反応や関係の変化にもかなり敏感です。喜んでもらえたか、必要とされているかを気にしやすく、無反応や冷たい態度には想像以上に傷つくことがあります。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">ESFJが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>世話好きでも、見返りがまったくいらないわけではない</li>
+                                    <li>明るく接していても、相手の反応にはかなり敏感</li>
+                                    <li>社交的でも、本当に大切な相手には特別な配慮をしている</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">1. ESFJ（領事）という「愛の供給センター」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFJ（領事）は、人々が集まる場所に温かな火を灯す、太陽のような存在です。彼らの関心は常に「外」に向けられており、誰かが困っていないか、誰かが寂しい思いをしていないかを無意識にスキャンしています。<br /><br />
-                            彼らにとって愛とは、抽象的な概念ではなく「具体的な行動」です。手料理を振る舞う、サプライズを企画する、落ち込んでいる時に駆けつける。こうした献身的なやり取りこそが、彼らにとっての生きがいです。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">ESFJを支える3つのエネルギー源</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                                <div className="p-3 bg-white rounded-lg border border-orange-100 text-center shadow-sm">
-                                    <span className="font-bold text-orange-600 block mb-1">感謝という報酬</span>
-                                    <p>「ありがとう、助かったよ」という一言で、彼らは無限に頑張ることができます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">2. ESFJが恋愛で大切にしやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFJは、恋愛でも「気持ちが通い合っているか」「ちゃんと大切にされているか」をとても重視します。相手に尽くすこと自体は得意ですが、それが一方通行にならず、関係として循環しているかどうかがかなり大事です。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">分かりやすい愛情</h3>
+                                    <p className="text-sm mb-0">好き、ありがとう、助かったなどが言葉で返ってくると安心しやすいです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-orange-100 text-center shadow-sm">
-                                    <span className="font-bold text-orange-600 block mb-1">コミュニティの和</span>
-                                    <p>自分だけでなく、家族や友人も含めた全員が幸せであることを強く願います。</p>
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">関係のあたたかさ</h3>
+                                    <p className="text-sm mb-0">冷たさや距離感より、つながっている実感がある方が力を発揮しやすいです。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-orange-100 text-center shadow-sm">
-                                    <span className="font-bold text-orange-600 block mb-1">明確な役割意識</span>
-                                    <p>「自分はこの人の支えである」という自覚が、彼らのアイデンティティを強めます。</p>
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">相互の気遣い</h3>
+                                    <p className="text-sm mb-0">自分だけが与える側ではなく、返してもらえる感覚が重要になりやすいです。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                ESFJが本気になりやすいのは、自分の愛情表現を重いと切り捨てず、受け取って返してくれる相手です。安心感のある往復があると、関係にかなり深くコミットしやすくなります。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">2. 恋愛傾向：1万回の「大丈夫？」、1万回の「大好き」</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFJの恋愛は、非常に情熱的で、かつ安定しています。彼らは一度心を許したパートナーに対して、まるで聖母のような深い愛情を注ぎます。一方で、相手からの反応が薄いと急激に不安に陥る、デリケートな一面も併せ持っています。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">ESFJが「運命」を感じる瞬間</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">価値観やマナーが一致したとき：</span>
-                                    <p className="text-sm mt-1">「人として正しい行動」を共にできる相手に、深い安心感を覚えます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">頑張りが見えないと感じると疲れる</h3>
+                                    <p className="text-sm mb-0">
+                                        ESFJはかなり動けるタイプですが、それが無反応で流されると消耗しやすくなります。感謝が返らない関係は負担感が大きくなりやすいです。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">家族や友人に紹介され、歓迎されたとき：</span>
-                                    <p className="text-sm mt-1">二人の関係が社会的に認められることに、大きな喜びを感じます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">人間関係の板挟みで苦しくなりやすい</h3>
+                                    <p className="text-sm mb-0">
+                                        周囲との調和を気にしやすいため、恋人と家族や友人の関係が悪いとかなり疲れやすい面があります。自分だけで調整しようとして限界を迎えることもあります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">日々の些細な変化に気づいてもらえたとき：</span>
-                                    <p className="text-sm mt-1">髪型の変化や、少し疲れている様子に気づいてもらえると、「見ていてくれる」という実感が愛情に変わります。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">冷たい距離感に弱い</h3>
+                                    <p className="text-sm mb-0">
+                                        連絡の薄さや反応の少なさが続くと、「嫌われたのでは」と不安になりやすいです。相手が悪気なく距離を取っていても、心の負担になりやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">3. ラブキャラ診断で見るESFJ：究極のマリア</h2>
-                        <p className="mb-6">「ラブキャラ64」で分析すると、ESFJの「与える喜び」のメカニズムが分かります。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">4. ラブキャラ診断で見るESFJ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFJは、当サイトのラブキャラでは「憧れの先輩（LARO）」や「忠犬ハチ公（FCPE）」として説明しやすい場面があります。前者は人当たりのよさと安心感、後者は相手に尽くす一途さとして出やすいイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+                                    <h3 className="text-lg font-bold text-orange-800 mb-2">憧れの先輩（LARO）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        人を安心させる空気や、場を整える力が出るパターンです。誰にでも感じよく接しつつ、大切な人には特に細やかな配慮が向きやすくなります。
+                                    </p>
+                                </div>
+                                <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
+                                    <h3 className="text-lg font-bold text-pink-800 mb-2">忠犬ハチ公（FCPE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        好きな相手のために尽くし、期待に応えようとする献身が強く出るイメージです。分かりやすく愛情を注ぐタイプとして表れやすくなります。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                                <h3 className="text-lg font-bold text-orange-800 mb-2 flex items-center text-sm">
-                                    <Coffee className="w-4 h-4 mr-2" />
-                                    憧れの先輩（LARO）
-                                    <span className="text-xs ml-3 text-white bg-orange-500 px-2 py-0.5 rounded-full">究極のホスト</span>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">5. ESFJと関係を深めるコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">1. 気持ちを見える形で返す</span>
+                                    <p className="text-sm mt-2 mb-0">言葉でも態度でも、受け取っていることが見えるとESFJはかなり安心しやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">2. 与える役を一方的に固定しない</span>
+                                    <p className="text-sm mt-2 mb-0">頼るだけでなく、相手を労わる役にも回れると関係のバランスが取りやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">3. 人間関係のストレスを共有する</span>
+                                    <p className="text-sm mt-2 mb-0">周囲との板挟みをひとりで抱えさせないだけでも、ESFJの負担はかなり軽くなります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-pink-50 p-6 rounded-xl border border-pink-200 mb-10">
+                                <h3 className="text-lg font-bold text-pink-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    ESFJに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-orange-900">
-                                    自分のペース（RO）で場をコントロールしながら、さりげなく全員に手を差し伸べる（LA）ESFJ。その安定感と社会性は、パートナーにとってこの上ない自慢となります。
-                                </p>
+                                <ul className="text-sm space-y-2 text-pink-900 list-disc list-inside mb-0">
+                                    <li>気遣いを受け取るだけで返さないこと</li>
+                                    <li>連絡や反応を極端に薄くすること</li>
+                                    <li>世話を焼いてくれるのを便利に利用すること</li>
+                                    <li>人前で愛情表現や配慮を茶化すこと</li>
+                                </ul>
                             </div>
-                            <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100">
-                                <h3 className="text-lg font-bold text-pink-800 mb-2 flex items-center text-sm">
-                                    <Heart className="w-4 h-4 mr-2" />
-                                    忠犬ハチ公（FCPE）
-                                    <span className="text-xs ml-3 text-white bg-pink-500 px-2 py-0.5 rounded-full">愛情の泉</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-pink-900">
-                                    愛する人のために尽くし（FA）、その期待に120%で応えようとする（CE）ピュアな一面。この献身性は、時に自己犠牲に近いレベルにまで達することがあり、守ってあげたくなる魅力を放ちます。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">4. 実習：ESFJと「幸せのインフラ」を維持する方法</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ESFJは「必要とされないこと」を死ぬほど嫌います。彼らが一生懸命あなたの面倒を見ようとするのは、単なるお節介ではなく、愛の証明なのです。<br /><br />
-                            彼らとの関係を永遠にする鍵は、<span className="font-bold text-orange-600">「定期的な承認のリマインド」</span>です。彼らが何かをしてくれたら、その場で喜びを爆発させてください。そして、時々は彼らを「甘えさせる側」に回してあげてください。彼らは与え続けることに慣れていますが、本当は誰よりも「自分も守られたい」という願いを抱いています。その願いを叶えられるのは、世界であなた一人だけなのです。
-                        </p>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-orange-500 to-pink-500 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">世界に愛を広げるあなたの、ための診断</h2>
+                            <h2 className="text-2xl font-bold mb-4">尽くす恋の温度差を整理する</h2>
                             <p className="mb-8 font-medium">
-                                ESFJのあなたの深い献身を受け取り、<br />
-                                共に豊かな人生を歩める「最高の聞き手」は誰？
+                                ESFJらしい愛情表現や、<br />
+                                傷つきやすい場面を診断で確認できます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-orange-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                愛情相性診断をスタート
+                                無料診断をスタートする
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-orange-300" />
-                        <span>「家族の幸せを第一に考える私の性格、分かってくれて嬉しいです。」（40代女性）</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

@@ -1,150 +1,184 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Sparkles, Heart, Sun, MessageCircle, Star } from 'lucide-react';
+import { ArrowLeft, Info, Sparkles, Sun } from 'lucide-react';
+
+export const metadata: Metadata = {
+    title: 'ENFJ（主人公）の性格・恋愛傾向を解説 | AI Love Matcher',
+    description: 'ENFJの恋愛傾向を、支え方、背負い込みやすい場面、相性を見る視点、関係を安定させるコツまで整理します。',
+    alternates: {
+        canonical: '/articles/enfj',
+    },
+};
 
 export default function ENFJArticle() {
     return (
-        <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
+        <main className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                {/* Visual Header */}
-                <div className="bg-gradient-to-r from-orange-400 to-yellow-400 h-32 flex items-center justify-center">
-                    <Sun className="text-white w-12 h-12 animate-spin-slow" />
+                <div className="bg-gradient-to-r from-orange-500 to-yellow-400 h-32 flex items-center justify-center">
+                    <Sun className="text-white w-12 h-12" />
                 </div>
 
                 <div className="p-8 sm:p-12">
                     <Link
                         href="/articles"
-                        className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors mb-8 font-bold"
+                        className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors mb-8 font-bold"
                     >
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         記事一覧に戻る
                     </Link>
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                        【決定版】ENFJ（主人公）の性格・恋愛傾向を徹底解説
-                        <span className="block text-xl sm:text-2xl text-orange-600 mt-3 font-medium">～MBTI×ラブキャラで紐解く、愛と正義の「理想郷」～</span>
+                        ENFJ（主人公）の性格・恋愛傾向を解説
+                        <span className="block text-xl sm:text-2xl text-orange-600 mt-3 font-medium">人を支える力が強い人が、恋愛で背負い込みやすいもの</span>
                     </h1>
 
-                    <div className="prose prose-teal max-w-none text-gray-700">
-                        {/* AIO Summary Section */}
+                    <div className="prose prose-orange max-w-none text-gray-700">
                         <section className="bg-orange-50 p-6 rounded-2xl border border-orange-100 mb-10 shadow-sm">
                             <h2 className="text-lg font-bold text-orange-800 mb-4 flex items-center">
                                 <Sparkles className="w-5 h-5 mr-2" />
-                                クイック要約：AI（AIO）向けサマリー
+                                先に要点
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-orange-700">
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 概要：</span> 生まれながらのリーダー。他者の成長を心から喜び、導く情熱家。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 恋愛：</span> 相手を全肯定し、共に高みを目指す「利他的な愛」が基本スタイル。</li>
-                                </ul>
-                                <ul className="list-none p-0 m-0 space-y-2">
-                                    <li className="flex items-start"><span className="font-bold mr-2">● ラブキャラ：</span> 期待に応える勇者「忠犬ハチ公（FCPE）」や、無敵の「キャプテンライオン（LAPE）」。</li>
-                                    <li className="flex items-start"><span className="font-bold mr-2">● 攻略法：</span> 感謝を言葉で伝え、彼らが「弱音を吐ける唯一の場所」になる。</li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0 text-sm text-orange-700">
+                                <li>ENFJは、人の気持ちや場の空気を読みながら、関係を前向きに育てようとしやすいタイプです。</li>
+                                <li>恋愛では「一緒に良くなっていける感覚」と「感謝がちゃんと返ってくること」を重視します。</li>
+                                <li>頼れる印象が強い反面、無理をしていても表に出しにくく、気づいたときには疲れ切っていることがあります。</li>
+                                <li>気持ちを受け取ってくれる相手、弱さも見せていいと思える相手だと関係が安定しやすくなります。</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">1. ENFJの基本性格: 人を動かす前に、人を気にかけている</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFJは、周囲の人の状態をよく見ていて、必要そうな声かけや働きかけを自然に行いやすいタイプです。場を明るくする力や、誰かを励ます力が強いため、周囲からは頼れる人、面倒見のいい人として見られやすいでしょう。
+                            </p>
+                            <p className="mb-6 leading-relaxed">
+                                ただし、その親しみやすさの裏では、相手の気持ちや関係の流れをかなり細かく見ています。人を支えるのが得意な一方で、自分がしんどいときに助けを求めるのは遅れやすく、「平気そうに見えるのに実は消耗していた」ということも起こりやすいです。
+                            </p>
+                            <div className="bg-gray-50 p-6 rounded-xl mb-0">
+                                <h3 className="text-lg font-bold text-gray-800 mb-3">ENFJが誤解されやすいポイント</h3>
+                                <ul className="space-y-2 text-sm mb-0">
+                                    <li>社交的でも、誰にでも同じ深さで心を開いているわけではない</li>
+                                    <li>前向きに見えても、相手の反応にはかなり敏感</li>
+                                    <li>面倒見がいいぶん、自分の限界を後回しにしやすい</li>
                                 </ul>
                             </div>
                         </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">1. ENFJ（主人公）という「光の導き手」の本質</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFJ（主人公）は、その名の通り物語の中心で周囲を鼓舞し、団結させる力を持っています。彼らの原動力は「自分一人の幸せ」ではなく「関わるすべての人々の向上」にあります。<br /><br />
-                            相手が何を求めているかを直感的に察知し、それを実現するための最適なルートを提示する能力は随一です。しかし、その輝きの裏には「誰からも嫌われたくない」という強い承認欲求や、他者の感情を吸い込みすぎてしまう繊細さも隠されています。
-                        </p>
-
-                        <div className="bg-gray-50 p-6 rounded-xl mb-10">
-                            <h3 className="text-lg font-bold text-gray-800 mb-4">ENFJの隠れた苦悩</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-orange-600 block mb-1">過剰な自己犠牲</span>
-                                    <p>相手を優先しすぎるあまり、自分のニーズが分からなくなる「エモーショナル・バーンアウト（感情的燃え尽き）」を起こしやすいです。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">2. ENFJが恋愛で大切にしやすいこと</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFJは、ただ一緒にいて楽しいかどうかだけでなく、この関係が互いにとって良いものになっているかをよく見ています。相手を支えたい気持ちが強いので、自分の思いや行動がちゃんと届いているか、感謝や信頼が返ってくるかをかなり重視します。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">成長の実感</h3>
+                                    <p className="text-sm mb-0">二人で前に進んでいる感覚があると、ENFJは関係に強くコミットしやすくなります。</p>
                                 </div>
-                                <div className="p-3 bg-white rounded-lg border border-gray-100">
-                                    <span className="font-bold text-orange-600 block mb-1">「完璧な自分」の呪縛</span>
-                                    <p>理想的な人間であろうとするプレッシャーから、失敗や弱みを見せることに強い恐怖を感じることがあります。</p>
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">感謝の循環</h3>
+                                    <p className="text-sm mb-0">尽くすこと自体は苦ではありませんが、受け取られていない感覚が続くと消耗しやすくなります。</p>
+                                </div>
+                                <div className="border border-orange-100 rounded-xl p-4">
+                                    <h3 className="font-bold text-orange-700 mb-2">本音を出せる安心</h3>
+                                    <p className="text-sm mb-0">明るさや強さだけでなく、弱音も見せていい関係だと長続きしやすいです。</p>
                                 </div>
                             </div>
-                        </div>
+                            <p className="mb-0 leading-relaxed">
+                                ENFJが本気になりやすいのは、自分のやさしさを当然扱いせず、心配や努力まで見てくれる相手です。支える側でいることが多いからこそ、自分も安心して預けられる感覚が大きな意味を持ちます。
+                            </p>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">2. 恋愛傾向：100%の愛を注ぎ、100%の愛を望む</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFJの恋愛は、非常に献身的かつ情熱的です。「好きな人のためなら何でもできる」という精神で、相手の夢を自分の夢のようにサポートします。しかし、それは裏を返せば、相手にも同等の熱量や感謝を求めているというサインでもあります。
-                        </p>
-
-                        <h3 className="text-xl font-bold text-gray-800 mb-4">ENFJが「離れたくない」と思う相手の特徴</h3>
-                        <ul className="space-y-4 mb-10 list-none p-0">
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">1</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">リアクションが豊富で誠実な人：</span>
-                                    <p className="text-sm mt-1">彼らの献身に対して「ありがとう」「嬉しい」という言葉を惜しみなく使える相手に、深い信頼を寄せます。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">3. すれ違いやすい場面</h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">頑張りすぎてから急に疲れる</h3>
+                                    <p className="text-sm mb-0">
+                                        相手のために動けてしまうぶん、違和感があっても後回しにしやすいタイプです。気づいたときには余裕がなくなり、急に距離を置きたくなることがあります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">2</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">共に理想を語り合える人：</span>
-                                    <p className="text-sm mt-1">未来の話や、お互いの価値観について語り合う時間を何よりも大切にします。知的な刺激を求める側面も強いです。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">反応の薄さを拒絶と受け取りやすい</h3>
+                                    <p className="text-sm mb-0">
+                                        ENFJは相手の反応をよく見ています。感謝や共感が極端に少ない相手だと、嫌われているのではなくても「大事にされていない」と感じやすくなります。
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-start">
-                                <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mt-1 mr-3 flex-shrink-0 font-bold">3</span>
-                                <div>
-                                    <span className="font-bold border-b-2 border-orange-200">「素の自分」を受け入れてくれる人：</span>
-                                    <p className="text-sm mt-1">頑張りすぎて疲れた時、ダメな自分を「それでいいよ」と包み込んでくれる包容力に、何よりも救われます。</p>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">相手を立てすぎて本音が遅れる</h3>
+                                    <p className="text-sm mb-0">
+                                        雰囲気を壊したくない気持ちから、自分の不満を整えてから話そうとしがちです。結果として、小さな違和感が後から大きくなりやすい面があります。
+                                    </p>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">3. ラブキャラ診断で見るENFJ：包容力と決断の支配者</h2>
-                        <p className="mb-6">「ラブキャラ64」で分析すると、ENFJの「愛の質」がより浮き彫りになります。</p>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">4. ラブキャラ診断で見るENFJ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFJは、当サイトのラブキャラでは「忠犬ハチ公（FCPE）」や「キャプテンライオン（LAPE）」として説明しやすい場面があります。前者は相手への献身、後者は周囲を引っ張る包容力として出やすいイメージです。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
+                                    <h3 className="text-lg font-bold text-orange-800 mb-2">忠犬ハチ公（FCPE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        好きな相手の期待に応えたい気持ちが強く出ると、かなり献身的に動きます。やさしさだけでなく「期待を裏切りたくない責任感」として表れやすいのが特徴です。
+                                    </p>
+                                </div>
+                                <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
+                                    <h3 className="text-lg font-bold text-yellow-800 mb-2">キャプテンライオン（LAPE）として見える場面</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        相手を励まし、方向づけし、必要なときに前に出る力が強く出るパターンです。頼もしさになる一方で、自分ひとりで抱え込みすぎると疲れやすくなります。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
-                        <div className="space-y-6 mb-10">
-                            <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                                <h3 className="text-lg font-bold text-orange-800 mb-2 flex items-center">
-                                    <Star className="w-4 h-4 mr-2" />
-                                    忠犬ハチ公（FCPE）
-                                    <span className="text-xs ml-3 text-white bg-orange-400 px-2 py-0.5 rounded-full">献身タイプ</span>
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">5. ENFJと関係を深めるコツ</h2>
+                            <ol className="space-y-4 mb-10">
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">1. 気遣いを受け取ったら、言葉で返す</span>
+                                    <p className="text-sm mt-2 mb-0">小さなことでも反応が返ると、ENFJは安心して関わり続けやすくなります。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">2. 強い面だけでなく、疲れにも目を向ける</span>
+                                    <p className="text-sm mt-2 mb-0">頼れるからと任せきりにせず、「今日は休んでいいよ」と言える相手が合いやすいです。</p>
+                                </li>
+                                <li className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <span className="font-bold text-orange-700">3. 建設的に本音を話せる空気を作る</span>
+                                    <p className="text-sm mt-2 mb-0">否定し合うのではなく、改善できる前提で話せると、ENFJは本音を出しやすくなります。</p>
+                                </li>
+                            </ol>
+
+                            <div className="bg-amber-50 p-6 rounded-xl border border-amber-200 mb-10">
+                                <h3 className="text-lg font-bold text-amber-800 mb-3 flex items-center">
+                                    <Info className="w-5 h-5 mr-2" />
+                                    ENFJに対して避けたい接し方
                                 </h3>
-                                <p className="text-sm leading-relaxed text-orange-900">
-                                    相手に合わせて（FA）全力で尽くす一方で、自分も全力で甘えたい（CE）という可愛らしい一面を持つENFJ。このキャラが強く出ると、相手の期待に応えようと猛烈に努力しますが、その分「捨てられる不安」にも敏感になります。
-                                </p>
+                                <ul className="text-sm space-y-2 text-amber-900 list-disc list-inside mb-0">
+                                    <li>気遣いを当然のものとして受け取ること</li>
+                                    <li>相談だけを持ち込み、支え返す姿勢がないこと</li>
+                                    <li>人前で雑に否定したり、軽く扱ったりすること</li>
+                                    <li>「明るい人だから平気」と決めつけること</li>
+                                </ul>
                             </div>
-                            <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
-                                <h3 className="text-lg font-bold text-yellow-800 mb-2 flex items-center">
-                                    <Heart className="w-4 h-4 mr-2" />
-                                    キャプテンライオン（LAPE）
-                                    <span className="text-xs ml-3 text-white bg-yellow-500 px-2 py-0.5 rounded-full">最強タイプ</span>
-                                </h3>
-                                <p className="text-sm leading-relaxed text-yellow-900">
-                                    自分から積極的にリードし（LA）、相手のすべてを優しく受け止める（PE）。ENFJの真骨頂であるリーダーシップと包容力が融合した理想的なキャラクターです。どんな困難も二人で乗り越えようとする、頼もしすぎる相棒となります。
-                                </p>
-                            </div>
-                        </div>
+                        </section>
 
-                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">4. ENFJを「一生離したくない」と思わせる極意</h2>
-                        <p className="mb-6 leading-relaxed">
-                            ENFJと長く幸せに過ごすためのキーワードは<span className="font-bold text-orange-600">「心のデトックス」</span>です。<br /><br />
-                            彼らは外では常に「完璧な主人公」を演じています。家の中、あるいは二人きりの空間だけは、彼らが鎧を脱ぎ捨てて「ただの自分」に戻れるように配慮してください。彼らの愚痴や弱音を否定せず最後まで聞き、「いつも頑張ってくれてありがとう」とハグするだけで、彼らの愛のバッテリーはフルチャージされます。
-                        </p>
-
-                        {/* CTA */}
                         <section className="bg-gradient-to-br from-orange-500 to-yellow-500 p-10 rounded-3xl text-center text-white shadow-2xl">
-                            <h2 className="text-2xl font-bold mb-4">あなたの愛の物語、続きを診断しよう</h2>
+                            <h2 className="text-2xl font-bold mb-4">支える恋のクセを整理する</h2>
                             <p className="mb-8 font-medium">
-                                ENFJのあなたを心から癒やし、<br />
-                                共に成長できる最高のパートナーはどのタイプ？
+                                ENFJらしい尽くし方や、<br />
+                                背負い込みやすい場面を診断で見直せます。
                             </p>
                             <Link href="/diagnosis" className="inline-block bg-white text-orange-600 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                二人の相性を詳しく見る（無料）
+                                無料診断をスタートする
                             </Link>
                         </section>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4 text-orange-300" />
-                        <span>「夫がまさにこのタイプ。接し方のヒントが見つかりました！」（40代女性）</span>
-                    </div>
-                    <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-100 text-sm text-gray-500">
+                    この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
         </main>

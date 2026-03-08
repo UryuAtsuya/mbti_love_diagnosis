@@ -50,11 +50,39 @@ export default function AboutPage() {
                     </section>
 
                     <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">コンテンツ制作体制</h2>
+                        <p>
+                            記事や診断文の企画・構成・編集補助には AI ツールを活用する場合がありますが、公開前に人の目で読み直し、表現調整や内容確認を行っています。MBTI や恋愛傾向に関する情報は、一般的に知られている考え方や当サイト独自の整理軸をもとに、読み物として分かりやすく再編集しています。
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">記事づくりで大切にしていること</h2>
+                        <ul className="list-disc list-inside space-y-2">
+                            <li>読者が自分や相手を理解するヒントになること</li>
+                            <li>断定ではなく、傾向や考え方として伝えること</li>
+                            <li>短い結論だけでなく、背景や注意点まで補足すること</li>
+                            <li>過度に刺激的な表現や誤解を招く煽りを避けること</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">情報の位置づけ</h2>
+                        <p>
+                            当サイトの診断結果や記事は、医療・心理療法・法的助言を提供するものではなく、性格傾向やコミュニケーションを考えるための参考情報です。相性や恋愛の結果を保証するものではないため、最終的な判断はご自身の状況に照らしてご検討ください。
+                        </p>
+                    </section>
+
+                    <section>
                         <h2 className="text-xl font-bold text-teal-700 mb-4">お問い合わせ</h2>
                         <p>
                             ご質問やご要望は、<Link href="/contact" className="text-teal-600 hover:underline">お問い合わせページ</Link>よりお願いいたします。
                         </p>
                     </section>
+
+                    <div className="pt-8 border-t border-gray-100 text-sm text-gray-500">
+                        2026年3月8日 更新
+                    </div>
                 </div>
             </div>
         </main>
