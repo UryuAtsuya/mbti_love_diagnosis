@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { User, Heart, Sparkles, Loader2 } from 'lucide-react';
 import { LOVE_TYPES, MBTI_TYPES } from '@/app/constants';
 
-type FormData = {
+export type DiagnosisFormData = {
     user_name: string;
     user_gender: string;
     user_mbti: string;
@@ -17,7 +17,7 @@ type FormData = {
 };
 
 type InputFormProps = {
-    onStartDiagnosis: (data: FormData) => void;
+    onStartDiagnosis: (data: DiagnosisFormData) => void;
     loading: boolean;
     onMBTIChange: (userColor: string, partnerColor: string) => void;
 };
@@ -25,7 +25,7 @@ type InputFormProps = {
 export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: InputFormProps) {
     const [step, setStep] = useState(0); // 0: User, 1: Partner
     const [direction, setDirection] = useState(0);
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<DiagnosisFormData>({
         user_name: '',
         user_gender: '',
         user_mbti: '',

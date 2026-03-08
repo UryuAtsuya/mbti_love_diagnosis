@@ -8,7 +8,11 @@ type Props = {
 
 export default function AffiliateRecommendation({ userMBTI, partnerMBTI, partnerLoveType }: Props) {
     const userText = userMBTI ? `${userMBTI}の` : '';
-    const partnerText = partnerMBTI ? `「${partnerMBTI}」` : '相性の良い';
+    const partnerText = partnerMBTI
+        ? `「${partnerMBTI}」`
+        : partnerLoveType
+            ? `「${partnerLoveType}」`
+            : '相性の良い';
 
     return (
         <div className="bg-[#f0f8ff] p-5 rounded-xl mt-8 text-center">
@@ -33,6 +37,8 @@ export default function AffiliateRecommendation({ userMBTI, partnerMBTI, partner
             >
                 今すぐ相性の良い相手を探す ➤
             </a>
+            {/* A8 tracking pixel */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=45K6H6+9OALO2+5PVE+5YJRM" alt="" />
         </div>
     );

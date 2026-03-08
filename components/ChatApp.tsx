@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import InputForm from './InputForm';
+import type { DiagnosisFormData } from './InputForm';
 import ResultView from './ResultView';
 import ChatInterface from './ChatInterface';
 
@@ -34,10 +35,10 @@ export default function ChatApp() {
     const [messages, setMessages] = useState<Message[]>([]);
 
     // フォームデータ (診断に使用したデータ)
-    const [formData, setFormData] = useState<any>(null);
+    const [formData, setFormData] = useState<DiagnosisFormData | null>(null);
 
     // --- API通信処理 ---
-    const callDify = async (queryText: string, inputs: any = {}) => {
+    const callDify = async (queryText: string, inputs: Partial<DiagnosisFormData> = {}) => {
         setLoading(true);
         try {
             const res = await fetch('/api/chat', {
@@ -69,7 +70,7 @@ export default function ChatApp() {
     };
 
     // --- Phase 1 -> 2: 診断実行 ---
-    const handleStartDiagnosis = async (formData: any) => {
+    const handleStartDiagnosis = async (formData: DiagnosisFormData) => {
         // 固定プロンプトで診断リクエスト
         const query = `二人の相性を診断してください。
 ユーザー: ${formData.user_name} (${formData.user_gender}, ${formData.user_mbti}, ${formData.user_love_type})
@@ -116,7 +117,7 @@ export default function ChatApp() {
     };
 
     // --- Phase 1 -> 2: 診断実行 (ラッパー) ---
-    const handleStartDiagnosisWrapper = async (data: any) => {
+    const handleStartDiagnosisWrapper = async (data: DiagnosisFormData) => {
         setFormData(data);
         setStep('diagnosing');
         await handleStartDiagnosis(data);

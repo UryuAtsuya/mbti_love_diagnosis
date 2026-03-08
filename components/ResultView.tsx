@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageCircleHeart, Share2 } from 'lucide-react';
+import { MessageCircleHeart } from 'lucide-react';
 import AffiliateRecommendation from './AffiliateRecommendation';
+import type { DiagnosisFormData } from './InputForm';
 
 type DiagnosisResult = {
     score: number;
@@ -13,7 +14,7 @@ type DiagnosisResult = {
 type ResultViewProps = {
     result: DiagnosisResult;
     onConsult: (initialMessage?: string) => void;
-    formData?: any;
+    formData?: DiagnosisFormData | null;
 };
 
 export default function ResultView({ result, onConsult, formData }: ResultViewProps) {

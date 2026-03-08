@@ -49,9 +49,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* admax */}
-        <script src="https://adm.shinobi.jp/s/ea556030d348073765e839541010e18e"></script>
-        {/* admax */}
+        <Script
+          id="admax"
+          src="https://adm.shinobi.jp/s/ea556030d348073765e839541010e18e"
+          strategy="afterInteractive"
+        />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7G66GB972Z"

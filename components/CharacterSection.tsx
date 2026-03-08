@@ -64,7 +64,6 @@ export default function CharacterSection() {
                                             </span>
                                         </div>
                                         <p className="text-xs text-gray-600 leading-relaxed">
-                                            {/* @ts-ignore: desc property added dynamically */}
                                             {type.desc}
                                         </p>
                                     </div>
