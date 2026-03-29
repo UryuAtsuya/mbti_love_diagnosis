@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, Heart, Activity, ShieldCheck } from 'lucide-react';
 import { ArrowLeft } from 'lucide-react';
+import { articles as articleData } from '@/lib/articleRegistry';
 
 export const metadata: Metadata = {
     title: '恋愛・相性コラム | AI Love Matcher',
@@ -11,156 +12,17 @@ export const metadata: Metadata = {
     },
 };
 
+const iconMap: Record<string, React.ReactNode> = {
+    'mbti-compatibility-ranking': <Activity className="w-6 h-6 text-rose-500" />,
+    'love-character-theory': <ShieldCheck className="w-6 h-6 text-indigo-500" />,
+    'truth-of-compatibility': <BrainIcon className="w-6 h-6 text-purple-500" />,
+    'idol-compatibility': <Heart className="w-6 h-6 text-pink-500" />,
+    'romance-strategy': <Activity className="w-6 h-6 text-orange-500" />,
+};
+const defaultIcon = <BookOpen className="w-6 h-6 text-teal-500" />;
+
 export default function ArticlesIndex() {
-    const articles = [
-        {
-            title: 'MBTI×ラブタイプ相性ランキングTOP5と読み解き方',
-            description: '会話の噛み合いやすさ、生活リズム、支え合いの観点から相性の高い組み合わせを整理。ランキングの見方と注意点も解説します。',
-            slug: 'mbti-compatibility-ranking',
-            icon: <Activity className="w-6 h-6 text-rose-500" />,
-            tag: 'ランキング'
-        },
-        {
-            title: '【理論編】ラブキャラ64診断とは? MBTIと合わせて読む恋愛ガイド',
-            description: 'ラブキャラ64が何を見る整理軸か、MBTIとどう役割分担するのかを、恋愛の実例に沿って解説します。',
-            slug: 'love-character-theory',
-            icon: <ShieldCheck className="w-6 h-6 text-indigo-500" />,
-            tag: '理論・解説'
-        },
-        {
-            title: 'MBTI×ラブキャラで見直す、相性の考え方',
-            description: '性格が似ていても恋愛でズレる理由を、会話・距離感・安心ポイントの観点から整理します。',
-            slug: 'truth-of-compatibility',
-            icon: <BrainIcon className="w-6 h-6 text-purple-500" />,
-            tag: '相性の真実'
-        },
-        {
-            title: 'MBTI 16タイプ別・推しに惹かれやすい理由を解説',
-            description: '自分がどんな芸能人やアイドルに惹かれやすいのかを、MBTIとラブキャラの視点で読み解きます。',
-            slug: 'idol-compatibility',
-            icon: <Heart className="w-6 h-6 text-pink-500" />,
-            tag: '推し活・アイドル'
-        },
-        {
-            title: '【実践編】MBTI×ラブキャラで読み解く恋愛コミュニケーション',
-            description: '距離の縮め方、会話の合わせ方、すれ違い後の修復まで、タイプ別の実践ポイントを整理します。',
-            slug: 'romance-strategy',
-            icon: <Activity className="w-6 h-6 text-orange-500" />,
-            tag: '恋愛攻略・実戦'
-        },
-        {
-            title: '【決定版】INFJ（提唱者）の性格・恋愛傾向を徹底解説',
-            description: '深い洞察力と強い信念を持つINFJの恋愛スタイルを、ラブキャラ診断でさらに深く掘り下げます。',
-            slug: 'infj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ENFP（広報運動家）の性格・恋愛傾向を徹底解説',
-            description: '自由と情熱を愛するENFPの魅力を解剖。彼らが真に求めるパートナーシップとは？',
-            slug: 'enfp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ENFJ（主人公）の性格・恋愛傾向を徹底解説',
-            description: '天性のリーダーENFJ。周囲を導き、献身的に尽くす彼らの愛し方を詳しく解説します。',
-            slug: 'enfj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】INFP（仲介者）の性格・恋愛傾向を徹底解説',
-            description: '感受性豊かな理想主義者、INFP。魂の共鳴を求める彼らの愛の形。',
-            slug: 'infp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】INTJ（建築家）の性格・恋愛傾向を徹底解説',
-            description: '冷静沈着な戦略家、INTJ。知的な共鳴を求める彼らの恋愛観と攻略法を伝授。',
-            slug: 'intj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ENTJ（指揮官）の性格・恋愛傾向を徹底解説',
-            description: '圧倒的な決断力を持つENTJ。彼らと対等な「戦友」になるための戦略を公開。',
-            slug: 'entj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】INTP（論理学者）の性格・恋愛傾向を徹底解説',
-            description: '独自の論理で生きるINTP。掴みどころのない彼らの心を射止めるためのヒント。',
-            slug: 'intp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ENTP（討論者）の性格・恋愛傾向を徹底解説',
-            description: '常に変化と刺激を求めるENTP。彼らを飽きさせない、知的な駆け引きの極意。',
-            slug: 'entp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ISFP（冒険家）の性格・恋愛傾向を徹底解説',
-            description: '独自の感性で世界を彩るISFP。言葉を超えた深い繋がりを築く方法。',
-            slug: 'isfp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ESFP（エンターテイナー）の性格・恋愛傾向を徹底解説',
-            description: '今この瞬間を全力で楽しむESFP。彼らの明るさの裏にある繊細な内面を解説。',
-            slug: 'esfp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ISTP（巨匠）の性格・恋愛傾向を徹底解説',
-            description: '冷静で実利的なISTP。不器用な優しさを持つ彼らの「沼る」攻略ポイント。',
-            slug: 'istp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ISTJ（管理者）の性格・恋愛傾向を徹底解説',
-            description: '誠実で安定感抜群のISTJ。将来を見据えた、堅実な愛を育むためのステップ。',
-            slug: 'istj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ISFJ（擁護者）の性格・恋愛傾向を徹底解説',
-            description: '究極の優しさを誇るISFJ。彼らの献身を支え、深い絆を結ぶためのアドバイス。',
-            slug: 'isfj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ESTJ（幹部）の性格・恋愛傾向を徹底解説',
-            description: '頼れるリーダーESTJ。秩序を重んじる彼らの信頼を勝ち取るための具体的戦略。',
-            slug: 'estj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ESFJ（領事）の性格・恋愛傾向を徹底解説',
-            description: '社交的で思いやりに満ちたESFJ。彼らの承認欲求を満たし、深い信頼を得る方法。',
-            slug: 'esfj',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        },
-        {
-            title: '【決定版】ESTP（起業家）の性格・恋愛傾向を徹底解説',
-            description: 'スリルを愛する冒険家、ESTP。最高に刺激的で最強の「戦友」になる方法。',
-            slug: 'estp',
-            icon: <BookOpen className="w-6 h-6 text-teal-500" />,
-            tag: '16タイプ解説'
-        }
-    ];
+    const articles = articleData.map((a) => ({ ...a, icon: iconMap[a.slug] ?? defaultIcon }));
 
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">

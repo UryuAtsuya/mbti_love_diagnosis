@@ -1,32 +1,10 @@
 import type { MetadataRoute } from 'next';
+import { articles } from '@/lib/articleRegistry';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://mbti-lovetype.com';
-    const articleSlugs = [
-        'mbti-compatibility-ranking',
-        'love-character-theory',
-        'truth-of-compatibility',
-        'idol-compatibility',
-        'romance-strategy',
-        'infj',
-        'enfp',
-        'enfj',
-        'infp',
-        'intj',
-        'entj',
-        'intp',
-        'entp',
-        'isfp',
-        'esfp',
-        'istp',
-        'istj',
-        'isfj',
-        'estj',
-        'esfj',
-        'estp',
-    ];
 
-    const articleEntries: MetadataRoute.Sitemap = articleSlugs.map((slug) => ({
+    const articleEntries: MetadataRoute.Sitemap = articles.map(({ slug }) => ({
         url: `${baseUrl}/articles/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
