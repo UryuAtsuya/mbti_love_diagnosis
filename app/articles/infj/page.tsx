@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Info, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'INFJ（提唱者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function INFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="INFJ（提唱者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="INFJの恋愛傾向を、距離感、安心ポイント、すれ違いやすい場面、ラブキャラの見方まで含めて整理します。"
+                slug="infj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-teal-600 to-teal-400 h-32 flex items-center justify-center">
                     <BookOpen className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function INFJArticle() {
                                     <li>準備なく大勢の場へ引っ張ること</li>
                                     <li>繊細さを弱さとして軽く扱うこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">消極的に見えることはありますが、関心がないわけではありません。相手の内面をじっくり見てから距離を縮める傾向があるため、慎重に映りやすいだけです。信頼できると感じた相手には、深い愛情を向けることが多いです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">一般的にはENFPやENTPなど、INFJの内面に興味を持って踏み込んでくれるタイプと相性が良いとされます。ただし、実際の相性はMBTIだけでは測りきれません。Love Characterで恋愛スタイルも含めて確認すると、より立体的に理解しやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFJが突然距離を置くのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">いわゆる「ドアスラム」と呼ばれる現象で、長期間我慢を重ねた結果、限界に達して急に離れるケースがあります。本人にとっても急な決断ではなく、内側ではずっと葛藤していたことが多いです。日頃から安心して本音を出せる空気があると予防しやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFJに愛情を伝えるにはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">派手なサプライズより、日常のなかで気持ちを丁寧に言葉にする方が届きやすい傾向があります。「あなたの話をちゃんと聞きたい」「無理しなくていいよ」といった、安心感を与える言葉が信頼につながりやすいです。</p>
+                                </div>
                             </div>
                         </section>
 

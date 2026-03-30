@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, PartyPopper, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ESFP（エンターテイナー）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ESFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-pink-50 to-yellow-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ESFP（エンターテイナー）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ESFPの恋愛傾向を、明るさの裏の繊細さ、好意の伝え方、反応を重視する理由、長続きのコツまで整理します。"
+                slug="esfp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-pink-500 to-yellow-400 h-32 flex items-center justify-center">
                     <PartyPopper className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ESFPArticle() {
                                     <li>楽しさを与える役だけを期待すること</li>
                                     <li>人前で感性やテンションを茶化すこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">Q. ESFPは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">むしろ積極的に好意を表現しやすいタイプです。ただし、相手からの反応が薄いと感じると急に引いてしまう傾向があります。勢いがあるように見えても、受け取ってもらえる実感がないと踏み出しにくくなりやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">Q. ESFPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">一般的にはISTPやISTJが挙げられることがありますが、実際の相性はMBTIだけでは測れません。ESFPの場合、感情をきちんと受け取ってくれる相手、楽しさだけでなく弱さも共有できる相手との相性が良くなりやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">Q. ESFPの「明るさ」は無理をしているのですか？</h3>
+                                    <p className="text-sm mb-0">基本的には自然体で明るいタイプですが、周囲から元気役を期待され続けると疲弊しやすい面があります。落ち込んでいる時期にも明るくふるまおうとしてしまうことがあるため、無理をしている可能性にも気づいてあげることが大切です。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-pink-700 mb-2">Q. ESFPとの関係がマンネリ化したときはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">ESFPは新しい体験や刺激に価値を感じやすいタイプです。日常に小さな変化やサプライズを取り入れると関係の温度が戻りやすくなります。一緒に新しい場所へ行く、初めてのことに挑戦するなど、共通の体験を増やすことが効果的です。</p>
+                                </div>
                             </div>
                         </section>
 

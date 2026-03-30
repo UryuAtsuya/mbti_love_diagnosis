@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Sparkles, Wrench } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ISTP（巨匠）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ISTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ISTP（巨匠）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ISTPの恋愛傾向を、自由を重視する理由、行動で愛情が出る場面、すれ違いの原因、関係を続けるコツまで整理します。"
+                slug="istp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-slate-600 to-emerald-500 h-32 flex items-center justify-center">
                     <Wrench className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ISTPArticle() {
                                     <li>ひとり時間や趣味を軽く扱うこと</li>
                                     <li>不器用さを愛情のなさと決めつけること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-emerald-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISTPは恋愛に興味がないのですか？</h3>
+                                    <p className="text-sm mb-0">興味がないのではなく、表現方法が独特なだけです。ISTPは言葉よりも行動で愛情を示しやすく、さりげない手助けや問題解決が好意のサインであることが多いです。気持ちを言語化するのが苦手なだけで、内面には深い感情を持っています。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISTPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ESFJやENFJなど、ISTPの寡黙さを理解しつつ関係に温かみを加えるタイプが挙げられます。ただし、ラブキャラで「距離感の好み」が一致しているかを確認することで、MBTI単体よりも正確な相性が見えてきます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISTPが急に冷たくなるのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">ISTPは感情的な場面で処理が追いつかないとき、一時的に距離を置く傾向があります。冷めたのではなく、自分の中で整理する時間が必要なだけのケースがほとんどです。追い詰めずに待つことで、自然に戻ってくることが多いです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISTPとの会話を深めるにはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">ISTPは抽象的な話題よりも、具体的な体験や趣味に関する話題で盛り上がりやすいです。一緒に何かを作る、体験する、問題を解くなど「並走型」の会話スタイルだと、ISTPは自然と心を開きやすくなります。</p>
+                                </div>
                             </div>
                         </section>
 

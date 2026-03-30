@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, MessageCircle, Sparkles, Trophy, Zap } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'MBTI相性ランキングTOP5 | AI Love Matcher',
@@ -61,6 +62,11 @@ const rankings = [
 export default function CompatibilityRankingArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-rose-50 to-orange-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="MBTI相性ランキングTOP5 | AI Love Matcher"
+                description="MBTIとラブタイプの補完関係をもとに、会話、生活リズム、支え合いの観点から相性の高い組み合わせを整理しました。"
+                slug="mbti-compatibility-ranking"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-rose-500 to-orange-400 h-48 flex flex-col items-center justify-center text-white">
                     <Trophy className="w-16 h-16 mb-4 animate-bounce" />
@@ -143,6 +149,28 @@ export default function CompatibilityRankingArticle() {
                             <p className="mb-0 leading-relaxed">
                                 逆に高順位の組み合わせでも、魅力だと思っていた差がストレスに変わることはあります。ランキングは、相性の高さを競うためではなく、<span className="font-bold text-rose-600">どこが噛み合いやすく、どこに注意が必要かを把握するための地図</span>として読むのがおすすめです。
                             </p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-xl font-bold text-gray-800 border-l-4 border-rose-500 pl-4 mb-4">よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ランキング下位の組み合わせでも大丈夫ですか？</h3>
+                                    <p className="text-sm mb-0">もちろん大丈夫です。ランキングは「すれ違いが起きやすいポイントの数」を示しているだけで、「うまくいかない」という意味ではありません。すれ違いポイントを知って対処できれば、むしろ深い関係を築けるケースも多くあります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. 同じMBTI同士の相性は良いのですか？</h3>
+                                    <p className="text-sm mb-0">会話のテンポや価値観が近いため、居心地の良さは感じやすいです。ただし「似すぎ」ゆえに関係が停滞したり、同じ弱点を補い合えなかったりするケースもあります。ラブキャラの組み合わせ次第で大きく変わるため、一概には言えません。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. 相性スコアと実際の恋愛は一致しますか？</h3>
+                                    <p className="text-sm mb-0">スコアは「自然体でいたとき」の噛み合いやすさを数値化したものです。実際の恋愛ではコミュニケーションの努力や生活環境、タイミングなど多くの要因が加わるため、スコアはあくまで参考の一つとして活用するのが適切です。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ランキングに載っていない組み合わせはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">ランキングはTOP5を紹介していますが、すべての組み合わせに良い面と注意点があります。載っていない組み合わせは、それぞれのタイプ別記事を読み比べるか、実際に診断を受けて個別のアドバイスを確認するのがおすすめです。</p>
+                                </div>
+                            </div>
                         </section>
 
                         <section className="bg-gradient-to-br from-rose-600 to-rose-400 p-10 rounded-3xl text-center text-white shadow-2xl mt-12">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Briefcase, Info, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ISTJ（管理者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ISTJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ISTJ（管理者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ISTJの恋愛傾向を、誠実さの出方、安定を重視する理由、感情表現が控えめな場面、長続きのコツまで整理します。"
+                slug="istj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-slate-600 to-slate-400 h-32 flex items-center justify-center">
                     <Briefcase className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ISTJArticle() {
                                     <li>慎重さを頭ごなしに否定すること</li>
                                     <li>責任感を当然のものとして扱うこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-slate-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-slate-700 mb-2">Q. ISTJは恋愛に興味がないように見えるのですが？</h3>
+                                    <p className="text-sm mb-0">ISTJは感情を表に出すのが得意ではないため、興味がないように見えることがあります。しかし内面では相手のことを真剣に考えており、行動で誠実さを示すことが多いタイプです。言葉の少なさは関心の薄さではなく、性質によるものです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-slate-700 mb-2">Q. ISTJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ESFPやENFPなど、ISTJの堅実さに安心しつつ関係に活気をもたらすタイプが相性良好とされています。ただし、恋愛での安心の求め方は人それぞれなので、ラブキャラも併せて確認することで具体的な相性像が見えてきます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-slate-700 mb-2">Q. ISTJに変化を受け入れてもらうにはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">ISTJはルーティンや安定を好むため、急な変化にはストレスを感じやすいです。事前に理由と見通しを伝え、準備する時間を与えると受け入れやすくなります。「突然」を避け「予告」を意識するのがポイントです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-slate-700 mb-2">Q. ISTJの愛情表現はどこで感じ取れますか？</h3>
+                                    <p className="text-sm mb-0">甘い言葉よりも、時間通りに迎えに来る、約束を忘れない、体調を気にかけるなどの「地味だが確実な行動」に現れます。派手さはありませんが、継続的で裏切らない愛情表現がISTJの強みです。</p>
+                                </div>
                             </div>
                         </section>
 

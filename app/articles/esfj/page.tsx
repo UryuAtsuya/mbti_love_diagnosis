@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Sparkles, Users } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ESFJ（領事）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ESFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ESFJ（領事）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ESFJの恋愛傾向を、愛情表現の多さ、承認を求めやすい理由、傷つきやすい場面、長続きのコツまで整理します。"
+                slug="esfj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-orange-500 to-pink-500 h-32 flex items-center justify-center">
                     <Users className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ESFJArticle() {
                                     <li>世話を焼いてくれるのを便利に利用すること</li>
                                     <li>人前で愛情表現や配慮を茶化すこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ESFJは恋愛に積極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">ESFJは相手を思いやる気持ちが行動に出やすいため、周囲からは積極的に見えることが多いです。ただし本人は「相手に喜んでほしい」という気持ちが先にあり、自分の気持ちを伝えることには慎重になる傾向もあります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ESFJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">一般的にはISTP・ISFPなど、ESFJの世話好きな面を自然に受け取れるタイプが挙げられます。ただし、MBTIだけでなくラブキャラ（愛情表現の出し方）も見ることで、より実態に近い相性が分かります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ESFJが「重い」と言われやすいのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">ESFJは相手のことを考えて先回りして行動する傾向があり、相手が距離を取りたいタイプだと「干渉されている」と感じさせてしまうことがあります。好意の表し方が合わないだけで、愛情の深さ自体が問題ではないことがほとんどです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ESFJが恋愛で疲れやすいのはどんなときですか？</h3>
+                                    <p className="text-sm mb-0">相手のために尽くしても感謝や反応が返ってこない場面が続くと、ESFJは強い消耗を感じやすいです。「やってもらって当然」という態度の相手とは、長期的に疲弊しやすい傾向があります。</p>
+                                </div>
                             </div>
                         </section>
 

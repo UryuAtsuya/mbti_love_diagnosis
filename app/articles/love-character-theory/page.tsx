@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Heart, ShieldCheck, Sparkles, Zap } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ラブキャラ64診断とは? MBTIと合わせて読むための理論ガイド | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function LoveCharacterGuide() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ラブキャラ64診断とは? MBTIと合わせて読むための理論ガイド | AI Love Matcher"
+                description="ラブキャラ64を、MBTIとどう違うのか、何を見るための整理軸なのかという観点でわかりやすく解説します。"
+                slug="love-character-theory"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-indigo-600 to-purple-600 h-32 flex items-center justify-center">
                     <ShieldCheck className="text-white w-12 h-12" />
@@ -144,6 +150,26 @@ export default function LoveCharacterGuide() {
                         <p className="mb-6 leading-relaxed">
                             診断の一番良い使い方は、自分や相手を決めつけることではなく、<span className="font-bold text-indigo-600">話し合う材料を増やすこと</span>です。読んで終わりにせず、行動に1つだけ落とし込むと実感しやすくなります。
                         </p>
+
+                        <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-600 pl-4 mb-6">よくある質問</h2>
+                        <div className="space-y-4 mb-10">
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-indigo-700 mb-2">Q. ラブキャラとMBTIの違いは何ですか？</h3>
+                                <p className="text-sm mb-0">MBTIは思考・行動パターンの全般的な傾向を見る指標であるのに対し、ラブキャラは恋愛における距離感・安心の求め方・愛情表現の出し方に特化した整理軸です。同じMBTIタイプでもラブキャラが異なれば、恋愛の振る舞いは大きく変わります。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-indigo-700 mb-2">Q. ラブキャラの結果が自分のイメージと違います</h3>
+                                <p className="text-sm mb-0">ラブキャラは「自覚している自分」ではなく「恋愛で無意識に出やすい傾向」を拾う設計です。普段の自分と違って見える場合は、過去の恋愛を振り返ってみると腑に落ちることが多いです。しっくり来ない部分は保留にして構いません。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-indigo-700 mb-2">Q. ラブキャラは変わることがありますか？</h3>
+                                <p className="text-sm mb-0">はい、恋愛経験や環境の変化によってラブキャラは変わることがあります。特に大きな恋愛を経験した後や、生活環境が大きく変わった時期には結果が変動しやすいです。半年～1年ごとに再診断してみると、自分の変化を確認できます。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-indigo-700 mb-2">Q. ラブキャラ診断はどんな場面で活用できますか？</h3>
+                                <p className="text-sm mb-0">パートナーとのすれ違いの原因を探るとき、自分の恋愛パターンを整理したいとき、新しい関係で気をつけるべきポイントを知りたいときに効果的です。話し合いのきっかけや、自己理解を深めるツールとして使うのがおすすめです。</p>
+                            </div>
+                        </div>
 
                         <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-600 pl-4 mb-6">6. 断定しすぎないための注意点</h2>
                         <p className="mb-6 leading-relaxed">

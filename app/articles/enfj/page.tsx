@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Sparkles, Sun } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ENFJ（主人公）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ENFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ENFJ（主人公）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ENFJの恋愛傾向を、支え方、背負い込みやすい場面、相性を見る視点、関係を安定させるコツまで整理します。"
+                slug="enfj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-orange-500 to-yellow-400 h-32 flex items-center justify-center">
                     <Sun className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ENFJArticle() {
                                     <li>人前で雑に否定したり、軽く扱ったりすること</li>
                                     <li>「明るい人だから平気」と決めつけること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ENFJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">むしろ積極的に関わろうとする傾向があります。ただし、相手のために動きすぎて自分の気持ちを後回しにしやすい面もあります。尽くすことが自然にできるタイプですが、その分だけ疲れを溜めやすい点に注意が必要です。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ENFJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">INFPやISFPなど、ENFJの気遣いに気づいて感謝を返してくれるタイプと安定しやすいとされます。ただし、MBTIだけで相性は決まりません。Love Characterで愛情の出し方や受け取り方まで見ると、よりフィットする相手が分かりやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ENFJが尽くしすぎて疲れるのを防ぐには？</h3>
+                                    <p className="text-sm mb-0">ENFJは相手の期待に応えようとする力が強いため、意識的に「自分のための時間」を確保することが大切です。パートナー側も、ENFJの頑張りを当たり前にせず、こまめに言葉で感謝を返すことで負担が軽減されやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-orange-700 mb-2">Q. ENFJが本音を言ってくれないと感じたらどうすればいい？</h3>
+                                    <p className="text-sm mb-0">ENFJは場の雰囲気を壊したくないという気持ちが強く、不満があっても飲み込んでしまうことがあります。「何でも言っていいよ」と伝えるだけでなく、批判されても受け止める姿勢を見せることで、少しずつ本音を出しやすくなります。</p>
+                                </div>
                             </div>
                         </section>
 

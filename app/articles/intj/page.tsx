@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Brain, Lock, ShieldCheck, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'INTJ（建築家）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function INTJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="INTJ（建築家）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="INTJの恋愛傾向を、知的な相性、自立の感覚、すれ違いやすい点、ラブキャラの見方まで含めて整理します。"
+                slug="intj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-indigo-600 to-purple-500 h-32 flex items-center justify-center">
                     <Brain className="text-white w-12 h-12" />
@@ -152,6 +158,28 @@ export default function INTJArticle() {
                                     <p className="text-sm mt-2 mb-0">「察して」より、「こう言ってもらえるとうれしい」と具体化した方が、INTJには伝わりやすくなります。</p>
                                 </li>
                             </ol>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. INTJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">恋愛に興味がないわけではなく、効率の悪いアプローチを避ける傾向があります。「この人なら長期的に良い関係を築けそうだ」と判断できると、自分から動くこともあります。感情より論理で関係を評価しやすい点が、消極的に見える原因になりやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. INTJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ENFPやENTPなど、知的な刺激を与えてくれつつ感情面を補ってくれるタイプと相性が良いとされることが多いです。ただし、MBTIだけで相性は決まりません。Love Characterで信頼の築き方や距離感の好みまで確認すると、より精度の高い判断ができます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. INTJが冷たく感じるのは愛情がないから？</h3>
+                                    <p className="text-sm mb-0">INTJは愛情を言葉や態度で頻繁に表現するのが得意ではない傾向があります。しかし、問題解決や将来設計を一緒に考えてくれる行動そのものが、INTJなりの愛情表現であることが多いです。表面的な温度感だけで判断しない方が関係は安定します。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. INTJに「察してほしい」は通じますか？</h3>
+                                    <p className="text-sm mb-0">INTJは論理的に考える力が強い一方で、暗黙の感情的サインを読み取るのが苦手なことがあります。「こうしてくれると嬉しい」と具体的に伝えた方が、INTJにとっては行動に移しやすく、結果的に関係の満足度が上がりやすくなります。</p>
+                                </div>
+                            </div>
                         </section>
 
                         <section className="bg-gradient-to-br from-indigo-600 to-purple-600 p-10 rounded-3xl text-center text-white shadow-2xl">

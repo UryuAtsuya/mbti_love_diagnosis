@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Heart, MessageCircle, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'INFP（仲介者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function INFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="INFP（仲介者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="INFPの恋愛傾向を、理想の持ち方、傷つきやすい場面、ラブキャラの見方、長続きしやすい関わり方まで整理します。"
+                slug="infp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-teal-400 to-emerald-400 h-32 flex items-center justify-center">
                     <Sparkles className="text-white w-12 h-12" />
@@ -151,6 +157,28 @@ export default function INFPArticle() {
                                     <p className="text-sm mt-2 mb-0">距離が必要な時期があっても、関係そのものを否定しているとは限りません。静かな時間がある方が戻ってきやすくなります。</p>
                                 </li>
                             </ol>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-teal-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFPは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">内面では恋愛への関心が強い傾向がありますが、理想が高いために行動に移すまでに時間がかかりやすいです。「この人なら自分の世界観を受け入れてくれそう」と感じるまで慎重になることが多く、消極的というよりは選択的と言えます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ENFJやINFJなど、感情を丁寧に扱ってくれるタイプと居心地が良くなりやすいとされます。ただし、相性はMBTIだけでは分かりません。Love Characterで価値観の重なり方や愛情表現のスタイルまで確認すると、より自分に合う相手が見えやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFPが理想と現実のギャップに苦しむときはどうすればいい？</h3>
+                                    <p className="text-sm mb-0">INFPは恋愛に対して理想像を持ちやすく、現実とのズレに落ち込むことがあります。完璧な関係を目指すより、「今この人と一緒にいて安心できるか」に目を向けると、関係がより安定しやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-teal-700 mb-2">Q. INFPが黙り込んだときはどう接すればいい？</h3>
+                                    <p className="text-sm mb-0">感情が大きく動いたとき、INFPはすぐには言葉にできないことがあります。無理に話させようとするより、そばにいながら待つ姿勢が効果的です。「話したくなったらいつでも聞くよ」と伝えるだけで、安心感につながりやすくなります。</p>
+                                </div>
+                            </div>
                         </section>
 
                         <section className="bg-gradient-to-br from-gray-800 to-gray-900 p-10 rounded-3xl text-center text-white shadow-2xl">

@@ -15,27 +15,20 @@ export default function AffiliateRecommendation({ userMBTI, partnerMBTI, partner
             : '相性の良い';
 
     return (
-        <div className="bg-[#f0f8ff] p-5 rounded-xl mt-8 text-center">
-            <h3 className="text-[#ff4081] mb-2.5 font-bold text-lg">
-                ⚠️ {userText}あなたと相性最高なのは...
-            </h3>
-
-            <p className="font-bold mb-5 text-gray-800 leading-relaxed">
-                直感型で優しい{partnerText}タイプの人です。<br />
-                実は、このタイプが最も多く登録しているのが<br />
-                <span className="bg-gradient-to-t from-[#ffff00] to-transparent bg-[length:100%_40%] bg-bottom bg-no-repeat">
-                    友だちから始まる恋愛「Wippy」
-                </span>
-                です。
+        <div className="bg-gray-50 border border-gray-200 p-5 rounded-xl mt-8">
+            <p className="text-xs text-gray-400 mb-3">PR</p>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                {userText}あなたの恋愛タイプに合った出会いを探してみませんか？
+                友だちから始まる恋愛マッチングアプリ「Wippy」では、{partnerText}タイプの方も多く利用されています。
             </p>
 
             <a
                 href="https://px.a8.net/svt/ejp?a8mat=45K6H6+9OALO2+5PVE+5YJRM"
                 target="_blank"
                 rel="nofollow noopener"
-                className="block bg-[#ff4081] text-white py-4 px-0 no-underline font-bold rounded-full shadow-[0_4px_0_#c6285e] hover:translate-y-1 hover:shadow-none transition-all duration-200"
+                className="inline-block bg-teal-600 text-white py-3 px-6 no-underline font-bold rounded-lg hover:bg-teal-700 transition-colors duration-200 text-sm"
             >
-                今すぐ相性の良い相手を探す ➤
+                Wippyの詳細を見る
             </a>
             {/* A8 tracking pixel */}
             {/* eslint-disable-next-line @next/next/no-img-element */}

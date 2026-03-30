@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { AlertCircle, ArrowLeft, Sparkles, Zap } from 'lucide-react';
+import { AlertCircle, ArrowLeft, HelpCircle, Info, Sparkles, Zap } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ENFP（広報運動家）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ENFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ENFP（広報運動家）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ENFPの恋愛傾向を、ワクワクの作り方、飽きやすさとの付き合い方、ラブキャラの見方、長続きのコツまで整理します。"
+                slug="enfp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-teal-400 to-pink-400 h-32 flex items-center justify-center">
                     <Zap className="text-white w-12 h-12" />
@@ -144,6 +150,89 @@ export default function ENFPArticle() {
                                     <li>気持ちを読ませるだけで説明しないこと</li>
                                     <li>楽しい時だけ近く、重い時に放置すること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">6. ENFPが恋愛で陥りやすいパターンと対処法</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFPは恋愛に対して前向きで積極的ですが、その熱量の高さゆえに繰り返しやすいパターンがあります。自覚しておくだけでも、同じ失敗を避けやすくなります。
+                            </p>
+                            <div className="space-y-6 mb-10">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                                    <h3 className="font-bold text-pink-700 mb-2 flex items-center">
+                                        <Info className="w-4 h-4 mr-2" />
+                                        パターン1: 初期の熱量が高すぎて相手が引く
+                                    </h3>
+                                    <p className="text-sm mb-3 leading-relaxed">
+                                        出会ったばかりの段階で相手の魅力を次々と見つけ、全力で好意を伝えてしまうことがあります。本人は素直な気持ちを表現しているだけですが、相手にとっては温度差が大きく感じられ、引かれてしまうケースがあります。
+                                    </p>
+                                    <div className="bg-white border border-pink-100 rounded-lg p-4">
+                                        <p className="text-sm font-bold text-pink-600 mb-1">対処法</p>
+                                        <p className="text-sm mb-0">気持ちが高まったときこそ、少し間を置いてから伝える練習をしてみましょう。1日寝かせてから連絡する、相手のペースに合わせて少しずつ距離を縮める、といった工夫が有効です。</p>
+                                    </div>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                                    <h3 className="font-bold text-pink-700 mb-2 flex items-center">
+                                        <Info className="w-4 h-4 mr-2" />
+                                        パターン2: 可能性に惹かれて現実を見落とす
+                                    </h3>
+                                    <p className="text-sm mb-3 leading-relaxed">
+                                        ENFPは相手の「こうなれるかもしれない」という可能性に強く反応します。そのため、今の相手をそのまま受け入れるというより、理想化してしまうことがあります。実際の相手とのギャップに気づいたとき、急に気持ちが冷めてしまう原因にもなりやすいです。
+                                    </p>
+                                    <div className="bg-white border border-pink-100 rounded-lg p-4">
+                                        <p className="text-sm font-bold text-pink-600 mb-1">対処法</p>
+                                        <p className="text-sm mb-0">相手の良い面だけでなく、日常的なクセや価値観の違いにも意識を向けてみましょう。「この人のここは合わないけど許容できるか」を考える習慣が、関係の安定につながります。</p>
+                                    </div>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-6">
+                                    <h3 className="font-bold text-pink-700 mb-2 flex items-center">
+                                        <Info className="w-4 h-4 mr-2" />
+                                        パターン3: 不満を溜めてから一気に爆発する
+                                    </h3>
+                                    <p className="text-sm mb-3 leading-relaxed">
+                                        明るい雰囲気を壊したくない気持ちが強いため、小さな不満やモヤモヤを我慢しがちです。しかし限界を超えると、それまで溜まっていたものが一度に出てしまい、相手からすると急に怒り出したように見えることがあります。
+                                    </p>
+                                    <div className="bg-white border border-pink-100 rounded-lg p-4">
+                                        <p className="text-sm font-bold text-pink-600 mb-1">対処法</p>
+                                        <p className="text-sm mb-0">違和感を覚えた段階で、軽い言葉でもいいので伝える練習をしましょう。「ちょっとだけモヤっとした」くらいの温度感で伝えることで、大きな爆発を防ぎやすくなります。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-pink-500 pl-4 mb-6">
+                                <span className="flex items-center">
+                                    <HelpCircle className="w-6 h-6 mr-2" />
+                                    7. よくある質問
+                                </span>
+                            </h2>
+                            <div className="space-y-4 mb-10">
+                                <div className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="font-bold text-gray-800 mb-2">Q. ENFPは飽きっぽいから長続きしないと言われますが、本当ですか？</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        一概には言えません。ENFPが関係に退屈を感じやすいのは事実ですが、それは相手への興味がなくなったのではなく、関係の中に変化や成長が感じられなくなったときに起きやすいです。お互いに新しい話題や体験を共有し続けられる関係であれば、むしろ長く深い関係を築けるタイプでもあります。
+                                    </p>
+                                </div>
+                                <div className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="font-bold text-gray-800 mb-2">Q. ENFPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        一般的にはINTJやINFJなど、内向的で深い思考を持つタイプとの相性が挙げられることが多いです。ENFPの発想力と相手の分析力が補い合う形になりやすいためです。ただし、MBTIの相性はあくまで傾向であり、実際にはコミュニケーションの取り方や価値観の一致度の方が関係の質に大きく影響します。
+                                    </p>
+                                </div>
+                                <div className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="font-bold text-gray-800 mb-2">Q. ENFPの恋愛における最大の強みは何ですか？</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        相手の魅力や可能性を見つけて、言葉にして伝えられることです。多くの人は自分の良さに気づいていないことが多いですが、ENFPはそれを自然に見つけて肯定できます。この力は、パートナーの自己肯定感を高め、関係全体にポジティブな空気を生み出します。
+                                    </p>
+                                </div>
+                                <div className="bg-gray-50 rounded-xl p-6">
+                                    <h3 className="font-bold text-gray-800 mb-2">Q. ENFPが恋愛で疲れたときはどうすればいいですか？</h3>
+                                    <p className="text-sm leading-relaxed mb-0">
+                                        まずは一人の時間を確保して、自分の気持ちを整理することが大切です。ENFPは普段から相手に合わせたり場を盛り上げたりすることにエネルギーを使っているため、意識的に休む時間が必要です。信頼できる友人に話を聞いてもらったり、趣味や創作活動に没頭する時間を取ることで、気持ちがリセットされやすくなります。
+                                    </p>
+                                </div>
                             </div>
                         </section>
 

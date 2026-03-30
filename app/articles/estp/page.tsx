@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Rocket, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ESTP（起業家）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ESTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ESTP（起業家）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ESTPの恋愛傾向を、スピード感のある関わり方、刺激を求める理由、直球さが強く出る場面、長続きのコツまで整理します。"
+                slug="estp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-orange-500 to-amber-400 h-32 flex items-center justify-center">
                     <Rocket className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ESTPArticle() {
                                     <li>勢いをすべて軽薄さとして扱うこと</li>
                                     <li>行動力や得意分野を小さく扱うこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ESTPは恋愛に飽きやすいタイプですか？</h3>
+                                    <p className="text-sm mb-0">刺激や変化を求める傾向があるため、マンネリに敏感になりやすい面はあります。ただし「飽きる」というよりも「この関係に成長やワクワクがあるか」を無意識に確認しているケースが多く、新しい体験を共有し続けられる相手とは長く続きやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ESTPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ISFJやISTPなど、ESTPの勢いを受け止めつつ安定感を提供できるタイプが挙げられます。ただし、恋愛の距離感や愛情表現の好みはMBTIだけでは分からないため、ラブキャラの視点を加えると判断しやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ESTPが急に連絡を返さなくなるのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">ESTPは「今やりたいこと」に集中しやすいため、返信を後回しにしがちなことがあります。相手への関心がなくなったわけではなく、目の前の活動に没頭しているだけの場合がほとんどです。心配なときは軽いトーンで声をかけると、すぐ戻ってくる傾向があります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ESTPに感情的な話をするコツはありますか？</h3>
+                                    <p className="text-sm mb-0">抽象的な感情表現よりも、具体的な場面や行動に紐づけて伝えると響きやすいです。「寂しい」よりも「先週○○のとき、もう少し一緒にいたかった」のように、事実ベースで話すとESTPは理解・対応しやすくなります。</p>
+                                </div>
                             </div>
                         </section>
 

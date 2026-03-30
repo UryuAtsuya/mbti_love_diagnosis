@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Heart, Shield, Sparkles, Target } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ENTJ（指揮官）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ENTJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ENTJ（指揮官）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ENTJの恋愛傾向を、パートナー選びの基準、責任感、強く出やすい部分、ラブキャラの見方まで含めて整理します。"
+                slug="entj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-slate-700 to-indigo-800 h-32 flex items-center justify-center">
                     <Shield className="text-white w-12 h-12" />
@@ -155,6 +161,28 @@ export default function ENTJArticle() {
                                     <p className="text-sm mt-2 mb-0">ENTJは走り続けやすいので、「休むことも成果の一部」と伝わるとバランスが取りやすくなります。</p>
                                 </li>
                             </ol>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-800 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ENTJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">むしろ主導権を取って関係を進めようとする傾向があります。ただし、恋愛にも効率や目的意識を持ち込みやすいため、ロマンチックな雰囲気を重視する相手には「ドライ」と感じられることもあります。本人なりに真剣に向き合っていることが多いです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ENTJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">INTPやINFPなど、ENTJの推進力を受け止めつつ違う視点を提供できるタイプと相性が良いとされます。ただし、MBTIだけで相性は判断しきれません。Love Characterで主導権の取り方や感情表現のバランスまで見ると、より現実的な相性が見えやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ENTJのパートナーが主張しにくいと感じたら？</h3>
+                                    <p className="text-sm mb-0">ENTJは議論に強く、意見をはっきり言うタイプなので、相手が萎縮してしまうケースがあります。ENTJ自身は対等な議論を歓迎していることが多いため、論点を整理して率直に伝えた方が、遠慮するよりも関係が健全に保たれやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ENTJに感情的なサポートを求めてもいい？</h3>
+                                    <p className="text-sm mb-0">ENTJは問題を解決しようとする傾向が強く、「ただ聞いてほしい」という気持ちに気づきにくいことがあります。「今は解決策より気持ちを聞いてほしい」と前置きするだけで、ENTJも対応を切り替えやすくなります。</p>
+                                </div>
+                            </div>
                         </section>
 
                         <section className="bg-gradient-to-br from-slate-700 to-indigo-900 p-10 rounded-3xl text-center text-white shadow-2xl">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Shield, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ISFJ（擁護者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ISFJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ISFJ（擁護者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ISFJの恋愛傾向を、支える愛情の出方、我慢しやすい場面、安心を感じる条件、長続きのコツまで整理します。"
+                slug="isfj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-emerald-600 to-teal-500 h-32 flex items-center justify-center">
                     <Shield className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ISFJArticle() {
                                     <li>不安定な態度で振り回すこと</li>
                                     <li>「言わないなら平気」と決めつけること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-emerald-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISFJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">ISFJは慎重に相手を見極めてから距離を縮める傾向があるため、消極的に映ることがあります。ただし、信頼関係ができた後は非常に深い愛情を注ぐタイプで、一度決めた相手を長く大切にしやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISFJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ESTPやEFSPなど、ISFJが苦手とする積極性を自然に補ってくれるタイプが挙げられます。ただし、MBTIだけで判断せず、ラブキャラで「安心の求め方」が一致しているかを確認すると、より実態に近い相性が見えます。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISFJが本音を言わないのはどうすればいいですか？</h3>
+                                    <p className="text-sm mb-0">ISFJは「相手を困らせたくない」という配慮から、不満を飲み込みやすいタイプです。責めるのではなく「何でも話してほしい」という安心感を日常的に伝えておくことで、少しずつ本音を出しやすくなる傾向があります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-emerald-700 mb-2">Q. ISFJが突然距離を取るのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">我慢を重ねた結果、限界を超えて一気に離れるパターンがISFJには見られます。怒りというよりも疲弊が原因であることが多く、小さな不満の段階で対話の機会を作ることが予防策として効果的です。</p>
+                                </div>
                             </div>
                         </section>
 

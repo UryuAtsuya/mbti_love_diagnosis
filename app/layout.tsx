@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,9 +50,31 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'AI Love Matcher',
+              url: 'https://mbti-lovetype.com',
+              description: 'AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析。16タイプ別の解説コラムも充実。',
+              inLanguage: 'ja',
+              publisher: {
+                '@type': 'Organization',
+                name: 'AI Love Matcher 運営事務局',
+                url: 'https://mbti-lovetype.com',
+              },
+            }),
+          }}
+        />
+        {/* Google AdSense verification */}
+        <meta name="google-adsense-account" content="ca-pub-8206190214868370" />
         <Script
-          id="admax"
-          src="https://adm.shinobi.jp/s/ea556030d348073765e839541010e18e"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
+          crossOrigin="anonymous"
           strategy="afterInteractive"
         />
         {/* Google Analytics */}
@@ -91,6 +114,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           {children}
           <Footer />
+          <CookieConsent />
         </div>
       </body>
     </html>

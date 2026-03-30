@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'MBTI×ラブキャラで読み解く恋愛コミュニケーション | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function RomanceStrategy() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="MBTI×ラブキャラで読み解く恋愛コミュニケーション | AI Love Matcher"
+                description="MBTIとラブキャラを手がかりに、距離の縮め方、会話の合わせ方、すれ違いの減らし方を整理した実践ガイドです。"
+                slug="romance-strategy"
+            />
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
                 <Link
                     href="/articles"
@@ -151,6 +157,28 @@ export default function RomanceStrategy() {
                         <p className="leading-relaxed mt-4 mb-0">
                             診断は便利ですが、相手本人の言葉より優先されるものではありません。あくまで<span className="font-bold text-teal-600">観察の補助線</span>として使うのが、一番うまく機能します。
                         </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">よくある質問</h2>
+                        <div className="space-y-4">
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">Q. 連絡頻度が合わない場合、どうすり合わせればいいですか？</h3>
+                                <p className="text-sm mb-0">まず「何のための連絡か」を整理すると話が進みやすくなります。安心確認なのか、報告なのか、雑談なのか。目的が違うだけで頻度の感覚がずれていることが多く、「朝と夜に一言ずつ」など具体的な目安を試して調整するのが効果的です。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">Q. ケンカ後の仲直り、どちらから話しかけるべきですか？</h3>
+                                <p className="text-sm mb-0">「どちらから」よりも「いつ」が重要です。一方がすぐ話したいタイプで、もう一方が時間を置きたいタイプの場合、修復ルールを事前に共有しておくと二次被害を防ぎやすくなります。冷静になってから声をかけるほうが、建設的な対話につながりやすいです。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">Q. MBTIタイプが真逆の相手にはどうアプローチすればいいですか？</h3>
+                                <p className="text-sm mb-0">真逆の組み合わせでは「自分にとっての当たり前」が通じないことを前提にすると楽になります。一度に全部理解しようとせず、まずは相手が嫌がることを1つだけ避ける、という小さなステップから始めるのがおすすめです。</p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">Q. 診断結果を相手に伝えるべきですか？</h3>
+                                <p className="text-sm mb-0">押しつける形ではなく、「自分はこういう傾向があるらしい」と自分の情報として共有するのが自然です。相手に診断を勧めるよりも、自分の行動改善のきっかけとして使い、その変化を通じて関心を持ってもらう流れが効果的です。</p>
+                            </div>
+                        </div>
                     </section>
 
                     <section>

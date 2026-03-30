@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Sparkles, Zap } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ENTP（討論者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ENTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ENTP（討論者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ENTPの恋愛傾向を、刺激を求める理由、議論と本音の違い、飽きやすさとの付き合い方まで整理します。"
+                slug="entp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-amber-600 to-orange-500 h-32 flex items-center justify-center">
                     <Zap className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ENTPArticle() {
                                     <li>不安を理由に自由を奪うこと</li>
                                     <li>ユーモアや発想の広がりを頭ごなしに潰すこと</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ENTPは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">むしろ興味を持った相手には積極的にアプローチする傾向があります。ただし、刺激や新鮮さを重視しやすいため、関係が安定期に入ると物足りなさを感じることもあります。飽きっぽいというより、成長や変化を関係の中にも求めるタイプです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ENTPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">INTJやINFJなど、深い思考を持ちながらENTPの発想を受け止められるタイプと相性が良いとされます。ただし、MBTIだけで相性は決まりません。Love Characterで自由度の求め方や議論スタイルの違いまで見ると、すれ違いを事前に把握しやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ENTPの議論好きについていけないときは？</h3>
+                                    <p className="text-sm mb-0">ENTPにとって議論は愛情表現の一つであり、否定しているつもりはないことが多いです。疲れたときは「今は議論モードじゃない」と率直に伝える方が、無理に付き合うより関係が健全に保たれやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-amber-700 mb-2">Q. ENTPとの関係にマンネリを感じさせないコツは？</h3>
+                                    <p className="text-sm mb-0">新しい体験や話題を一緒に取り入れることが効果的です。旅行や新しい趣味に限らず、「最近こんな面白い話を見つけた」といった知的な刺激でも十分です。ENTPは変化そのものを楽しめるタイプなので、小さな新鮮さでも関係の活力になりやすいです。</p>
+                                </div>
                             </div>
                         </section>
 

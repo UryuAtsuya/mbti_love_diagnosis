@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Gavel, Info, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ESTJ（幹部）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ESTJArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ESTJ（幹部）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ESTJの恋愛傾向を、責任感の出方、率直さが強く出る場面、相手に求めやすいこと、関係を続けるコツまで整理します。"
+                slug="estj"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-indigo-600 to-blue-500 h-32 flex items-center justify-center">
                     <Gavel className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ESTJArticle() {
                                     <li>責任感を利用して任せきりにすること</li>
                                     <li>人前で意地を張るようにぶつかること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ESTJは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">ESTJは目標が定まると積極的に行動する傾向がありますが、感情面の表現は得意ではないことが多いです。そのため消極的に見えることもありますが、内面では相手との関係を着実に構築したいと考えている場合がほとんどです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ESTJと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ISFPやINFPなど、ESTJの堅実さを安心材料として受け取れるタイプが相性良好とされています。ただし、MBTIの相性だけで判断せず、ラブキャラで愛情表現の一致度も確認すると、より精度が上がります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ESTJが「厳しすぎる」と感じられるのはなぜですか？</h3>
+                                    <p className="text-sm mb-0">ESTJは効率や正しさを重視するため、パートナーにもそれを求めてしまうことがあります。本人に悪意はなくても、相手にとっては「指摘が多い」と感じやすい場面があり、伝え方を意識するだけで関係が大きく改善するケースもあります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-indigo-700 mb-2">Q. ESTJは「ありがとう」と言うのが苦手ですか？</h3>
+                                    <p className="text-sm mb-0">言葉で感謝を伝えるよりも、行動で示す傾向が強いです。家事を率先してやる、予定を調整するなど、具体的な行動が「ありがとう」の代わりになっていることがあります。相手に伝わっていないと感じるなら、言葉を添える練習が効果的です。</p>
+                                </div>
                             </div>
                         </section>
 

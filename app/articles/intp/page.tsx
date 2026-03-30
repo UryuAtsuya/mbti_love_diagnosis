@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Lightbulb, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'INTP（論理学者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function INTPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="INTP（論理学者）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="INTPの恋愛傾向を、距離感、知的な相性、本音が見えにくい理由、長く付き合うコツまで整理します。"
+                slug="intp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-purple-600 to-blue-500 h-32 flex items-center justify-center">
                     <Lightbulb className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function INTPArticle() {
                                     <li>ひとり時間や没頭時間を軽く扱うこと</li>
                                     <li>「普通はこうでしょ」で思考を閉じること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">Q. INTPは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">恋愛そのものに関心がないわけではありませんが、感情を言語化したり積極的にアプローチしたりするのが得意ではない傾向があります。知的な共鳴を感じた相手には自然と距離が縮まることが多く、本人も気づかないうちに惹かれていることがあります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">Q. INTPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ENTJやENFJなど、INTPの思考を尊重しつつ行動面や感情面を補ってくれるタイプと相性が良いとされます。ただし、MBTIだけで相性は決まりません。Love Characterで自由時間の必要度や愛情表現のスタイルまで確認すると、より実態に合った相性が分かります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">Q. INTPの返事が遅いのは興味がないサイン？</h3>
+                                    <p className="text-sm mb-0">必ずしもそうとは限りません。INTPは返事の内容を頭の中で吟味してから送る傾向があり、考えている時間が長くなりやすいです。即レスの速さより、返ってきた内容の丁寧さで関心度を判断した方が正確なことが多いです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-purple-700 mb-2">Q. INTPにもっと気持ちを表現してほしいときは？</h3>
+                                    <p className="text-sm mb-0">「もっと愛情を見せて」と抽象的に伝えるより、「週に一度は一緒にご飯を食べたい」のように具体的な行動レベルで伝える方が、INTPには分かりやすく実行しやすい傾向があります。小さな成功体験を積み重ねることで、表現の幅が広がりやすくなります。</p>
+                                </div>
                             </div>
                         </section>
 

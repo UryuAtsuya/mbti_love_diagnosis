@@ -94,15 +94,21 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
                         {result.message}
                     </div>
 
-                    {/* Affiliate Recommendation */}
-                    <div className="px-6 pb-6 md:px-8 md:pb-8 bg-white">
-                        <AffiliateRecommendation
-                            userMBTI={formData?.user_mbti}
-                            partnerMBTI={formData?.partner_mbti}
-                            partnerLoveType={formData?.partner_love_type}
-                        />
-                    </div>
                 </div>
+            </motion.div>
+
+            {/* Affiliate - clearly separated from diagnosis result */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.0 }}
+                className="mt-6 px-4"
+            >
+                <AffiliateRecommendation
+                    userMBTI={formData?.user_mbti}
+                    partnerMBTI={formData?.partner_mbti}
+                    partnerLoveType={formData?.partner_love_type}
+                />
             </motion.div>
 
             {/* Quick Action Buttons (Bottom Sheet style) */}

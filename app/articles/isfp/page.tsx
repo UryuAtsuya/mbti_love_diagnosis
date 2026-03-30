@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Info, Palette, Sparkles } from 'lucide-react';
+import ArticleJsonLd from '@/components/ArticleJsonLd';
 
 export const metadata: Metadata = {
     title: 'ISFP（冒険家）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
 export default function ISFPArticle() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-yellow-50 to-rose-50 py-12 px-4 sm:px-6">
+            <ArticleJsonLd
+                title="ISFP（冒険家）の性格・恋愛傾向を解説 | AI Love Matcher"
+                description="ISFPの恋愛傾向を、感性の強さ、やさしさの出方、傷つきやすい場面、関係を守るコツまで整理します。"
+                slug="isfp"
+            />
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div className="bg-gradient-to-r from-yellow-400 to-rose-400 h-32 flex items-center justify-center">
                     <Palette className="text-white w-12 h-12" />
@@ -161,6 +167,28 @@ export default function ISFPArticle() {
                                     <li>人前で恥をかかせること</li>
                                     <li>静かな時間を拒絶や冷たさと決めつけること</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-yellow-400 pl-4 mb-6">6. よくある質問</h2>
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ISFPは恋愛に消極的なタイプですか？</h3>
+                                    <p className="text-sm mb-0">言葉で積極的にアプローチするのは得意ではない傾向がありますが、行動や態度でさりげなく好意を示すことが多いです。自分の感覚を大切にするタイプなので、無理に押すより自然な流れの中で距離を縮めようとしやすいです。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ISFPと相性が良いのはどのタイプですか？</h3>
+                                    <p className="text-sm mb-0">ENFJやESTJなど、ISFPの感性を尊重しつつ安定感を提供してくれるタイプと相性が良いとされます。ただし、相性はMBTIだけでは分かりません。Love Characterで感情表現のスタイルや安心ポイントまで確認すると、より実感に合った判断がしやすくなります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ISFPが不満を溜め込んでいるか見分けるには？</h3>
+                                    <p className="text-sm mb-0">ISFPは言葉より先に態度に変化が出やすいタイプです。返事が短くなる、一緒にいる時間を減らそうとするなどの変化が見られたら、問い詰めるのではなく「最近どう？」と穏やかに聞いてみると、本音を話しやすくなる傾向があります。</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                    <h3 className="font-bold text-rose-700 mb-2">Q. ISFPとの会話が続かないと感じたら？</h3>
+                                    <p className="text-sm mb-0">ISFPは抽象的な議論より、五感に訴える体験や具体的な話題の方が乗りやすい傾向があります。一緒に何かを体験したり、好きなものについて語ってもらう形の方が、言葉のやり取りだけよりも自然にコミュニケーションが深まりやすいです。</p>
+                                </div>
                             </div>
                         </section>
 
