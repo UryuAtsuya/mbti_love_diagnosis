@@ -40,7 +40,7 @@ export default function AffiliateRecommendation({ userMBTI, partnerMBTI, partner
             <div className="border-t border-gray-200 pt-4">
                 <a href="https://px.a8.net/svt/ejp?a8mat=4AZS0V+61WO6Q+5UBE+5Z6WX" rel="nofollow" target="_blank">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img width={100} height={60} alt="" src="https://www27.a8.net/svt/bgt?aid=260330143366&wid=001&eno=01&mid=s00000027257001004000&mc=1" />
+                    <img width={300} height={250} alt="" src="https://www27.a8.net/svt/bgt?aid=260330143366&wid=001&eno=01&mid=s00000027257001004000&mc=1" />
                 </a>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AZS0V+61WO6Q+5UBE+5Z6WX" alt="" />
