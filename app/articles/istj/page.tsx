@@ -192,6 +192,33 @@ export default function ISTJArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-slate-500 pl-4 mb-6">ISTJと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ISTJは、信頼と誠実さを軸に関係を築くタイプです。日常の安定感を共有できる相手、または互いの違いが刺激と安心のバランスになれる相手との組み合わせが合いやすいとされています。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/esfp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">ESFP</h3>
+                                    <p className="text-sm text-gray-600">ISTJの安定感とESFPの明るさが補い合うと、生活の基盤を共有しながら楽しみも生まれやすい関係です。お互いの違いが刺激と安心のバランスになりやすいです。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/estj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">ESTJ</h3>
+                                    <p className="text-sm text-gray-600">秩序と責任感を共有するESTJとは、日常の決めごとや役割分担がしやすい関係です。同じ方向を向いて物事を進める安心感が生まれやすいです。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/isfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">ISFJ</h3>
+                                    <p className="text-sm text-gray-600">誠実さと細やかな配慮を共通して持つISFJとは、静かな信頼の上に関係が育ちやすいです。お互いの不満を溜めないよう言葉にすることが大切な組み合わせです。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-slate-600 to-slate-800 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">堅実な恋の強みと弱点を整理する</h2>
                             <p className="mb-8 font-medium">

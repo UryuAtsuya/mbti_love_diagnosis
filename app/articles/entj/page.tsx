@@ -185,6 +185,33 @@ export default function ENTJArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-indigo-800 pl-4 mb-6">ENTJと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENTJは、目標に向かって行動する力が強く、同じ方向を向いて切磋琢磨できる相手との関係で輝きやすいタイプです。尊重し合いながら互いの強みを発揮できる組み合わせが長続きしやすい傾向があります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/intp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">INTP</h3>
+                                    <p className="text-sm text-gray-600">INTPの分析力とENTJの決断力が合わさると、考えを形にするチーム感が生まれやすいです。互いに刺激し合える知的な関係になりやすいです。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/infp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">INFP</h3>
+                                    <p className="text-sm text-gray-600">ENTJの行動力とINFPの価値観が噛み合うと、互いの弱点を補い合う形になりやすいです。方向性を合わせることができれば、互いに大きく成長できる関係です。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/intj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <h3 className="font-bold text-slate-700 mb-2 group-hover:text-slate-800">INTJ</h3>
+                                    <p className="text-sm text-gray-600">戦略的な思考を共有するINTJとは、長期的な視点で関係を築きやすいです。互いの独立性を尊重しながら、目標や価値観を共有できる関係になりやすいです。</p>
+                                    <span className="text-xs text-slate-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-slate-700 to-indigo-900 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">自分の恋愛の強さと弱点を知る</h2>
                             <p className="mb-8 font-medium">

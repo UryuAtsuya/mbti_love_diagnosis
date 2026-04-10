@@ -192,6 +192,33 @@ export default function ISTPArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-emerald-500 pl-4 mb-6">ISTPと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ISTPは、実用的な判断力と独立心を大切にするタイプです。自由を尊重してくれながら、具体的な話ができる相手との組み合わせが安定しやすい傾向があります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/esfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-emerald-50 hover:border-emerald-200 transition-all">
+                                    <h3 className="font-bold text-emerald-700 mb-2 group-hover:text-emerald-800">ESFJ</h3>
+                                    <p className="text-sm text-gray-600">ISTPの実用的な行動力とESFJの温かさが組み合わさると、生活の中で自然に役割が補い合う関係になりやすいです。ESFJがISTPに感情面での安心感をもたらすことがあります。</p>
+                                    <span className="text-xs text-emerald-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/estj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-emerald-50 hover:border-emerald-200 transition-all">
+                                    <h3 className="font-bold text-emerald-700 mb-2 group-hover:text-emerald-800">ESTJ</h3>
+                                    <p className="text-sm text-gray-600">実務感覚を共有するESTJとは、具体的な課題の解決や日常の安定を一緒に作りやすいです。感情の共有を意識的に増やすことで関係がより安定しやすくなります。</p>
+                                    <span className="text-xs text-emerald-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/entj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-emerald-50 hover:border-emerald-200 transition-all">
+                                    <h3 className="font-bold text-emerald-700 mb-2 group-hover:text-emerald-800">ENTJ</h3>
+                                    <p className="text-sm text-gray-600">ISTPの専門的な技術力とENTJのビジョンが組み合わさると、互いの強みを発揮しやすい関係です。短い言葉でも通じ合いやすいシンプルさが魅力の組み合わせです。</p>
+                                    <span className="text-xs text-emerald-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-slate-700 to-emerald-600 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">不器用な愛情表現を整理する</h2>
                             <p className="mb-8 font-medium">

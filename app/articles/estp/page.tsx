@@ -192,6 +192,33 @@ export default function ESTPArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">ESTPと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESTPは、行動や現実の体験を通じて関係を深めるタイプです。ESTPのスピード感や決断力を受け止めてくれながら、生活の中で安定感をもたらせる相手との組み合わせが合いやすいとされています。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/isfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ISFJ</h3>
+                                    <p className="text-sm text-gray-600">ESTPのエネルギーとISFJの温かさと安定感が補い合うと、日常に活気と安心が共存しやすい関係です。ISFJがESTPを落ち着かせ、ESTPがISFJに刺激をもたらす形になりやすいです。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/istj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ISTJ</h3>
+                                    <p className="text-sm text-gray-600">ESTPの行動力とISTJの着実さが組み合わさると、現実的な場面で頼り合える関係になりやすいです。ペースの違いを意識しながら役割を合わせることが大切です。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/esfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ESFJ</h3>
+                                    <p className="text-sm text-gray-600">社交的な面が共通しており、人との関わりを楽しみながら関係を築きやすいです。ESFJの感情への配慮がESTPの関係を安定させる役割を果たすことがあります。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-orange-600 to-amber-500 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">スピード感のある恋の相性を整理する</h2>
                             <p className="mb-8 font-medium">

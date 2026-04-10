@@ -192,6 +192,33 @@ export default function ENFJArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">ENFJと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENFJは、相手を支え導くことに自然に力を発揮するタイプです。自分が包み込む力を安心して使えるよう、感情を素直に受け取ってくれる相手との組み合わせが安定しやすい傾向があります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/infp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">INFP</h3>
+                                    <p className="text-sm text-gray-600">INFPの豊かな内面をENFJが引き出す形になりやすく、気持ちの共有を大切にする点が一致しています。ENFJにとってもINFPの深い共感が心の支えになりやすい関係です。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/isfp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ISFP</h3>
+                                    <p className="text-sm text-gray-600">ISFPの感性の豊かさをENFJが自然に尊重する形になりやすいです。ENFJの包容力とISFPの個性が調和すると、互いに居心地の良い関係が生まれやすいです。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/infj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">INFJ</h3>
+                                    <p className="text-sm text-gray-600">価値観の深い部分で共鳴しやすく、気持ちのやり取りがしやすい組み合わせです。どちらも相手を理解することを大切にするため、すれ違いが少ない傾向があります。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-orange-500 to-yellow-500 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">支える恋のクセを整理する</h2>
                             <p className="mb-8 font-medium">
