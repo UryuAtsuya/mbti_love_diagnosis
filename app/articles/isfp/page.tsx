@@ -192,6 +192,33 @@ export default function ISFPArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-yellow-400 pl-4 mb-6">ISFPと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ISFPは、感性や個性を否定されない安心感の中で関係を深めやすいタイプです。自分のペースを尊重してくれながら、温かみのあるやり取りができる相手との組み合わせが合いやすいとされています。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/enfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-yellow-50 hover:border-yellow-200 transition-all">
+                                    <h3 className="font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">ENFJ</h3>
+                                    <p className="text-sm text-gray-600">ISFPの感性や個性を丁寧に尊重するENFJとは、否定されない安心感の中で関係が深まりやすいです。ENFJの包容力がISFPの内面を引き出してくれることがあります。</p>
+                                    <span className="text-xs text-yellow-600 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/esfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-yellow-50 hover:border-yellow-200 transition-all">
+                                    <h3 className="font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">ESFJ</h3>
+                                    <p className="text-sm text-gray-600">感情を大切にする傾向が共通しており、日常の中で温かみのある関係を築きやすいです。ESFJの社交性がISFPをさりげなくサポートする形になりやすいです。</p>
+                                    <span className="text-xs text-yellow-600 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/estp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-yellow-50 hover:border-yellow-200 transition-all">
+                                    <h3 className="font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">ESTP</h3>
+                                    <p className="text-sm text-gray-600">ISFPの感性とESTPのアクティブさが組み合わさると、日常に刺激が生まれやすい関係です。互いの行動力と感性が補い合う形になりやすいです。</p>
+                                    <span className="text-xs text-yellow-600 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-yellow-400 to-rose-400 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">感性を守る恋の条件を知る</h2>
                             <p className="mb-8 font-medium">

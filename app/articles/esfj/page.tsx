@@ -192,6 +192,33 @@ export default function ESFJArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-orange-500 pl-4 mb-6">ESFJと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ESFJは、周囲の人を気にかけて関係の温度を整える力が強いタイプです。ESFJの温かさや気遣いを素直に受け取ってくれる相手、または一緒に場を明るくできる相手との組み合わせが合いやすいとされています。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/isfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ISFJ</h3>
+                                    <p className="text-sm text-gray-600">ケアすることを大切にする傾向が共通しており、自然に支え合える関係になりやすいです。どちらも相手を思いやる行動が出やすいため、安心感のある関係が育ちやすいです。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/isfp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ISFP</h3>
+                                    <p className="text-sm text-gray-600">ESFJの包容力とISFPの感性が組み合わさると、互いを否定せずに受け入れる関係になりやすいです。ESFJがISFPの個性を大切にする形になりやすいです。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/esfp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-orange-50 hover:border-orange-200 transition-all">
+                                    <h3 className="font-bold text-orange-700 mb-2 group-hover:text-orange-800">ESFP</h3>
+                                    <p className="text-sm text-gray-600">社交的でポジティブな面が共通しており、一緒に楽しい時間を過ごしやすい関係です。感情の温度が近いため、喜びや気持ちを共有しやすい組み合わせです。</p>
+                                    <span className="text-xs text-orange-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-orange-500 to-pink-500 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">尽くす恋の温度差を整理する</h2>
                             <p className="mb-8 font-medium">

@@ -192,6 +192,33 @@ export default function ENTPArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-amber-500 pl-4 mb-6">ENTPと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                ENTPは、新しいアイデアや議論を通じて関係を深めるタイプです。知的な刺激を大切にしながら、深みのある対話ができる相手との組み合わせで長続きしやすい傾向があります。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/infj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-amber-50 hover:border-amber-200 transition-all">
+                                    <h3 className="font-bold text-amber-700 mb-2 group-hover:text-amber-800">INFJ</h3>
+                                    <p className="text-sm text-gray-600">ENTPのアイデアをINFJが深く読み解く形になりやすく、話せば話すほど理解が深まる関係です。INFJの洞察がENTPの思考に新たな深みをもたらすことがあります。</p>
+                                    <span className="text-xs text-amber-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/intj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-amber-50 hover:border-amber-200 transition-all">
+                                    <h3 className="font-bold text-amber-700 mb-2 group-hover:text-amber-800">INTJ</h3>
+                                    <p className="text-sm text-gray-600">ENTPのアイデアの広がりとINTJの戦略的思考が噛み合うと、互いの知的欲求を満たし合える関係になりやすいです。知的な議論を深く楽しめる組み合わせです。</p>
+                                    <span className="text-xs text-amber-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/enfp" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-amber-50 hover:border-amber-200 transition-all">
+                                    <h3 className="font-bold text-amber-700 mb-2 group-hover:text-amber-800">ENFP</h3>
+                                    <p className="text-sm text-gray-600">可能性や新しい発想に反応しやすい点が共通しており、会話のテンポが合いやすいです。アイデアを出し合う中で関係が自然に深まりやすい組み合わせです。</p>
+                                    <span className="text-xs text-amber-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-amber-600 to-orange-500 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">刺激を求める恋のパターンを整理する</h2>
                             <p className="mb-8 font-medium">

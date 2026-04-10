@@ -192,6 +192,33 @@ export default function INTPArticle() {
                             </div>
                         </section>
 
+                        <section>
+                            <h2 className="text-2xl font-bold text-gray-800 border-l-8 border-purple-500 pl-4 mb-6">INTPと相性が取りやすいタイプ</h2>
+                            <p className="mb-6 leading-relaxed">
+                                INTPは、論理的な深みのある対話を楽しめる相手との関係で安心しやすいタイプです。感情面での補完や、アイデアを一緒に形にしてくれる相手との組み合わせが良いとされています。
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                <Link href="/articles/entj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-purple-50 hover:border-purple-200 transition-all">
+                                    <h3 className="font-bold text-purple-700 mb-2 group-hover:text-purple-800">ENTJ</h3>
+                                    <p className="text-sm text-gray-600">INTPの分析力とENTJの実行力が組み合わさると、アイデアを現実に変えやすい関係になります。互いに高め合える知的パートナーシップが生まれやすいです。</p>
+                                    <span className="text-xs text-purple-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/enfj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-purple-50 hover:border-purple-200 transition-all">
+                                    <h3 className="font-bold text-purple-700 mb-2 group-hover:text-purple-800">ENFJ</h3>
+                                    <p className="text-sm text-gray-600">ENFJがINTPの内面に寄り添う形になりやすく、安心して深い話ができる関係になりやすいです。ENFJの温かさがINTPの孤立しがちな傾向を和らげてくれることがあります。</p>
+                                    <span className="text-xs text-purple-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                                <Link href="/articles/infj" className="group block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:bg-purple-50 hover:border-purple-200 transition-all">
+                                    <h3 className="font-bold text-purple-700 mb-2 group-hover:text-purple-800">INFJ</h3>
+                                    <p className="text-sm text-gray-600">深い思考と洞察を共有するINFJとは、知的な対話の中で相互理解が深まりやすいです。表面的な会話より深い意味のある話を好む傾向が共通しています。</p>
+                                    <span className="text-xs text-purple-500 font-bold mt-3 inline-block">詳しく読む →</span>
+                                </Link>
+                            </div>
+                            <p className="text-sm text-gray-500 bg-gray-50 p-4 rounded-xl">
+                                相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、<Link href="/diagnosis" className="text-teal-600 hover:underline font-medium">相性診断</Link>で組み合わせを確認してみてください。
+                            </p>
+                        </section>
+
                         <section className="bg-gradient-to-br from-purple-600 to-blue-600 p-10 rounded-3xl text-center text-white shadow-2xl">
                             <h2 className="text-2xl font-bold mb-4">考えすぎる恋のクセを整理する</h2>
                             <p className="mb-8 font-medium">
