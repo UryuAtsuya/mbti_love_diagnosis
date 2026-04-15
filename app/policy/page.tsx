@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'プライバシーポリシー・免責事項 | AI Love Matcher',
@@ -14,13 +14,7 @@ export default function PolicyPage() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50 py-12 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-                <Link
-                    href="/"
-                    className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors mb-8"
-                >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    ホームに戻る
-                </Link>
+                <Breadcrumb items={[{ label: 'プライバシーポリシー' }]} />
 
                 <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-teal-500 pb-4">プライバシーポリシー・免責事項</h1>
 

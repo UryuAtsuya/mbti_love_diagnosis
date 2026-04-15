@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'お問い合わせ | AI Love Matcher',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white p-8 max-w-4xl mx-auto">
+            <Breadcrumb items={[{ label: 'お問い合わせ' }]} />
             <h1 className="text-3xl font-bold text-gray-800 mb-6">お問い合わせ</h1>
 
             <section className="mb-8">

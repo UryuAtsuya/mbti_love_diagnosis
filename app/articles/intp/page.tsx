@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Info, Lightbulb, Sparkles } from 'lucide-react';
+import { Info, Lightbulb, Sparkles } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'INTP（論理学者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -25,13 +26,7 @@ export default function INTPArticle() {
                 </div>
 
                 <div className="p-8 sm:p-12">
-                    <Link
-                        href="/articles"
-                        className="inline-flex items-center text-purple-600 hover:text-purple-700 transition-colors mb-8 font-bold"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        記事一覧に戻る
-                    </Link>
+                    <Breadcrumb items={[{ label: "記事一覧", href: "/articles" }, { label: "INTP（論理学者）の性格・恋愛傾向を解説" }]} />
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
                         INTP（論理学者）の性格・恋愛傾向を解説
