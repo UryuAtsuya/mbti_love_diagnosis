@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Heart, ShieldCheck, Sparkles, Zap } from 'lucide-react';
+import { Heart, ShieldCheck, Sparkles, Zap } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'ラブキャラ64診断とは? MBTIと合わせて読むための理論ガイド | AI Love Matcher',
@@ -25,13 +26,7 @@ export default function LoveCharacterGuide() {
                 </div>
 
                 <div className="p-8 sm:p-12">
-                    <Link
-                        href="/articles"
-                        className="inline-flex items-center text-indigo-600 hover:text-indigo-700 transition-colors mb-8 font-bold"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        記事一覧に戻る
-                    </Link>
+                    <Breadcrumb items={[{ label: "記事一覧", href: "/articles" }, { label: "ラブキャラ64診断とは? MBTIと合わせて読むための理論ガイド" }]} />
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
                         【理論編】ラブキャラ64診断とは? MBTIと合わせて読むためのガイド

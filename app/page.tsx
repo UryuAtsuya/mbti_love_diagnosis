@@ -1,12 +1,15 @@
 // app/page.tsx
-import CharacterSection from '@/components/CharacterSection';
-import DiagnosisHero from '@/components/DiagnosisHero';
 import ArticleSection from '@/components/ArticleSection';
+import DiagnosisHero from '@/components/DiagnosisHero';
+import CharacterSection from '@/components/CharacterSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-teal-50 to-emerald-50">
-      {/* Hero Section */}
+      {/* Article Section - Primary content for SEO */}
+      <ArticleSection />
+
+      {/* Diagnosis CTA */}
       <DiagnosisHero />
 
       {/* Affiliate Banner */}
@@ -19,9 +22,6 @@ export default function Home() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AZS0V+61WO6Q+5UBE+5Z6WX" alt="" />
       </div>
-
-      {/* Article Section */}
-      <ArticleSection />
 
       {/* Character Image Section */}
       <CharacterSection />

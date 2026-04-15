@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, MessageCircle, Sparkles, Trophy, Zap } from 'lucide-react';
+import { MessageCircle, Sparkles, Trophy, Zap } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'MBTI相性ランキングTOP5 | AI Love Matcher',
@@ -76,13 +77,7 @@ export default function CompatibilityRankingArticle() {
                 </div>
 
                 <div className="p-8 sm:p-12">
-                    <Link
-                        href="/articles"
-                        className="inline-flex items-center text-rose-600 hover:text-rose-700 transition-colors mb-8 font-bold"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        記事一覧に戻る
-                    </Link>
+                    <Breadcrumb items={[{ label: "記事一覧", href: "/articles" }, { label: "MBTI相性ランキングTOP5" }]} />
 
                     <div className="prose prose-rose max-w-none text-gray-700">
                         <section className="bg-rose-50 p-8 rounded-2xl border border-rose-100 mb-12">

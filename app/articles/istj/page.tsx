@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Briefcase, Info, Sparkles } from 'lucide-react';
+import { Briefcase, Info, Sparkles } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'ISTJ（管理者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -25,13 +26,7 @@ export default function ISTJArticle() {
                 </div>
 
                 <div className="p-8 sm:p-12">
-                    <Link
-                        href="/articles"
-                        className="inline-flex items-center text-slate-600 hover:text-slate-700 transition-colors mb-8 font-bold"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        記事一覧に戻る
-                    </Link>
+                    <Breadcrumb items={[{ label: "記事一覧", href: "/articles" }, { label: "ISTJ（管理者）の性格・恋愛傾向を解説" }]} />
 
                     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
                         ISTJ（管理者）の性格・恋愛傾向を解説

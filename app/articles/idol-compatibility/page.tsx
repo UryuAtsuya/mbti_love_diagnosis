@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'MBTI 16タイプ別・推しに惹かれやすい理由を解説 | AI Love Matcher',
@@ -20,13 +20,7 @@ export default function IdolCompatibility() {
                 slug="idol-compatibility"
             />
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-                <Link
-                    href="/articles"
-                    className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors mb-8"
-                >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    記事一覧に戻る
-                </Link>
+                <Breadcrumb items={[{ label: "記事一覧", href: "/articles" }, { label: "MBTI 16タイプ別・推しに惹かれやすい理由を解説" }]} />
 
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 leading-relaxed">
                     MBTI 16タイプ別・推しに惹かれやすい理由を解説
