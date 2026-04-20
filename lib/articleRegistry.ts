@@ -7,6 +7,30 @@ export interface Article {
 
 export const articles: Article[] = [
     {
+        slug: 'diagnosis-guide',
+        title: '診断結果をそのまま信じないための読み解きガイド',
+        description: 'MBTIとラブタイプの結果を、決めつけではなく会話の材料として使うための見方を整理します。',
+        tag: '理論・解説',
+    },
+    {
+        slug: 'relationship-checkpoints',
+        title: '相性が悪いと感じたときに先に確認したい5つのこと',
+        description: '本当に相性が悪いのか、それとも距離感や伝え方のズレなのかを切り分けるための確認ポイントを紹介します。',
+        tag: '恋愛攻略・実戦',
+    },
+    {
+        slug: 'message-frequency-gap',
+        title: '連絡頻度の違いで苦しくなる前に読む話',
+        description: '返信速度や会話量の差が不安に変わる前に、すり合わせるべき論点と伝え方を具体例つきで解説します。',
+        tag: '恋愛攻略・実戦',
+    },
+    {
+        slug: 'dating-value-differences',
+        title: '価値観が違う相手とうまく付き合うための話し合い方',
+        description: 'お金、時間、将来像の違いでぶつかったときに、関係を壊さず整理する対話の進め方をまとめました。',
+        tag: '恋愛攻略・実戦',
+    },
+    {
         slug: 'mbti-compatibility-ranking',
         title: 'MBTI×ラブタイプ相性ランキングTOP5と読み解き方',
         description: '会話の噛み合いやすさ、生活リズム、支え合いの観点から相性の高い組み合わせを整理。ランキングの見方と注意点も解説します。',
@@ -135,7 +159,7 @@ export const articles: Article[] = [
 ];
 
 export const featuredArticleSlugs = [
+    'diagnosis-guide',
     'truth-of-compatibility',
-    'idol-compatibility',
-    'romance-strategy',
+    'relationship-checkpoints',
 ];
