@@ -45,6 +45,24 @@ export default function ArticlesIndex() {
                     </p>
                 </div>
 
+                <section className="mb-12 bg-white/90 border border-teal-100 rounded-2xl p-6 shadow-sm">
+                    <h2 className="text-lg font-bold text-teal-700 mb-3">記事の編集方針</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+                        <div className="bg-teal-50 rounded-xl p-4 border border-teal-100">
+                            <p className="font-bold text-teal-700 mb-2">決めつけを避ける</p>
+                            <p className="mb-0">タイプ診断を断定ではなく、会話や自己理解の材料として使えるように整理しています。</p>
+                        </div>
+                        <div className="bg-teal-50 rounded-xl p-4 border border-teal-100">
+                            <p className="font-bold text-teal-700 mb-2">悩み起点で書く</p>
+                            <p className="mb-0">相性・連絡頻度・価値観のズレなど、実際の悩みに接続できる読み物を優先しています。</p>
+                        </div>
+                        <div className="bg-teal-50 rounded-xl p-4 border border-teal-100">
+                            <p className="font-bold text-teal-700 mb-2">公開後も更新する</p>
+                            <p className="mb-0">重複感や説明不足があれば見直し、関連導線も含めて改善を続けています。</p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Theory & Analysis */}
                 <section id="theory" className="mb-14">
                     <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">

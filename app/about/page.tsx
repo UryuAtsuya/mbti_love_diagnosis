@@ -22,6 +22,9 @@ export default function AboutPage() {
                     <section>
                         <h2 className="text-xl font-bold text-teal-700 mb-4">運営者</h2>
                         <p>AI Love Matcher 運営事務局</p>
+                        <p className="mt-2 text-sm text-gray-600">
+                            性格傾向の読み解きと恋愛コミュニケーションの整理をテーマに、診断体験と記事コンテンツを運営しています。
+                        </p>
                     </section>
 
                     <section>
@@ -41,6 +44,16 @@ export default function AboutPage() {
                         <p>
                             当サイトでは、誇張や断定的な表現を避け、傾向や参考情報として理解しやすいコンテンツ作りを重視しています。広告や外部リンクの掲載がある場合も、ユーザーにとって役立つ説明や比較情報を先に提示し、広告のみを目的としたページは作成しません。
                         </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">記事の制作フロー</h2>
+                        <ol className="list-decimal list-inside space-y-2">
+                            <li>恋愛や相性に関する悩みテーマを整理し、記事の目的と想定読者を決めます。</li>
+                            <li>MBTIの一般的な見方と、当サイトのラブタイプ整理軸を分けて構成を作ります。</li>
+                            <li>公開前に人の目で読み直し、決めつけが強い表現や重複感のある記述を調整します。</li>
+                            <li>公開後も必要に応じて見直し、説明不足の箇所や導線を更新します。</li>
+                        </ol>
                     </section>
 
                     <section>
@@ -74,8 +87,15 @@ export default function AboutPage() {
                         </p>
                     </section>
 
+                    <section>
+                        <h2 className="text-xl font-bold text-teal-700 mb-4">更新と修正について</h2>
+                        <p>
+                            記事内容の誤記、分かりにくい表現、導線の不備などは順次見直しています。大きな方針変更や重要な修正がある場合は、各ページの更新日や関連導線に反映します。
+                        </p>
+                    </section>
+
                     <div className="pt-8 border-t border-gray-100 text-sm text-gray-500">
-                        2026年3月8日 更新
+                        2026年4月19日 更新
                     </div>
                 </div>
             </div>
