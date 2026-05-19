@@ -5,21 +5,29 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CookieConsent from "@/components/CookieConsent";
+import {
+  contactFormUrl,
+  foundingDate,
+  organizationName,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "@/lib/siteMetadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MBTI×ラブタイプ相性診断 | AIが解き明かす運命の相性",
   description: "AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析！16タイプ別の解説コラムも充実。あなたの恋愛を科学する相性診断サイト。",
-  metadataBase: new URL('https://mbti-lovetype.com'),
+  metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'MBTI×ラブタイプ相性診断',
     description: 'AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析！',
-    url: 'https://mbti-lovetype.com',
-    siteName: 'AI Love Matcher',
+    url: siteUrl,
+    siteName,
     images: [
       {
         url: '/Love_type.png',
@@ -57,16 +65,51 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'AI Love Matcher',
-              url: 'https://mbti-lovetype.com',
-              description: 'AIがあなたのMBTIと恋愛タイプから、二人の相性を徹底分析。16タイプ別の解説コラムも充実。',
-              inLanguage: 'ja',
-              publisher: {
-                '@type': 'Organization',
-                name: 'AI Love Matcher 運営事務局',
-                url: 'https://mbti-lovetype.com',
-              },
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': `${siteUrl}/#organization`,
+                  name: organizationName,
+                  url: siteUrl,
+                  logo: `${siteUrl}/icon.png`,
+                  foundingDate,
+                  publishingPrinciples: `${siteUrl}/about`,
+                  correctionsPolicy: `${siteUrl}/contact`,
+                  knowsAbout: ['MBTI', 'ラブタイプ', '恋愛相性', '恋愛コミュニケーション'],
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    contactType: 'customer support',
+                    url: contactFormUrl,
+                    availableLanguage: ['ja'],
+                  },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': `${siteUrl}/#website`,
+                  name: siteName,
+                  alternateName: ['MBTIラブタイプ相性診断', 'MBTI Love Type Matcher'],
+                  url: siteUrl,
+                  description: siteDescription,
+                  inLanguage: 'ja',
+                  publisher: {
+                    '@id': `${siteUrl}/#organization`,
+                  },
+                },
+                {
+                  '@type': 'WebApplication',
+                  '@id': `${siteUrl}/diagnosis#webapp`,
+                  name: 'MBTI×ラブタイプ無料相性診断',
+                  url: `${siteUrl}/diagnosis`,
+                  applicationCategory: 'LifestyleApplication',
+                  operatingSystem: 'Web',
+                  isAccessibleForFree: true,
+                  inLanguage: 'ja',
+                  description: 'MBTIとラブタイプをもとに、二人の相性や会話で気をつけたいポイントを無料で整理します。',
+                  provider: {
+                    '@id': `${siteUrl}/#organization`,
+                  },
+                },
+              ],
             }),
           }}
         />

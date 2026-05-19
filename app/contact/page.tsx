@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { contactFormUrl, organizationName, siteUrl } from '@/lib/siteMetadata';
 
 export const metadata: Metadata = {
     title: 'お問い合わせ | AI Love Matcher',
@@ -11,8 +12,33 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+    const contactJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        '@id': `${siteUrl}/contact#contact`,
+        url: `${siteUrl}/contact`,
+        name: 'お問い合わせ | AI Love Matcher',
+        description: 'AI Love Matcherへの質問、記事内容の指摘、不具合報告、広告掲載相談の窓口です。',
+        mainEntity: {
+            '@type': 'Organization',
+            '@id': `${siteUrl}/#organization`,
+            name: organizationName,
+            contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer support',
+                url: contactFormUrl,
+                availableLanguage: ['ja'],
+            },
+        },
+        inLanguage: 'ja',
+    };
+
     return (
         <main className="min-h-screen bg-white p-8 max-w-4xl mx-auto">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+            />
             <Breadcrumb items={[{ label: 'お問い合わせ' }]} />
             <h1 className="text-3xl font-bold text-gray-800 mb-6">お問い合わせ</h1>
 
@@ -29,7 +55,7 @@ export default function ContactPage() {
                         内容によっては、返信までお時間をいただく場合や、返信できない場合があります。
                     </p>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSc--6IRclml4DsYVFUFhDS7r-hde1VeV1seX0CiGhtOqImvEg/viewform?usp=publish-editor"
+                        href={contactFormUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-emerald-500 px-6 py-3 font-bold text-white shadow-lg shadow-teal-100 transition-transform hover:scale-[1.02]"
