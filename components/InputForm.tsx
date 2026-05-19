@@ -77,12 +77,12 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
     return (
         <div className="w-full max-w-md md:max-w-xl mx-auto">
             {/* Progress Bar (Segmented) */}
-            <div className="mb-8">
-                <div className="flex justify-between text-xs font-bold text-teal-600 mb-2">
-                    <button onClick={() => { setDirection(-1); setStep(0); }} className="focus:outline-none hover:text-teal-800 transition-colors">あなた</button>
-                    <button onClick={() => { setDirection(1); setStep(1); }} className="focus:outline-none hover:text-teal-800 transition-colors">お相手</button>
+            <div className="mb-5 sm:mb-8">
+                <div className="flex justify-between text-xs font-bold text-teal-700 mb-2">
+                    <button type="button" onClick={() => { setDirection(-1); setStep(0); }} className="min-h-8 rounded-full px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 hover:text-teal-900 transition-colors">あなた</button>
+                    <button type="button" onClick={() => { setDirection(1); setStep(1); }} className="min-h-8 rounded-full px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 hover:text-teal-900 transition-colors">お相手</button>
                 </div>
-                <div className="h-2 rounded-full overflow-hidden flex cursor-pointer" onClick={(e) => {
+                <div className="h-3 rounded-full overflow-hidden flex cursor-pointer" onClick={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const isLeft = x < rect.width / 2;
@@ -95,14 +95,14 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                     }
                 }}>
                     {/* Left Segment */}
-                    <div className={`flex-1 transition-colors duration-300 ${step === 0 ? 'bg-teal-400' : 'bg-gray-200'}`} />
+                    <div className={`flex-1 transition-colors duration-300 ${step === 0 ? 'bg-teal-600' : 'bg-gray-200'}`} />
                     {/* Right Segment */}
-                    <div className={`flex-1 transition-colors duration-300 ${step === 1 ? 'bg-teal-400' : 'bg-gray-200'}`} />
+                    <div className={`flex-1 transition-colors duration-300 ${step === 1 ? 'bg-teal-600' : 'bg-gray-200'}`} />
                 </div>
             </div>
 
             {/* Form Content */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-teal-100 p-6 relative overflow-hidden min-h-[420px]">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-teal-100 p-4 relative overflow-hidden min-h-[408px] sm:rounded-3xl sm:p-6 sm:min-h-[420px]">
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.div
                         key={step}
@@ -118,15 +118,16 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                         className="space-y-4"
                     >
                         <div className="text-center mb-4">
-                            <h2 className="text-xl font-bold text-gray-700 flex items-center justify-center gap-2">
-                                {step === 0 ? <User className="text-teal-500" /> : <Heart className="text-teal-500" />}
+                            <h2 className="text-xl font-bold text-gray-800 flex items-center justify-center gap-2">
+                                {step === 0 ? <User className="text-teal-700" /> : <Heart className="text-teal-700" />}
                                 {step === 0 ? "あなたのこと" : "お相手のこと"}
                             </h2>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-xs font-bold text-gray-500 ml-1">お名前 (ニックネーム)</label>
+                            <label htmlFor={step === 0 ? 'user_name' : 'partner_name'} className="text-xs font-bold text-gray-700 ml-1">お名前 (ニックネーム)</label>
                             <input
+                                id={step === 0 ? 'user_name' : 'partner_name'}
                                 type="text"
                                 value={step === 0 ? formData.user_name : formData.partner_name}
                                 onChange={(e) => setFormData({
@@ -134,19 +135,21 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                                     [step === 0 ? 'user_name' : 'partner_name']: e.target.value
                                 })}
                                 placeholder={step === 0 ? "例: みく" : "例: たくみ"}
-                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700"
+                                className="min-h-12 w-full p-3 bg-teal-50/50 border border-teal-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-gray-800"
                             />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-xs font-bold text-gray-500 ml-1">性別</label>
+                            <label htmlFor={step === 0 ? 'user_gender' : 'partner_gender'} className="text-xs font-bold text-gray-700 ml-1">性別</label>
                             <select
+                                id={step === 0 ? 'user_gender' : 'partner_gender'}
+                                name={step === 0 ? 'user_gender' : 'partner_gender'}
                                 value={step === 0 ? formData.user_gender : formData.partner_gender}
                                 onChange={(e) => setFormData({
                                     ...formData,
                                     [step === 0 ? 'user_gender' : 'partner_gender']: e.target.value
                                 })}
-                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700"
+                                className="min-h-12 w-full p-3 bg-teal-50/50 border border-teal-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-gray-800"
                             >
                                 <option value="">選択してください</option>
                                 <option value="男性">男性</option>
@@ -156,8 +159,10 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-xs font-bold text-gray-500 ml-1">MBTI</label>
+                            <label htmlFor={step === 0 ? 'user_mbti' : 'partner_mbti'} className="text-xs font-bold text-gray-700 ml-1">MBTI</label>
                             <select
+                                id={step === 0 ? 'user_mbti' : 'partner_mbti'}
+                                name={step === 0 ? 'user_mbti' : 'partner_mbti'}
                                 value={step === 0 ? formData.user_mbti : formData.partner_mbti}
                                 onChange={(e) => {
                                     const newVal = e.target.value;
@@ -175,7 +180,7 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                                         partnerType ? partnerType.color : '#ecfdf5' // default emerald-50
                                     );
                                 }}
-                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700"
+                                className="min-h-12 w-full p-3 bg-teal-50/50 border border-teal-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-gray-800"
                             >
                                 <option value="">選択してください</option>
                                 {MBTI_TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
@@ -183,14 +188,16 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-xs font-bold text-gray-500 ml-1">Love Type</label>
+                            <label htmlFor={step === 0 ? 'user_love_type' : 'partner_love_type'} className="text-xs font-bold text-gray-700 ml-1">Love Type</label>
                             <select
+                                id={step === 0 ? 'user_love_type' : 'partner_love_type'}
+                                name={step === 0 ? 'user_love_type' : 'partner_love_type'}
                                 value={step === 0 ? formData.user_love_type : formData.partner_love_type}
                                 onChange={(e) => setFormData({
                                     ...formData,
                                     [step === 0 ? 'user_love_type' : 'partner_love_type']: e.target.value
                                 })}
-                                className="w-full p-3 bg-teal-50/50 border border-teal-100 rounded-xl focus:ring-2 focus:ring-teal-400 outline-none text-gray-700 text-sm"
+                                className="min-h-12 w-full p-3 bg-teal-50/50 border border-teal-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-gray-800 text-sm"
                             >
                                 <option value="">選択してください</option>
                                 {LOVE_TYPES.map((t, i) => (
@@ -205,12 +212,13 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
             </div>
 
             {/* Action Buttons */}
-            <div className="mt-8 flex gap-4">
+            <div className="mt-6 flex gap-3 sm:mt-8 sm:gap-4">
                 {step === 1 && (
                     <button
+                        type="button"
                         onClick={handleBack}
                         disabled={loading}
-                        className="flex-1 py-4 bg-white text-teal-600 font-bold rounded-full shadow-lg shadow-gray-100 hover:bg-gray-50 transition-all"
+                        className="min-h-14 flex-1 py-4 bg-white text-teal-700 font-bold rounded-full shadow-lg shadow-gray-100 hover:bg-gray-50 transition-all disabled:opacity-70"
                     >
                         戻る
                     </button>
@@ -218,16 +226,18 @@ export default function InputForm({ onStartDiagnosis, loading, onMBTIChange }: I
 
                 {step === 0 ? (
                     <button
+                        type="button"
                         onClick={handleNext}
-                        className="w-full py-4 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-bold rounded-full shadow-lg shadow-teal-200 hover:scale-[1.02] active:scale-95 transition-all"
+                        className="min-h-14 w-full py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold rounded-full shadow-lg shadow-teal-200 hover:scale-[1.02] active:scale-95 transition-all"
                     >
                         次へ進む
                     </button>
                 ) : (
                     <button
+                        type="button"
                         onClick={handleSubmit}
                         disabled={loading}
-                        className="flex-1 py-4 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-bold rounded-full shadow-lg shadow-teal-200 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:scale-100"
+                        className="min-h-14 flex-1 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold rounded-full shadow-lg shadow-teal-200 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:scale-100"
                     >
                         {loading ? <Loader2 className="animate-spin" /> : (
                             <>

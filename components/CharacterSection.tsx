@@ -9,17 +9,17 @@ export default function CharacterSection() {
     const [activeTab, setActiveTab] = useState<'mbti' | 'love_type'>('mbti');
 
     return (
-        <div className="max-w-5xl mx-auto px-4 pb-20">
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-teal-100">
-                <h2 className="text-2xl font-bold text-center text-gray-700 mb-8">
+        <div className="max-w-5xl mx-auto px-4 pb-16 sm:pb-20">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-teal-100 sm:rounded-3xl sm:p-8">
+                <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
                     <span className="border-b-4 border-teal-200 inline-block pb-1">診断キャラクター</span>
                 </h2>
 
                 {/* Slider Toggle */}
                 <div className="max-w-xs mx-auto mb-8">
-                    <div className="flex justify-between text-xs font-bold text-teal-600 mb-2 px-2">
-                        <button onClick={() => setActiveTab('mbti')} className="focus:outline-none hover:text-teal-800 transition-colors">MBTI</button>
-                        <button onClick={() => setActiveTab('love_type')} className="focus:outline-none hover:text-teal-800 transition-colors">Love Type</button>
+                    <div className="flex justify-between text-xs font-bold text-teal-700 mb-2 px-2">
+                        <button type="button" onClick={() => setActiveTab('mbti')} className="min-h-8 rounded-full px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 hover:text-teal-900 transition-colors">MBTI</button>
+                        <button type="button" onClick={() => setActiveTab('love_type')} className="min-h-8 rounded-full px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 hover:text-teal-900 transition-colors">Love Type</button>
                     </div>
                     <div className="h-10 bg-gray-100 rounded-full p-1 relative cursor-pointer flex" onClick={() => setActiveTab(activeTab === 'mbti' ? 'love_type' : 'mbti')}>
                         <motion.div
@@ -30,10 +30,10 @@ export default function CharacterSection() {
                             }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         />
-                        <div className={`flex-1 flex items-center justify-center text-sm font-bold z-20 transition-colors duration-200 ${activeTab === 'mbti' ? 'text-teal-600' : 'text-gray-400'}`}>
+                        <div className={`flex-1 flex items-center justify-center text-sm font-bold z-20 transition-colors duration-200 ${activeTab === 'mbti' ? 'text-teal-700' : 'text-gray-600'}`}>
                             MBTI
                         </div>
-                        <div className={`flex-1 flex items-center justify-center text-sm font-bold z-20 transition-colors duration-200 ${activeTab === 'love_type' ? 'text-teal-600' : 'text-gray-400'}`}>
+                        <div className={`flex-1 flex items-center justify-center text-sm font-bold z-20 transition-colors duration-200 ${activeTab === 'love_type' ? 'text-teal-700' : 'text-gray-600'}`}>
                             Love Type
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function CharacterSection() {
                                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                             >
                                 {LOVE_TYPES.filter(t => !t.disabled).map((type) => (
-                                    <div key={type.value} className="bg-white border border-teal-50 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow hover:border-teal-200 group">
+                                    <div key={type.value} className="bg-white border border-teal-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow hover:border-teal-300 group">
                                         <div className="relative w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-50">
                                             <Image
                                                 src={`/images/love_types/${type.value}.png`}
@@ -88,9 +88,9 @@ export default function CharacterSection() {
                                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
                                             />
                                         </div>
-                                        <h3 className="font-bold text-gray-700 text-sm mb-1">{type.label.split('(')[0]}</h3>
-                                        <p className="text-xs text-teal-600 font-bold mb-2">{type.label.split('(')[1]?.replace(')', '')}</p>
-                                        <p className="text-xs text-gray-500">{type.desc}</p>
+                                        <h3 className="font-bold text-gray-800 text-sm mb-1">{type.label.split('(')[0]}</h3>
+                                        <p className="text-xs text-teal-700 font-bold mb-2">{type.label.split('(')[1]?.replace(')', '')}</p>
+                                        <p className="text-xs text-gray-600 leading-5">{type.desc}</p>
                                     </div>
                                 ))}
                             </motion.div>
@@ -98,7 +98,7 @@ export default function CharacterSection() {
                     </AnimatePresence>
                 </div>
 
-                <p className="text-center text-gray-500 mt-8 text-sm">
+                <p className="text-center text-gray-600 mt-8 text-sm">
                     個性豊かなキャラクターたちがあなたの恋愛をサポート！
                 </p>
             </div>

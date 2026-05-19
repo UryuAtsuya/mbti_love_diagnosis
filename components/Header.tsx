@@ -23,10 +23,10 @@ export default function Header() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="flex items-center gap-2 font-bold text-teal-600 text-lg hover:text-teal-700 transition-colors"
+                    className="flex min-w-0 items-center gap-2 font-bold text-teal-700 text-base hover:text-teal-800 transition-colors sm:text-lg"
                 >
-                    <Heart className="w-5 h-5 fill-teal-500 text-teal-500" />
-                    <span>AI Love Matcher</span>
+                    <Heart className="w-5 h-5 shrink-0 fill-teal-600 text-teal-600" />
+                    <span className="truncate">AI Love Matcher</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -41,8 +41,8 @@ export default function Header() {
                             href="/articles"
                             className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
                                 pathname.startsWith('/articles')
-                                    ? 'text-teal-600'
-                                    : 'text-gray-600 hover:text-teal-600'
+                                    ? 'text-teal-700'
+                                    : 'text-gray-700 hover:text-teal-700'
                             }`}
                         >
                             <BookOpen className="w-4 h-4" />
@@ -56,7 +56,7 @@ export default function Header() {
                                     <Link
                                         key={cat.href}
                                         href={cat.href}
-                                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-600 hover:text-teal-600 hover:bg-teal-50 transition-colors"
+                                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:text-teal-700 hover:bg-teal-50 transition-colors"
                                     >
                                         {cat.icon}
                                         {cat.label}
@@ -70,8 +70,8 @@ export default function Header() {
                         href="/about"
                         className={`text-sm font-medium transition-colors ${
                             pathname === '/about'
-                                ? 'text-teal-600'
-                                : 'text-gray-600 hover:text-teal-600'
+                                ? 'text-teal-700'
+                                : 'text-gray-700 hover:text-teal-700'
                         }`}
                     >
                         運営者情報
@@ -79,7 +79,7 @@ export default function Header() {
 
                     <Link
                         href="/diagnosis"
-                        className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-md hover:-translate-y-px transition-all"
+                        className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-md hover:-translate-y-px transition-all"
                     >
                         相性診断を始める
                     </Link>
@@ -87,7 +87,7 @@ export default function Header() {
 
                 {/* Mobile hamburger */}
                 <button
-                    className="md:hidden p-2 text-gray-600 hover:text-teal-600 transition-colors"
+                    className="md:hidden min-h-11 min-w-11 p-2 text-gray-700 hover:text-teal-700 transition-colors"
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label="メニューを開く"
                 >
@@ -97,12 +97,12 @@ export default function Header() {
 
             {/* Mobile menu */}
             {menuOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+                <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2">
                     {categories.map((cat) => (
                         <Link
                             key={cat.href}
                             href={cat.href}
-                            className="flex items-center gap-2 text-gray-600 hover:text-teal-600 text-sm font-medium py-1 transition-colors"
+                            className="flex min-h-11 items-center gap-2 text-gray-700 hover:text-teal-700 text-sm font-medium transition-colors"
                             onClick={() => setMenuOpen(false)}
                         >
                             {cat.icon}
@@ -111,14 +111,14 @@ export default function Header() {
                     ))}
                     <Link
                         href="/about"
-                        className="flex items-center gap-2 text-gray-600 hover:text-teal-600 text-sm font-medium py-1 transition-colors"
+                        className="flex min-h-11 items-center gap-2 text-gray-700 hover:text-teal-700 text-sm font-medium transition-colors"
                         onClick={() => setMenuOpen(false)}
                     >
                         運営者情報
                     </Link>
                     <Link
                         href="/diagnosis"
-                        className="block bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-5 py-3 rounded-full text-sm font-bold text-center"
+                        className="block min-h-12 bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-5 py-3 rounded-full text-sm font-bold text-center"
                         onClick={() => setMenuOpen(false)}
                     >
                         相性診断を始める

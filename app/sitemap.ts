@@ -1,56 +1,60 @@
 import type { MetadataRoute } from 'next';
 import { articles } from '@/lib/articleRegistry';
+import { foundingDate, siteUrl } from '@/lib/siteMetadata';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://mbti-lovetype.com';
+    const latestArticleModified = articles.reduce(
+        (latest, article) => article.dateModified > latest ? article.dateModified : latest,
+        foundingDate,
+    );
 
-    const articleEntries: MetadataRoute.Sitemap = articles.map(({ slug }) => ({
-        url: `${baseUrl}/articles/${slug}`,
-        lastModified: new Date(),
+    const articleEntries: MetadataRoute.Sitemap = articles.map(({ slug, dateModified }) => ({
+        url: `${siteUrl}/articles/${slug}`,
+        lastModified: dateModified,
         changeFrequency: 'monthly',
         priority: 0.7,
     }));
 
     return [
         {
-            url: `${baseUrl}/`,
-            lastModified: new Date(),
+            url: `${siteUrl}/`,
+            lastModified: latestArticleModified,
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
-            url: `${baseUrl}/diagnosis`,
-            lastModified: new Date(),
+            url: `${siteUrl}/diagnosis`,
+            lastModified: foundingDate,
             changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/about`,
-            lastModified: new Date(),
+            url: `${siteUrl}/about`,
+            lastModified: foundingDate,
             changeFrequency: 'monthly',
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/contact`,
-            lastModified: new Date(),
+            url: `${siteUrl}/contact`,
+            lastModified: foundingDate,
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
-            url: `${baseUrl}/policy`,
-            lastModified: new Date(),
+            url: `${siteUrl}/policy`,
+            lastModified: foundingDate,
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
-            url: `${baseUrl}/terms`,
-            lastModified: new Date(),
+            url: `${siteUrl}/terms`,
+            lastModified: foundingDate,
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
-            url: `${baseUrl}/articles`,
-            lastModified: new Date(),
+            url: `${siteUrl}/articles`,
+            lastModified: latestArticleModified,
             changeFrequency: 'weekly',
             priority: 0.8,
         },

@@ -3,32 +3,48 @@ export interface Article {
     title: string;
     description: string;
     tag: string;
+    datePublished: string;
+    dateModified: string;
 }
 
-export const articles: Article[] = [
+const defaultDatePublished = '2026-03-01';
+const defaultDateModified = '2026-03-29';
+
+type ArticleSeed = Omit<Article, 'datePublished' | 'dateModified'> &
+    Partial<Pick<Article, 'datePublished' | 'dateModified'>>;
+
+const articleSeeds: ArticleSeed[] = [
     {
         slug: 'diagnosis-guide',
         title: '診断結果をそのまま信じないための読み解きガイド',
         description: 'MBTIとラブタイプの結果を、決めつけではなく会話の材料として使うための見方を整理します。',
         tag: '理論・解説',
+        datePublished: '2026-04-19',
+        dateModified: '2026-04-19',
     },
     {
         slug: 'relationship-checkpoints',
         title: '相性が悪いと感じたときに先に確認したい5つのこと',
         description: '本当に相性が悪いのか、それとも距離感や伝え方のズレなのかを切り分けるための確認ポイントを紹介します。',
         tag: '恋愛攻略・実戦',
+        datePublished: '2026-04-19',
+        dateModified: '2026-04-19',
     },
     {
         slug: 'message-frequency-gap',
         title: '連絡頻度の違いで苦しくなる前に読む話',
         description: '返信速度や会話量の差が不安に変わる前に、すり合わせるべき論点と伝え方を具体例つきで解説します。',
         tag: '恋愛攻略・実戦',
+        datePublished: '2026-04-19',
+        dateModified: '2026-04-19',
     },
     {
         slug: 'dating-value-differences',
         title: '価値観が違う相手とうまく付き合うための話し合い方',
         description: 'お金、時間、将来像の違いでぶつかったときに、関係を壊さず整理する対話の進め方をまとめました。',
         tag: '恋愛攻略・実戦',
+        datePublished: '2026-04-19',
+        dateModified: '2026-04-19',
     },
     {
         slug: 'mbti-compatibility-ranking',
@@ -157,6 +173,16 @@ export const articles: Article[] = [
         tag: '16タイプ解説',
     },
 ];
+
+export const articles: Article[] = articleSeeds.map((article) => ({
+    datePublished: defaultDatePublished,
+    dateModified: defaultDateModified,
+    ...article,
+}));
+
+export function getArticleBySlug(slug: string): Article | undefined {
+    return articles.find((article) => article.slug === slug);
+}
 
 export const featuredArticleSlugs = [
     'diagnosis-guide',

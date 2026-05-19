@@ -167,7 +167,7 @@ export default function ChatApp() {
 
     return (
         <div
-            className="min-h-screen w-full flex items-center justify-center p-4 transition-colors duration-700"
+            className="min-h-screen w-full flex items-start justify-center px-4 py-8 transition-colors duration-700 sm:items-center sm:p-4"
             style={{
                 background: `linear-gradient(135deg, ${bgColors.user} 0%, ${bgColors.partner} 100%)`
             }}
@@ -181,9 +181,9 @@ export default function ChatApp() {
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <div className="text-center mb-8">
-                            <h1 className="text-3xl font-bold text-gray-800 mb-2">AI Love Matcher</h1>
-                            <p className="text-teal-500 font-medium">二人の相性をAIが徹底分析♡</p>
+                        <div className="text-center mb-6 sm:mb-8">
+                            <h1 className="text-2xl font-bold text-gray-800 mb-2 sm:text-3xl">AI Love Matcher</h1>
+                            <p className="text-teal-700 font-medium">二人の相性をAIが徹底分析</p>
                         </div>
                         <InputForm
                             onStartDiagnosis={handleStartDiagnosisWrapper}
@@ -204,11 +204,11 @@ export default function ChatApp() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-teal-200 rounded-full animate-ping opacity-20"></div>
                             <div className="bg-white p-6 rounded-full shadow-xl relative z-10">
-                                <Heart className="w-16 h-16 text-teal-500 animate-pulse" />
+                                <Heart className="w-16 h-16 text-teal-700 animate-pulse" />
                             </div>
                         </div>
                         <h2 className="mt-8 text-2xl font-bold text-gray-700">診断中...</h2>
-                        <p className="text-teal-500 mt-2">二人の相性を分析しています</p>
+                        <p className="text-teal-700 mt-2">二人の相性を分析しています</p>
                     </motion.div>
                 )}
 
