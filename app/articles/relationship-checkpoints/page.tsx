@@ -19,7 +19,7 @@ export default function RelationshipCheckpointsPage() {
                 description="本当に相性が悪いのか、それとも話し方や距離感のズレなのかを見極めるための確認ポイントを整理します。"
                 slug="relationship-checkpoints"
                 datePublished="2026-04-19"
-                dateModified="2026-04-19"
+                dateModified="2026-05-19"
             />
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
                 <Breadcrumb items={[{ label: '記事一覧', href: '/articles' }, { label: '相性が悪いと感じたときに先に確認したい5つのこと' }]} />
@@ -89,6 +89,45 @@ export default function RelationshipCheckpointsPage() {
                         <p className="mb-0">
                             相性診断でどう出るかより、自分が安心して話せるか、尊重されている感覚があるかの方が重要です。
                         </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">6. MBTIだけで相性を決めない</h2>
+                        <p className="mb-4">
+                            MBTIで相性が良いとされる組み合わせでも、恋愛ではうまくいかないことがあります。逆に、タイプだけ見ると違いが大きい二人でも、連絡頻度、生活リズム、愛情表現の受け取り方が合っていれば安定することがあります。
+                        </p>
+                        <p className="mb-4">
+                            当サイトでは、MBTIを「考え方の傾向」、ラブタイプを「恋愛で安心する条件」と分けて見ています。相性が悪いと感じたときは、性格そのものではなく、安心条件のズレが起きていないかを先に確認すると判断しやすくなります。
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">性格の違い</h3>
+                                <p className="text-sm mb-0">
+                                    考える順番、決め方、感情表現の出方が違う状態です。説明の仕方を変えると改善することがあります。
+                                </p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">安心条件の違い</h3>
+                                <p className="text-sm mb-0">
+                                    連絡、距離感、優先順位、将来像の扱いが違う状態です。具体的なルール作りが必要になりやすいです。
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">7. 危険な相性の悪さと、調整できるズレの違い</h2>
+                        <p className="mb-4">
+                            調整できるズレは、話し合うと少しずつ行動が変わります。返信の目安を決める、予定変更の伝え方を変える、ケンカ後の戻り方を決めるなど、二人で運用を作れる状態です。
+                        </p>
+                        <p className="mb-4">
+                            一方で、こちらの不安を何度伝えても軽く扱われる、人格を否定される、話し合いそのものを拒否され続ける場合は、相性以前に関係の安全性を見直す必要があります。診断結果が良くても、尊重されない関係を続ける理由にはなりません。
+                        </p>
+                        <div className="bg-rose-50 border border-rose-100 rounded-xl p-5 text-sm">
+                            <p className="mb-0">
+                                「違いがあること」と「大切にされないこと」は別です。前者はすり合わせの対象ですが、後者は距離を取る判断材料になります。
+                            </p>
+                        </div>
                     </section>
 
                     <section>

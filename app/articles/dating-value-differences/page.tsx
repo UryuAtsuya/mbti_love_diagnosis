@@ -19,7 +19,7 @@ export default function DatingValueDifferencesPage() {
                 description="お金、時間、将来像の違いでぶつかったときに、相手を否定せず論点を整理する話し合いの進め方を解説します。"
                 slug="dating-value-differences"
                 datePublished="2026-04-19"
-                dateModified="2026-04-19"
+                dateModified="2026-05-19"
             />
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
                 <Breadcrumb items={[{ label: '記事一覧', href: '/articles' }, { label: '価値観が違う相手とうまく付き合うための話し合い方' }]} />
@@ -101,6 +101,45 @@ export default function DatingValueDifferencesPage() {
                             <p>私は△△みたいに感じやすいみたいで、そこが少し不安だった。</p>
                             <p>あなたはどう考えていたのかを先に知りたい。</p>
                             <p className="mb-0">その上で、今後は□□みたいにできると助かる。</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">6. MBTI別に起こりやすいすれ違い</h2>
+                        <p className="mb-4">
+                            価値観の違いは、単に「性格が合わない」というより、安心する判断基準が違うことで起こります。MBTIで見ると、判断型は予定やルールが決まっている方が落ち着きやすく、知覚型は余白や変更のしやすさを大切にしやすい傾向があります。
+                        </p>
+                        <p className="mb-4">
+                            思考型は「合理的かどうか」を先に見やすく、感情型は「相手の気持ちを大切にできているか」を先に見やすいことがあります。どちらが正しいかではなく、話し合いで見ている場所が違うと考えると、相手を責めずに整理しやすくなります。
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">予定重視の人</h3>
+                                <p className="text-sm mb-0">
+                                    先に決めておくことで安心するため、急な変更が続くと大切にされていないように感じやすくなります。
+                                </p>
+                            </div>
+                            <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+                                <h3 className="font-bold text-teal-700 mb-2">柔軟さ重視の人</h3>
+                                <p className="text-sm mb-0">
+                                    その場の気分や状況も大切にしたいため、細かく決めすぎると窮屈に感じやすくなります。
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">7. 合わせることと我慢することを分ける</h2>
+                        <p className="mb-4">
+                            話し合いの目的は、どちらか一方が完全に譲ることではありません。毎回同じ人だけが予定を変える、金銭感覚を飲み込む、将来の希望を言えない状態が続くなら、それはすり合わせではなく我慢になっています。
+                        </p>
+                        <p className="mb-4">
+                            合わせるとは、互いの大事にしているものを理解したうえで、現実的な運用を決めることです。たとえば「旅行は年2回までにするが、記念日は少し良い店に行く」「平日は一人時間を優先し、週末は予定を共有する」のように、場面ごとに分けると負担が偏りにくくなります。
+                        </p>
+                        <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5 text-sm">
+                            <p className="mb-0">
+                                価値観が違う相手と続けるには、完全一致を目指すより「違っても扱える形」を作る方が現実的です。
+                            </p>
                         </div>
                     </section>
 

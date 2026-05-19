@@ -28,7 +28,7 @@ const articleSeeds: ArticleSeed[] = [
         description: '本当に相性が悪いのか、それとも距離感や伝え方のズレなのかを切り分けるための確認ポイントを紹介します。',
         tag: '恋愛攻略・実戦',
         datePublished: '2026-04-19',
-        dateModified: '2026-04-19',
+        dateModified: '2026-05-19',
     },
     {
         slug: 'message-frequency-gap',
@@ -36,7 +36,7 @@ const articleSeeds: ArticleSeed[] = [
         description: '返信速度や会話量の差が不安に変わる前に、すり合わせるべき論点と伝え方を具体例つきで解説します。',
         tag: '恋愛攻略・実戦',
         datePublished: '2026-04-19',
-        dateModified: '2026-04-19',
+        dateModified: '2026-05-19',
     },
     {
         slug: 'dating-value-differences',
@@ -44,7 +44,7 @@ const articleSeeds: ArticleSeed[] = [
         description: 'お金、時間、将来像の違いでぶつかったときに、関係を壊さず整理する対話の進め方をまとめました。',
         tag: '恋愛攻略・実戦',
         datePublished: '2026-04-19',
-        dateModified: '2026-04-19',
+        dateModified: '2026-05-19',
     },
     {
         slug: 'mbti-compatibility-ranking',

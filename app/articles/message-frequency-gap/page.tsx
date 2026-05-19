@@ -19,7 +19,7 @@ export default function MessageFrequencyGapPage() {
                 description="返信ペースの違いが不安や不満に変わる前に、すり合わせるべきポイントと伝え方の例をまとめました。"
                 slug="message-frequency-gap"
                 datePublished="2026-04-19"
-                dateModified="2026-04-19"
+                dateModified="2026-05-19"
             />
             <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
                 <Breadcrumb items={[{ label: '記事一覧', href: '/articles' }, { label: '連絡頻度の違いで苦しくなる前に読む話' }]} />
@@ -92,7 +92,49 @@ export default function MessageFrequencyGapPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">5. それでもつらいときに見直すポイント</h2>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">5. MBTIとラブタイプで見え方を分ける</h2>
+                        <p className="mb-4">
+                            MBTIでは、外向型か内向型か、直感型か感覚型かによって、連絡の意味づけが変わることがあります。外向型はやり取りのテンポそのものに安心を感じやすく、内向型は一度考える時間を置いてから返す方が自然な場合があります。
+                        </p>
+                        <p className="mb-4">
+                            一方で、連絡頻度の不安はMBTIだけでは説明しきれません。ラブタイプで見ると、好意をこまめな反応で受け取りたい人もいれば、信頼しているからこそ頻繁に確認しなくていいと感じる人もいます。
+                        </p>
+                        <div className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-sm">
+                            <p className="mb-3">
+                                たとえば、相手が「返信は少ないけれど会ったときは丁寧」なら、愛情が薄いのではなく、テキストより対面で関係を作るタイプかもしれません。
+                            </p>
+                            <p className="mb-0">
+                                逆に「会っているときも雑で、連絡でも不安を放置する」なら、頻度の問題ではなく尊重の問題として見直す必要があります。
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">6. 実際に使える確認メッセージ</h2>
+                        <div className="space-y-4">
+                            <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                                <h3 className="font-bold text-emerald-700 mb-2">忙しさを確認したいとき</h3>
+                                <p className="text-sm mb-0">
+                                    「最近忙しそうだけど、返しやすい時間帯ってある？ 無理に即レスしてほしいわけじゃなくて、目安が分かると安心する。」
+                                </p>
+                            </div>
+                            <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                                <h3 className="font-bold text-emerald-700 mb-2">寂しさを伝えたいとき</h3>
+                                <p className="text-sm mb-0">
+                                    「返事がないときに、勝手に不安になりやすいみたい。短くてもいいから、忙しい日は一言だけもらえると落ち着く。」
+                                </p>
+                            </div>
+                            <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                                <h3 className="font-bold text-emerald-700 mb-2">相手の負担を減らしたいとき</h3>
+                                <p className="text-sm mb-0">
+                                    「毎回長く返さなくて大丈夫。大事な話だけ週末にまとめて話せたら、普段は短文でも安心できそう。」
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-teal-500 pl-4 mb-4">7. それでもつらいときに見直すポイント</h2>
                         <p className="mb-4">
                             話し合っても改善しない場合は、相手のスタイルが悪いというより、必要な安心の形が大きく違う可能性があります。ここを無視して無理に合わせ続けると、好きでも消耗します。
                         </p>
