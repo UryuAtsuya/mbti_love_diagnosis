@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { MessageCircle, Sparkles, Trophy, Zap } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: 'MBTI相性ランキングTOP5 | AI Love Matcher',
@@ -189,6 +190,7 @@ export default function CompatibilityRankingArticle() {
                     <span className="font-medium italic">Edit by AI Love Matcher Editorial Team</span>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

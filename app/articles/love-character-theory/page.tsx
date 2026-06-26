@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Heart, ShieldCheck, Sparkles, Zap } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: 'ラブキャラ64診断とは? MBTIと合わせて読むための理論ガイド | AI Love Matcher',
@@ -188,6 +189,7 @@ export default function LoveCharacterGuide() {
                     Edit by AI Love Matcher Editorial Team
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

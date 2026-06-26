@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: '連絡頻度の違いで苦しくなる前に読む話 | AI Love Matcher',
@@ -152,6 +153,7 @@ export default function MessageFrequencyGapPage() {
                     </section>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

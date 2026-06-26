@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: '診断結果をそのまま信じないための読み解きガイド | AI Love Matcher',
@@ -129,6 +130,7 @@ export default function DiagnosisGuidePage() {
                     </section>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

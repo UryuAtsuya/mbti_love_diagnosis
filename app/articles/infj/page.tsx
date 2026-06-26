@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BookOpen, Info, Sparkles } from 'lucide-react';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: 'INFJ（提唱者）の性格・恋愛傾向を解説 | AI Love Matcher',
@@ -231,6 +232,7 @@ export default function INFJArticle() {
                     この記事は一般的な傾向をもとに編集しています。2026年3月更新。
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

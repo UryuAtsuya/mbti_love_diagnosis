@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: '相性が悪いと感じたときに先に確認したい5つのこと | AI Love Matcher',
@@ -150,6 +151,7 @@ export default function RelationshipCheckpointsPage() {
                     </section>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

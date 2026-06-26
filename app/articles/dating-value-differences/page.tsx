@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: '価値観が違う相手とうまく付き合うための話し合い方 | AI Love Matcher',
@@ -152,6 +153,7 @@ export default function DatingValueDifferencesPage() {
                     </section>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }

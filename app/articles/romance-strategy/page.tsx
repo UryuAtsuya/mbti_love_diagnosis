@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ArticleJsonLd from '@/components/ArticleJsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import ArticleAffiliateRecommendation from '@/components/ArticleAffiliateRecommendation';
 
 export const metadata: Metadata = {
     title: 'MBTI×ラブキャラで読み解く恋愛コミュニケーション | AI Love Matcher',
@@ -188,6 +189,7 @@ export default function RomanceStrategy() {
                     </section>
                 </div>
             </div>
+            <ArticleAffiliateRecommendation />
         </main>
     );
 }
