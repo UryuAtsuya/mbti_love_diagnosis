@@ -1,15 +1,16 @@
 # AI Love Matcher
 
-AI Love Matcher is a Japanese website for MBTI and Love Type compatibility.
+> AI Love Matcher is a Japanese website for MBTI and Love Type compatibility.
+
 It provides a free browser-based compatibility diagnosis and editorial articles about relationship communication.
 
 ## Main pages
 
-- Home: https://mbti-lovetype.com/
-- Free compatibility diagnosis: https://mbti-lovetype.com/diagnosis
-- Articles: https://mbti-lovetype.com/articles
-- Operator information: https://mbti-lovetype.com/about
-- Contact: https://mbti-lovetype.com/contact
+- [Home](https://mbti-lovetype.com/): Overview of the free compatibility diagnosis and article content.
+- [Free compatibility diagnosis](https://mbti-lovetype.com/diagnosis): Browser-based MBTI and Love Type compatibility check.
+- [Articles](https://mbti-lovetype.com/articles): Editorial articles about MBTI, Love Type compatibility, and relationship communication.
+- [Operator information](https://mbti-lovetype.com/about): Site purpose, editorial stance, and operator information.
+- [Contact](https://mbti-lovetype.com/contact): Contact form and correction requests.
 
 ## What the site covers
 
