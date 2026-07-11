@@ -1,134 +1,20 @@
 import Link from 'next/link';
-import { Sparkles, ArrowRight, Lightbulb, Users } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import { articles, featuredArticleSlugs } from '@/lib/articleRegistry';
 
-const featuredTagClasses: Record<string, string> = {
-    'truth-of-compatibility': 'text-teal-700 bg-teal-50',
-    'idol-compatibility': 'text-pink-600 bg-pink-50',
-    'romance-strategy': 'text-orange-600 bg-orange-50',
-};
-
-const theoryArticles = articles.filter((a) =>
-    ['理論・解説', 'ランキング', '相性の真実'].includes(a.tag)
-);
-const typeArticles = articles.filter((a) => a.tag === '16タイプ解説').slice(0, 6);
-
 export default function ArticleSection() {
-    const featured = featuredArticleSlugs.map((slug) => articles.find((a) => a.slug === slug)!);
-
-    return (
-        <section className="py-12 px-4 bg-white/50 sm:py-16">
-            <div className="max-w-6xl mx-auto">
-                {/* Featured Articles */}
-                <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 sm:mb-10">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 flex items-center gap-2">
-                            <Sparkles className="text-teal-700 w-6 h-6" />
-                            <span>恋愛・相性コラム</span>
-                        </h2>
-                        <p className="text-gray-600 mt-2 leading-7">MBTI×ラブキャラで読み解く、恋愛のヒント</p>
-                    </div>
-                    <Link
-                        href="/articles"
-                        className="hidden md:flex items-center text-teal-700 font-bold hover:text-teal-800 transition-colors"
-                    >
-                        記事一覧を見る <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-14">
-                    {featured.map((article) => (
-                        <Link
-                            key={article.slug}
-                            href={`/articles/${article.slug}`}
-                            className="group block bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-200 hover:border-teal-300 transition-all p-4 h-full sm:p-5"
-                        >
-                            <div className="flex flex-col h-full">
-                                <span className={`text-xs font-bold px-2 py-1 rounded w-fit mb-3 ${featuredTagClasses[article.slug]}`}>
-                                    {article.tag}
-                                </span>
-                                <h3 className="font-bold text-gray-800 mb-2 leading-7 group-hover:text-teal-700 transition-colors">
-                                    {article.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 leading-6 line-clamp-3 mb-4 flex-grow">
-                                    {article.description}
-                                </p>
-                                <span className="text-teal-700 text-sm font-bold flex items-center mt-auto">
-                                    読む <ArrowRight className="w-3 h-3 ml-1 transform group-hover:translate-x-1 transition-transform" />
-                                </span>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-
-                {/* Theory & Analysis Preview */}
-                <div className="mb-12 sm:mb-14">
-                    <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                        <Lightbulb className="w-5 h-5 text-indigo-500" />
-                        理論・解説
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {theoryArticles.map((article) => (
-                            <Link
-                                key={article.slug}
-                                href={`/articles/${article.slug}`}
-                                className="group flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-200 hover:border-teal-300 hover:shadow-sm transition-all"
-                            >
-                                <div className="flex-1">
-                                    <h4 className="font-bold text-sm text-gray-800 leading-6 group-hover:text-teal-700 transition-colors line-clamp-2">
-                                        {article.title}
-                                    </h4>
-                                    <p className="text-xs text-gray-600 leading-5 mt-1 line-clamp-2">{article.description}</p>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-
-                {/* 16 Types Preview */}
-                <div className="mb-8">
-                    <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                        <Users className="w-5 h-5 text-teal-700" />
-                        16タイプ別解説
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                        {typeArticles.map((article) => {
-                            const typeCode = article.slug.toUpperCase();
-                            return (
-                                <Link
-                                    key={article.slug}
-                                    href={`/articles/${article.slug}`}
-                                    className="group bg-white rounded-lg p-3 border border-gray-200 hover:border-teal-300 hover:shadow-sm transition-all text-center"
-                                >
-                                    <div className="text-lg font-bold text-teal-700 group-hover:text-teal-800 transition-colors">
-                                        {typeCode}
-                                    </div>
-                                    <p className="text-xs text-gray-600 mt-1 line-clamp-1">
-                                        {article.title.match(/（(.+?)）/)?.[1] ?? ''}
-                                    </p>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                    <div className="mt-4 text-center">
-                        <Link
-                            href="/articles#types"
-                            className="inline-flex min-h-10 items-center text-teal-700 font-bold text-sm hover:text-teal-800 transition-colors"
-                        >
-                            全16タイプを見る <ArrowRight className="w-3 h-3 ml-1" />
-                        </Link>
-                    </div>
-                </div>
-
-                <div className="mt-8 text-center md:hidden">
-                    <Link
-                        href="/articles"
-                        className="inline-flex min-h-11 items-center text-teal-700 font-bold hover:text-teal-800 transition-colors"
-                    >
-                        記事一覧を見る <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+  const featured = featuredArticleSlugs.map((slug) => articles.find((article) => article.slug === slug)!).filter(Boolean);
+  return (
+    <section className="border-y border-[#ebe5ea] bg-white px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div><p className="text-xs font-bold tracking-[.16em] text-[#b64f61]">JOURNAL</p><h2 className="mt-3 text-2xl font-bold sm:text-3xl">恋愛を、もう少し深く理解する。</h2><p className="mt-3 text-sm leading-7 text-[#6a6573]">相性・会話・距離感を、タイプだけで決めつけずに考えるコラム。</p></div>
+          <Link href="/articles" className="inline-flex min-h-11 items-center gap-2 font-bold text-[#7969bb]">恋愛コラムをすべて見る <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+        <div className="mt-9 grid gap-4 md:grid-cols-3">
+          {featured.map((article, index) => <Link key={article.slug} href={`/articles/${article.slug}`} className={`group flex min-h-64 flex-col rounded-3xl border border-[#e9e4e8] p-6 transition hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(37,35,66,.08)] ${index === 0 ? 'bg-[#eee9fb]' : 'bg-[#fcfafb]'}`}><span className="w-fit rounded-full bg-white px-3 py-1 text-xs font-bold text-[#b64f61]">{article.tag}</span><h3 className="mt-5 text-lg font-bold leading-7 group-hover:text-[#7969bb]">{article.title}</h3><p className="mt-3 line-clamp-2 text-sm leading-6 text-[#6a6573]">{article.description}</p><div className="mt-auto flex items-center justify-between pt-5 text-xs text-[#837d8b]"><span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> 約5分</span><ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div></Link>)}
+        </div>
+      </div>
+    </section>
+  );
 }

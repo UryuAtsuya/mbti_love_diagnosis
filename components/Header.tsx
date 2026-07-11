@@ -3,128 +3,36 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Heart, BookOpen, Lightbulb, Users, Sparkles, Menu, X, ChevronDown } from 'lucide-react';
+import { Heart, Menu, X } from 'lucide-react';
 
-const categories = [
-    { href: '/articles', label: '記事一覧', icon: <BookOpen className="w-4 h-4" /> },
-    { href: '/articles#theory', label: '理論・解説', icon: <Lightbulb className="w-4 h-4" /> },
-    { href: '/articles#types', label: 'タイプ別解説', icon: <Users className="w-4 h-4" /> },
-    { href: '/articles#romance', label: '恋愛コラム', icon: <Sparkles className="w-4 h-4" /> },
+const navigation = [
+  { href: '/diagnosis', label: '診断する' },
+  { href: '/articles#types', label: 'タイプを知る' },
+  { href: '/articles', label: '恋愛コラム' },
+  { href: '/about', label: 'このサイトについて' },
 ];
 
 export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-    return (
-        <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-            <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-                {/* Logo */}
-                <Link
-                    href="/"
-                    className="flex min-w-0 items-center gap-2 font-bold text-teal-700 text-base hover:text-teal-800 transition-colors sm:text-lg"
-                >
-                    <Heart className="w-5 h-5 shrink-0 fill-teal-600 text-teal-600" />
-                    <span className="truncate">AI Love Matcher</span>
-                </Link>
+  return (
+    <header className="sticky top-0 z-50 border-b border-[#ebe5ea] bg-white/95 shadow-[0_4px_18px_rgba(37,35,66,.04)] backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+        <Link href="/" className="flex min-w-0 items-center gap-2 font-bold text-[#252342]">
+          <span className="relative flex h-8 w-9 items-center justify-center" aria-hidden="true"><span className="absolute left-1 h-6 w-6 rounded-full border-2 border-[#a897e8]" /><span className="absolute right-1 h-6 w-6 rounded-full border-2 border-[#f27d8d]" /></span>
+          <span className="truncate">AI Love Matcher</span>
+        </Link>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-6">
-                    {/* Articles dropdown */}
-                    <div
-                        className="relative"
-                        onMouseEnter={() => setDropdownOpen(true)}
-                        onMouseLeave={() => setDropdownOpen(false)}
-                    >
-                        <Link
-                            href="/articles"
-                            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-                                pathname.startsWith('/articles')
-                                    ? 'text-teal-700'
-                                    : 'text-gray-700 hover:text-teal-700'
-                            }`}
-                        >
-                            <BookOpen className="w-4 h-4" />
-                            記事一覧
-                            <ChevronDown className={`w-3 h-3 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
-                        </Link>
+        <nav className="hidden items-center gap-6 md:flex" aria-label="メインナビゲーション">
+          {navigation.map((item) => <Link key={item.href} href={item.href} className={`text-sm font-medium transition-colors hover:text-[#b64f61] ${pathname === item.href ? 'text-[#b64f61]' : 'text-[#565164]'}`}>{item.label}</Link>)}
+          <Link href="/diagnosis" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#f27d8d] px-5 text-sm font-bold text-white transition hover:bg-[#ed6f81]"><Heart className="h-4 w-4 fill-white" />無料で相性診断</Link>
+        </nav>
 
-                        {dropdownOpen && (
-                            <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[180px]">
-                                {categories.slice(1).map((cat) => (
-                                    <Link
-                                        key={cat.href}
-                                        href={cat.href}
-                                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:text-teal-700 hover:bg-teal-50 transition-colors"
-                                    >
-                                        {cat.icon}
-                                        {cat.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-
-                    <Link
-                        href="/about"
-                        className={`text-sm font-medium transition-colors ${
-                            pathname === '/about'
-                                ? 'text-teal-700'
-                                : 'text-gray-700 hover:text-teal-700'
-                        }`}
-                    >
-                        運営者情報
-                    </Link>
-
-                    <Link
-                        href="/diagnosis"
-                        className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:shadow-md hover:-translate-y-px transition-all"
-                    >
-                        相性診断を始める
-                    </Link>
-                </nav>
-
-                {/* Mobile hamburger */}
-                <button
-                    className="md:hidden min-h-11 min-w-11 p-2 text-gray-700 hover:text-teal-700 transition-colors"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="メニューを開く"
-                >
-                    {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                </button>
-            </div>
-
-            {/* Mobile menu */}
-            {menuOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2">
-                    {categories.map((cat) => (
-                        <Link
-                            key={cat.href}
-                            href={cat.href}
-                            className="flex min-h-11 items-center gap-2 text-gray-700 hover:text-teal-700 text-sm font-medium transition-colors"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            {cat.icon}
-                            {cat.label}
-                        </Link>
-                    ))}
-                    <Link
-                        href="/about"
-                        className="flex min-h-11 items-center gap-2 text-gray-700 hover:text-teal-700 text-sm font-medium transition-colors"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        運営者情報
-                    </Link>
-                    <Link
-                        href="/diagnosis"
-                        className="block min-h-12 bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-5 py-3 rounded-full text-sm font-bold text-center"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        相性診断を始める
-                    </Link>
-                </div>
-            )}
-        </header>
-    );
+        <Link href="/diagnosis" className="ml-auto mr-1 inline-flex min-h-11 items-center rounded-full bg-[#f27d8d] px-4 text-xs font-bold text-white md:hidden">無料で診断</Link>
+        <button type="button" className="flex min-h-11 min-w-11 items-center justify-center text-[#252342] md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'メニューを閉じる' : 'メニューを開く'}>{menuOpen ? <X /> : <Menu />}</button>
+      </div>
+      {menuOpen && <nav className="space-y-1 border-t border-[#ebe5ea] bg-white px-4 py-4 md:hidden" aria-label="モバイルナビゲーション">{navigation.map((item) => <Link key={item.href} href={item.href} className="flex min-h-11 items-center rounded-xl px-3 text-sm font-medium text-[#565164] hover:bg-[#faf7f8]" onClick={() => setMenuOpen(false)}>{item.label}</Link>)}</nav>}
+    </header>
+  );
 }

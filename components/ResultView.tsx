@@ -23,17 +23,17 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-teal-100"
+                className="overflow-hidden rounded-3xl border border-[#e7e0e6] bg-white shadow-[0_24px_70px_rgba(37,35,66,.14)]"
             >
                 {/* Header Section */}
-                <div className="bg-gradient-to-b from-teal-500 to-emerald-400 p-8 text-center text-white relative overflow-hidden">
+                <div className="relative overflow-hidden bg-[#252342] p-8 text-center text-white">
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
 
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="text-teal-100 font-bold tracking-widest mb-4 relative z-10"
+                        className="relative z-10 mb-4 font-bold tracking-widest text-[#c8bdf0]"
                     >
                         COMPATIBILITY SCORE
                     </motion.p>
@@ -48,7 +48,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
                                 stroke="currentColor"
                                 strokeWidth="12"
                                 fill="transparent"
-                                className="text-teal-300/30"
+                                className="text-white/15"
                             />
                             <motion.circle
                                 cx="50%"
@@ -90,7 +90,12 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
 
                 {/* Content Section */}
                 <div className="p-6 md:p-8 bg-white">
-                    <div className="prose prose-teal prose-base md:prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap break-words overflow-wrap-anywhere">
+                    {formData?.user_mbti && formData?.partner_mbti && (
+                        <p className="mb-5 text-center text-sm font-bold tracking-[.12em] text-[#7969bb]">
+                            {formData.user_mbti} × {formData.partner_mbti} の相性
+                        </p>
+                    )}
+                    <div className="prose prose-base max-w-none whitespace-pre-wrap break-words leading-relaxed text-gray-700 md:prose-lg overflow-wrap-anywhere">
                         {result.message}
                     </div>
 
@@ -120,19 +125,19 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
             >
                 <button
                     onClick={() => onConsult("この人とのデートで気をつけるべきことや、おすすめのデートプランを教えて！")}
-                    className="bg-white border border-teal-100 p-4 rounded-2xl shadow-sm hover:shadow-md hover:bg-teal-50 transition-all text-left group"
+                    className="group rounded-2xl border border-[#e7e0e6] bg-white p-4 text-left shadow-sm transition-all hover:bg-[#faf7f8] hover:shadow-md"
                 >
                     <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">💘</span>
                     <span className="font-bold text-gray-700 text-sm">デート術</span>
-                    <span className="block text-xs text-teal-500 mt-1">成功の秘訣は？</span>
+                    <span className="mt-1 block text-xs text-[#b64f61]">成功の秘訣は？</span>
                 </button>
                 <button
                     onClick={() => onConsult("この人に対して「やってはいけないこと」や「地雷」を教えて！")}
-                    className="bg-white border border-teal-100 p-4 rounded-2xl shadow-sm hover:shadow-md hover:bg-teal-50 transition-all text-left group"
+                    className="group rounded-2xl border border-[#e7e0e6] bg-white p-4 text-left shadow-sm transition-all hover:bg-[#faf7f8] hover:shadow-md"
                 >
                     <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">🙅‍♀️</span>
                     <span className="font-bold text-gray-700 text-sm">NG行動</span>
-                    <span className="block text-xs text-teal-500 mt-1">地雷を踏まないために</span>
+                    <span className="mt-1 block text-xs text-[#b64f61]">地雷を踏まないために</span>
                 </button>
             </motion.div>
 
@@ -145,7 +150,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
             >
                 <button
                     onClick={() => onConsult()}
-                    className="w-full md:w-auto bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-4 rounded-full shadow-xl shadow-teal-300/50 font-bold text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-transform"
+                    className="flex w-full items-center justify-center gap-3 rounded-full bg-[#f27d8d] px-8 py-4 text-lg font-bold text-white shadow-xl shadow-[#f27d8d]/30 transition-transform hover:scale-105 active:scale-95 md:w-auto"
                 >
                     <MessageCircleHeart className="w-6 h-6" />
                     AIアドバイザーに相談する
