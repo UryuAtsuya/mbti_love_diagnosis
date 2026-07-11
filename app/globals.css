@@ -5,9 +5,9 @@
   --foreground: #252342;
   --color-canvas: #faf7f8;
   --color-navy: #252342;
-  --color-coral: #f27d8d;
-  --color-coral-dark: #b64f61;
-  --color-lavender: #a897e8;
+  --color-coral: #0f9f8f;
+  --color-coral-dark: #0f766e;
+  --color-lavender: #99d8ce;
 }
 
 @theme inline {
@@ -34,14 +34,14 @@ body {
   padding: 0.9rem 1.75rem;
   color: white;
   font-weight: 700;
-  box-shadow: 0 12px 28px rgba(182, 79, 97, 0.22);
+  box-shadow: 0 12px 28px rgba(15, 118, 110, 0.2);
   transition: transform .2s ease, background .2s ease;
 }
 
-.primary-cta:hover { transform: translateY(-2px); background: #ed6f81; }
+.primary-cta:hover { transform: translateY(-2px); background: #0d8b7e; }
 .section-heading { text-align: center; }
-.section-heading > span { color: #7969bb; font-size: .75rem; font-weight: 700; letter-spacing: .16em; }
+.section-heading > span { color: #0f766e; font-size: .75rem; font-weight: 700; letter-spacing: .16em; }
 .section-heading h2 { margin-top: .75rem; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; }
 .hero-orb { position: absolute; border-radius: 9999px; filter: blur(2px); pointer-events: none; }
-.hero-orb-left { width: 24rem; height: 24rem; left: -12rem; top: -8rem; background: rgba(242,125,141,.12); }
-.hero-orb-right { width: 30rem; height: 30rem; right: -14rem; bottom: -16rem; background: rgba(168,151,232,.15); }
+.hero-orb-left { width: 24rem; height: 24rem; left: -12rem; top: -8rem; background: rgba(153,216,206,.18); }
+.hero-orb-right { width: 30rem; height: 30rem; right: -14rem; bottom: -16rem; background: rgba(209,241,233,.32); }

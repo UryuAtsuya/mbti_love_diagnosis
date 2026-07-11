@@ -91,7 +91,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
                 {/* Content Section */}
                 <div className="p-6 md:p-8 bg-white">
                     {formData?.user_mbti && formData?.partner_mbti && (
-                        <p className="mb-5 text-center text-sm font-bold tracking-[.12em] text-[#7969bb]">
+                        <p className="mb-5 text-center text-sm font-bold tracking-[.12em] text-[#0f766e]">
                             {formData.user_mbti} × {formData.partner_mbti} の相性
                         </p>
                     )}
@@ -129,7 +129,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
                 >
                     <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">💘</span>
                     <span className="font-bold text-gray-700 text-sm">デート術</span>
-                    <span className="mt-1 block text-xs text-[#b64f61]">成功の秘訣は？</span>
+                    <span className="mt-1 block text-xs text-[#0f766e]">成功の秘訣は？</span>
                 </button>
                 <button
                     onClick={() => onConsult("この人に対して「やってはいけないこと」や「地雷」を教えて！")}
@@ -137,7 +137,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
                 >
                     <span className="block text-2xl mb-2 group-hover:scale-110 transition-transform origin-left">🙅‍♀️</span>
                     <span className="font-bold text-gray-700 text-sm">NG行動</span>
-                    <span className="mt-1 block text-xs text-[#b64f61]">地雷を踏まないために</span>
+                    <span className="mt-1 block text-xs text-[#0f766e]">地雷を踏まないために</span>
                 </button>
             </motion.div>
 
@@ -150,7 +150,7 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
             >
                 <button
                     onClick={() => onConsult()}
-                    className="flex w-full items-center justify-center gap-3 rounded-full bg-[#f27d8d] px-8 py-4 text-lg font-bold text-white shadow-xl shadow-[#f27d8d]/30 transition-transform hover:scale-105 active:scale-95 md:w-auto"
+                    className="flex w-full items-center justify-center gap-3 rounded-full bg-[#0f9f8f] px-8 py-4 text-lg font-bold text-white shadow-xl shadow-[#0f9f8f]/30 transition-transform hover:scale-105 active:scale-95 md:w-auto"
                 >
                     <MessageCircleHeart className="w-6 h-6" />
                     AIアドバイザーに相談する

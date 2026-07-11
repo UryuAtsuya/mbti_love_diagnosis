@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { MBTI_TYPES } from '@/app/constants';
 
 const groups = [
-  { name: '分析家', types: ['INTJ', 'INTP', 'ENTJ', 'ENTP'], color: '#7969bb' },
+  { name: '分析家', types: ['INTJ', 'INTP', 'ENTJ', 'ENTP'], color: '#0f766e' },
   { name: '外交官', types: ['INFJ', 'INFP', 'ENFJ', 'ENFP'], color: '#4f8a72' },
   { name: '番人', types: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ'], color: '#4d7d9b' },
   { name: '探検家', types: ['ISTP', 'ISFP', 'ESTP', 'ESFP'], color: '#ad7640' },
@@ -28,7 +28,7 @@ export default function CharacterSection() {
             </div>
           ))}
         </div>
-        <div className="mt-7 text-center"><Link href="/articles#types" className="inline-flex min-h-11 items-center gap-2 font-bold text-[#7969bb]">16タイプの解説を見る <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="mt-7 text-center"><Link href="/articles#types" className="inline-flex min-h-11 items-center gap-2 font-bold text-[#0f766e]">16タイプの解説を見る <ArrowRight className="h-4 w-4" /></Link></div>
       </div>
     </section>
   );
