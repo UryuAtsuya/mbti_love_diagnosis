@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Check, Heart, MessageCircle, Sparkles, Users } from 'lucide-react';
 import ArticleSection from '@/components/ArticleSection';
 import CharacterSection from '@/components/CharacterSection';
@@ -15,7 +16,7 @@ export default function Home() {
       <section className="relative border-b border-[#ebe5ea] px-4 py-12 sm:py-20 lg:py-24">
         <div className="hero-orb hero-orb-left" aria-hidden="true" />
         <div className="hero-orb hero-orb-right" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[.95fr_1.05fr] lg:gap-14">
           <div className="text-center lg:text-left">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#eadde4] bg-white/80 px-4 py-2 text-xs font-bold tracking-[.08em] text-[var(--color-coral-dark)] sm:text-sm">
               <Sparkles className="h-4 w-4" /> 無料のMBTI × ラブタイプ相性診断
@@ -35,27 +36,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="absolute -inset-5 rotate-3 rounded-[2rem] bg-[#d9f1eb]" aria-hidden="true" />
-            <div className="relative rounded-[1.75rem] border border-white/70 bg-white/95 p-6 shadow-[0_24px_70px_rgba(37,35,66,.14)] sm:p-8">
-              <div className="flex items-center justify-between text-sm font-bold">
-                <span className="rounded-full bg-[#e7f6f2] px-4 py-2 text-[#0f766e]">INTJ</span>
-                <Heart className="h-5 w-5 fill-[#0f9f8f] text-[#0f9f8f]" />
-                <span className="rounded-full bg-[#eef9f6] px-4 py-2 text-[#0f766e]">ENFP</span>
-              </div>
-              <div className="my-7 text-center">
-                <p className="text-xs font-bold tracking-[.16em] text-[#8c8696]">COMPATIBILITY</p>
-                <p className="mt-1 font-serif text-6xl font-semibold text-[var(--color-navy)]">87<span className="text-2xl">%</span></p>
-                <p className="mt-3 font-bold leading-7">正反対だからこそ、<br />お互いの世界を広げられる関係</p>
-              </div>
-              <div className="space-y-3 border-t border-[#eee9ed] pt-5 text-sm">
-                {[['惹かれ合いやすさ', 5], ['会話の相性', 4], ['安心感', 4]].map(([label, count]) => (
-                  <div key={String(label)} className="flex items-center justify-between gap-3">
-                    <span className="text-[#696474]">{label}</span>
-                    <span className="tracking-wider text-[#0f9f8f]">{'★'.repeat(Number(count))}<span className="text-[#d8e5e1]">{'★'.repeat(5 - Number(count))}</span></span>
-                  </div>
-                ))}
-              </div>
+          <div className="relative mx-auto w-full max-w-xl">
+            <div className="absolute -inset-4 rotate-2 rounded-[2rem] bg-[#d9f1eb] sm:-inset-5" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/80 bg-white shadow-[0_24px_70px_rgba(37,35,66,.14)]">
+              <Image
+                src="/images/hero_bg.png"
+                alt="MBTIとラブタイプを組み合わせた相性診断"
+                width={1024}
+                height={572}
+                sizes="(max-width: 1023px) min(92vw, 576px), 52vw"
+                className="h-auto w-full"
+                priority
+              />
             </div>
           </div>
         </div>

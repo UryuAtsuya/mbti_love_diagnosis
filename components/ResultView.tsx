@@ -3,7 +3,9 @@
 import { motion } from 'framer-motion';
 import { MessageCircleHeart } from 'lucide-react';
 import AffiliateRecommendation from './AffiliateRecommendation';
+import AdSenseUnit from './AdSenseUnit';
 import type { DiagnosisFormData } from './InputForm';
+import { adsenseSlots } from '@/lib/monetization';
 
 type DiagnosisResult = {
     score: number;
@@ -101,6 +103,8 @@ export default function ResultView({ result, onConsult, formData }: ResultViewPr
 
                 </div>
             </motion.div>
+
+            <AdSenseUnit slot={adsenseSlots.diagnosisResult} className="mt-8 px-4" />
 
             {/* Affiliate - clearly separated from diagnosis result */}
             <motion.div

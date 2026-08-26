@@ -1,0 +1,174 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AI Love Matcher" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation "メインナビゲーション" [ref=e10]:
+        - link "診断する" [ref=e11] [cursor=pointer]:
+          - /url: /diagnosis
+        - link "タイプを知る" [ref=e12] [cursor=pointer]:
+          - /url: /articles#types
+        - link "恋愛コラム" [ref=e13] [cursor=pointer]:
+          - /url: /articles
+        - link "このサイトについて" [ref=e14] [cursor=pointer]:
+          - /url: /about
+        - link "無料で相性診断" [ref=e15] [cursor=pointer]:
+          - /url: /diagnosis
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e27]:
+        - navigation "パンくずリスト" [ref=e28]:
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - link "ホーム" [ref=e31] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e36]:
+              - link "記事一覧" [ref=e39] [cursor=pointer]:
+                - /url: /articles
+            - listitem [ref=e40]:
+              - generic [ref=e43]: ENFJ（主人公）の性格・恋愛傾向を解説
+        - heading "ENFJ（主人公）の性格・恋愛傾向を解説 人を支える力が強い人が、恋愛で背負い込みやすいもの" [level=1] [ref=e44]:
+          - text: ENFJ（主人公）の性格・恋愛傾向を解説
+          - generic [ref=e45]: 人を支える力が強い人が、恋愛で背負い込みやすいもの
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - heading "先に要点" [level=2] [ref=e48]
+            - list [ref=e52]:
+              - listitem [ref=e53]: ENFJは、人の気持ちや場の空気を読みながら、関係を前向きに育てようとしやすいタイプです。
+              - listitem [ref=e54]: 恋愛では「一緒に良くなっていける感覚」と「感謝がちゃんと返ってくること」を重視します。
+              - listitem [ref=e55]: 頼れる印象が強い反面、無理をしていても表に出しにくく、気づいたときには疲れ切っていることがあります。
+              - listitem [ref=e56]: 気持ちを受け取ってくれる相手、弱さも見せていいと思える相手だと関係が安定しやすくなります。
+          - generic [ref=e57]:
+            - 'heading "1. ENFJの基本性格: 人を動かす前に、人を気にかけている" [level=2] [ref=e58]'
+            - paragraph [ref=e59]: ENFJは、周囲の人の状態をよく見ていて、必要そうな声かけや働きかけを自然に行いやすいタイプです。場を明るくする力や、誰かを励ます力が強いため、周囲からは頼れる人、面倒見のいい人として見られやすいでしょう。
+            - paragraph [ref=e60]: ただし、その親しみやすさの裏では、相手の気持ちや関係の流れをかなり細かく見ています。人を支えるのが得意な一方で、自分がしんどいときに助けを求めるのは遅れやすく、「平気そうに見えるのに実は消耗していた」ということも起こりやすいです。
+            - generic [ref=e61]:
+              - heading "ENFJが誤解されやすいポイント" [level=3] [ref=e62]
+              - list [ref=e63]:
+                - listitem [ref=e64]: 社交的でも、誰にでも同じ深さで心を開いているわけではない
+                - listitem [ref=e65]: 前向きに見えても、相手の反応にはかなり敏感
+                - listitem [ref=e66]: 面倒見がいいぶん、自分の限界を後回しにしやすい
+          - generic [ref=e67]:
+            - heading "2. ENFJが恋愛で大切にしやすいこと" [level=2] [ref=e68]
+            - paragraph [ref=e69]: ENFJは、ただ一緒にいて楽しいかどうかだけでなく、この関係が互いにとって良いものになっているかをよく見ています。相手を支えたい気持ちが強いので、自分の思いや行動がちゃんと届いているか、感謝や信頼が返ってくるかをかなり重視します。
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - heading "成長の実感" [level=3] [ref=e72]
+                - paragraph [ref=e73]: 二人で前に進んでいる感覚があると、ENFJは関係に強くコミットしやすくなります。
+              - generic [ref=e74]:
+                - heading "感謝の循環" [level=3] [ref=e75]
+                - paragraph [ref=e76]: 尽くすこと自体は苦ではありませんが、受け取られていない感覚が続くと消耗しやすくなります。
+              - generic [ref=e77]:
+                - heading "本音を出せる安心" [level=3] [ref=e78]
+                - paragraph [ref=e79]: 明るさや強さだけでなく、弱音も見せていい関係だと長続きしやすいです。
+            - paragraph [ref=e80]: ENFJが本気になりやすいのは、自分のやさしさを当然扱いせず、心配や努力まで見てくれる相手です。支える側でいることが多いからこそ、自分も安心して預けられる感覚が大きな意味を持ちます。
+          - generic [ref=e81]:
+            - heading "3. すれ違いやすい場面" [level=2] [ref=e82]
+            - generic [ref=e83]:
+              - generic [ref=e84]:
+                - heading "頑張りすぎてから急に疲れる" [level=3] [ref=e85]
+                - paragraph [ref=e86]: 相手のために動けてしまうぶん、違和感があっても後回しにしやすいタイプです。気づいたときには余裕がなくなり、急に距離を置きたくなることがあります。
+              - generic [ref=e87]:
+                - heading "反応の薄さを拒絶と受け取りやすい" [level=3] [ref=e88]
+                - paragraph [ref=e89]: ENFJは相手の反応をよく見ています。感謝や共感が極端に少ない相手だと、嫌われているのではなくても「大事にされていない」と感じやすくなります。
+              - generic [ref=e90]:
+                - heading "相手を立てすぎて本音が遅れる" [level=3] [ref=e91]
+                - paragraph [ref=e92]: 雰囲気を壊したくない気持ちから、自分の不満を整えてから話そうとしがちです。結果として、小さな違和感が後から大きくなりやすい面があります。
+          - generic [ref=e93]:
+            - heading "4. ラブキャラ診断で見るENFJ" [level=2] [ref=e94]
+            - paragraph [ref=e95]: ENFJは、当サイトのラブキャラでは「忠犬ハチ公（FCPE）」や「キャプテンライオン（LAPE）」として説明しやすい場面があります。前者は相手への献身、後者は周囲を引っ張る包容力として出やすいイメージです。
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - heading "忠犬ハチ公（FCPE）として見える場面" [level=3] [ref=e98]
+                - paragraph [ref=e99]: 好きな相手の期待に応えたい気持ちが強く出ると、かなり献身的に動きます。やさしさだけでなく「期待を裏切りたくない責任感」として表れやすいのが特徴です。
+              - generic [ref=e100]:
+                - heading "キャプテンライオン（LAPE）として見える場面" [level=3] [ref=e101]
+                - paragraph [ref=e102]: 相手を励まし、方向づけし、必要なときに前に出る力が強く出るパターンです。頼もしさになる一方で、自分ひとりで抱え込みすぎると疲れやすくなります。
+          - generic [ref=e103]:
+            - heading "5. ENFJと関係を深めるコツ" [level=2] [ref=e104]
+            - list [ref=e105]:
+              - listitem [ref=e106]:
+                - text: 1. 気遣いを受け取ったら、言葉で返す
+                - paragraph [ref=e107]: 小さなことでも反応が返ると、ENFJは安心して関わり続けやすくなります。
+              - listitem [ref=e108]:
+                - text: 2. 強い面だけでなく、疲れにも目を向ける
+                - paragraph [ref=e109]: 頼れるからと任せきりにせず、「今日は休んでいいよ」と言える相手が合いやすいです。
+              - listitem [ref=e110]:
+                - text: 3. 建設的に本音を話せる空気を作る
+                - paragraph [ref=e111]: 否定し合うのではなく、改善できる前提で話せると、ENFJは本音を出しやすくなります。
+            - generic [ref=e112]:
+              - heading "ENFJに対して避けたい接し方" [level=3] [ref=e113]
+              - list [ref=e116]:
+                - listitem [ref=e117]: 気遣いを当然のものとして受け取ること
+                - listitem [ref=e118]: 相談だけを持ち込み、支え返す姿勢がないこと
+                - listitem [ref=e119]: 人前で雑に否定したり、軽く扱ったりすること
+                - listitem [ref=e120]: 「明るい人だから平気」と決めつけること
+          - generic [ref=e121]:
+            - heading "6. よくある質問" [level=2] [ref=e122]
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - heading "Q. ENFJは恋愛に消極的なタイプですか？" [level=3] [ref=e125]
+                - paragraph [ref=e126]: むしろ積極的に関わろうとする傾向があります。ただし、相手のために動きすぎて自分の気持ちを後回しにしやすい面もあります。尽くすことが自然にできるタイプですが、その分だけ疲れを溜めやすい点に注意が必要です。
+              - generic [ref=e127]:
+                - heading "Q. ENFJと相性が良いのはどのタイプですか？" [level=3] [ref=e128]
+                - paragraph [ref=e129]: INFPやISFPなど、ENFJの気遣いに気づいて感謝を返してくれるタイプと安定しやすいとされます。ただし、MBTIだけで相性は決まりません。Love Characterで愛情の出し方や受け取り方まで見ると、よりフィットする相手が分かりやすくなります。
+              - generic [ref=e130]:
+                - heading "Q. ENFJが尽くしすぎて疲れるのを防ぐには？" [level=3] [ref=e131]
+                - paragraph [ref=e132]: ENFJは相手の期待に応えようとする力が強いため、意識的に「自分のための時間」を確保することが大切です。パートナー側も、ENFJの頑張りを当たり前にせず、こまめに言葉で感謝を返すことで負担が軽減されやすくなります。
+              - generic [ref=e133]:
+                - heading "Q. ENFJが本音を言ってくれないと感じたらどうすればいい？" [level=3] [ref=e134]
+                - paragraph [ref=e135]: ENFJは場の雰囲気を壊したくないという気持ちが強く、不満があっても飲み込んでしまうことがあります。「何でも言っていいよ」と伝えるだけでなく、批判されても受け止める姿勢を見せることで、少しずつ本音を出しやすくなります。
+          - generic [ref=e136]:
+            - heading "ENFJと相性が取りやすいタイプ" [level=2] [ref=e137]
+            - paragraph [ref=e138]: ENFJは、相手を支え導くことに自然に力を発揮するタイプです。自分が包み込む力を安心して使えるよう、感情を素直に受け取ってくれる相手との組み合わせが安定しやすい傾向があります。
+            - generic [ref=e139]:
+              - link "INFP INFPの豊かな内面をENFJが引き出す形になりやすく、気持ちの共有を大切にする点が一致しています。ENFJにとってもINFPの深い共感が心の支えになりやすい関係です。 詳しく読む →" [ref=e140] [cursor=pointer]:
+                - /url: /articles/infp
+                - heading "INFP" [level=3] [ref=e141]
+                - paragraph [ref=e142]: INFPの豊かな内面をENFJが引き出す形になりやすく、気持ちの共有を大切にする点が一致しています。ENFJにとってもINFPの深い共感が心の支えになりやすい関係です。
+                - generic [ref=e143]: 詳しく読む →
+              - link "ISFP ISFPの感性の豊かさをENFJが自然に尊重する形になりやすいです。ENFJの包容力とISFPの個性が調和すると、互いに居心地の良い関係が生まれやすいです。 詳しく読む →" [ref=e144] [cursor=pointer]:
+                - /url: /articles/isfp
+                - heading "ISFP" [level=3] [ref=e145]
+                - paragraph [ref=e146]: ISFPの感性の豊かさをENFJが自然に尊重する形になりやすいです。ENFJの包容力とISFPの個性が調和すると、互いに居心地の良い関係が生まれやすいです。
+                - generic [ref=e147]: 詳しく読む →
+              - link "INFJ 価値観の深い部分で共鳴しやすく、気持ちのやり取りがしやすい組み合わせです。どちらも相手を理解することを大切にするため、すれ違いが少ない傾向があります。 詳しく読む →" [ref=e148] [cursor=pointer]:
+                - /url: /articles/infj
+                - heading "INFJ" [level=3] [ref=e149]
+                - paragraph [ref=e150]: 価値観の深い部分で共鳴しやすく、気持ちのやり取りがしやすい組み合わせです。どちらも相手を理解することを大切にするため、すれ違いが少ない傾向があります。
+                - generic [ref=e151]: 詳しく読む →
+            - paragraph [ref=e152]:
+              - text: 相性はMBTIだけで決まるわけではありません。ラブタイプや価値観の共有度によっても大きく変わります。気になる相手がいれば、
+              - link "相性診断" [ref=e153] [cursor=pointer]:
+                - /url: /diagnosis
+              - text: で組み合わせを確認してみてください。
+          - generic [ref=e154]:
+            - heading "支える恋のクセを整理する" [level=2] [ref=e155]
+            - paragraph [ref=e156]: ENFJらしい尽くし方や、背負い込みやすい場面を診断で見直せます。
+            - link "無料診断をスタートする" [ref=e157] [cursor=pointer]:
+              - /url: /diagnosis
+      - generic [ref=e158]: この記事は一般的な傾向をもとに編集しています。2026年3月更新。
+    - complementary [ref=e159]:
+      - generic [ref=e160]:
+        - paragraph [ref=e161]: PR
+        - paragraph [ref=e162]: 外部サービスのご案内
+      - paragraph [ref=e163]: 恋愛タイプや相性を整えるだけでなく、第一印象づくりも大切です。自分磨きの選択肢として、スキンケア関連サービスもチェックできます。
+      - link "スキンケアサービスの詳細を見る" [ref=e164] [cursor=pointer]:
+        - /url: https://px.a8.net/svt/ejp?a8mat=4B63GM+59BVX6+5TX8+5YZ75
+        - img "スキンケアサービスの詳細を見る" [ref=e165]
+        - generic [ref=e166]: 詳細を確認する
+  - contentinfo [ref=e171]:
+    - generic [ref=e172]:
+      - generic [ref=e173]: © 2026 AI Love Matcher. All rights reserved.
+      - generic [ref=e174]:
+        - link "ホーム" [ref=e175] [cursor=pointer]:
+          - /url: /
+        - link "運営者情報" [ref=e176] [cursor=pointer]:
+          - /url: /about
+        - link "利用規約" [ref=e177] [cursor=pointer]:
+          - /url: /terms
+        - link "プライバシーポリシー" [ref=e178] [cursor=pointer]:
+          - /url: /policy
+        - link "お問い合わせ" [ref=e179] [cursor=pointer]:
+          - /url: /contact
+    - paragraph [ref=e181]: ※記事の企画・構成・編集補助にAIツールを利用する場合がありますが、公開前に内容確認と表現調整を行っています。診断結果や記事内容は一般的な傾向を紹介するものであり、特定の結果や事実を保証するものではありません。

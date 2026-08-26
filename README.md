@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Google AdSense
+
+The site-wide AdSense code and `public/ads.txt` use publisher ID `pub-8206190214868370`. Auto ads can be enabled from the AdSense dashboard without additional code changes.
+
+For explicit responsive units, create ad units in AdSense and set their numeric slot IDs in the deployment environment:
+
+```bash
+NEXT_PUBLIC_GOOGLE_ADSENSE_ARTICLE_SLOT=1234567890
+NEXT_PUBLIC_GOOGLE_ADSENSE_RESULT_SLOT=0987654321
+```
+
+If a slot is not configured, its unit is not rendered. Do not use the example values above in production.
+
 ## Getting Started
 
 First, run the development server:

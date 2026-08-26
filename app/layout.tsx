@@ -13,6 +13,7 @@ import {
   siteName,
   siteUrl,
 } from "@/lib/siteMetadata";
+import { adsensePublisherId } from "@/lib/monetization";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -114,12 +115,11 @@ export default function RootLayout({
           }}
         />
         {/* Google AdSense verification */}
-        <meta name="google-adsense-account" content="ca-pub-8206190214868370" />
-        <Script
+        <meta name="google-adsense-account" content={adsensePublisherId} />
+        <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8206190214868370"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
         {/* Google Analytics */}
         <Script

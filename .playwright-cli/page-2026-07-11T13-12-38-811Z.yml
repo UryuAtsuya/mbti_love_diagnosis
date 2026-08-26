@@ -1,0 +1,211 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AI Love Matcher" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation "メインナビゲーション" [ref=e10]:
+        - link "診断する" [ref=e11] [cursor=pointer]:
+          - /url: /diagnosis
+        - link "タイプを知る" [ref=e12] [cursor=pointer]:
+          - /url: /articles#types
+        - link "恋愛コラム" [ref=e13] [cursor=pointer]:
+          - /url: /articles
+        - link "このサイトについて" [ref=e14] [cursor=pointer]:
+          - /url: /about
+        - link "無料で相性診断" [ref=e15] [cursor=pointer]:
+          - /url: /diagnosis
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: 無料のMBTI × ラブタイプ相性診断
+        - heading "性格だけではわからない、 二人の恋愛相性を読み解く。" [level=1] [ref=e26]: 性格だけではわからない、二人の恋愛相性を読み解く。
+        - paragraph [ref=e27]: MBTIとラブタイプを掛け合わせて、会話・距離感・愛情表現・すれ違いやすいポイントまで整理します。
+        - generic [ref=e28]:
+          - link "二人の相性を診断する" [ref=e29] [cursor=pointer]:
+            - /url: /diagnosis
+          - paragraph [ref=e32]: 登録不要 ・ 約1分 ・ 完全無料
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: INTJ
+          - generic [ref=e40]: ENFP
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: COMPATIBILITY
+          - paragraph [ref=e43]: 87%
+          - paragraph [ref=e44]: 正反対だからこそ、お互いの世界を広げられる関係
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]: 惹かれ合いやすさ
+            - generic [ref=e48]: ★★★★★
+          - generic [ref=e49]:
+            - generic [ref=e50]: 会話の相性
+            - generic [ref=e51]: ★★★★★
+          - generic [ref=e52]:
+            - generic [ref=e53]: 安心感
+            - generic [ref=e54]: ★★★★★
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - text: WHAT YOU CAN LEARN
+        - heading "相性の数字だけで終わらない診断" [level=2] [ref=e58]
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: "01"
+          - heading "二人の相性がわかる" [level=3] [ref=e68]
+          - paragraph [ref=e69]: 性格と恋愛傾向を組み合わせて、惹かれ合う理由を分析します。
+        - generic [ref=e70]:
+          - generic [ref=e71]: "02"
+          - heading "すれ違う理由がわかる" [level=3] [ref=e75]
+          - paragraph [ref=e76]: 連絡頻度・距離感・価値観の違いを、言葉にして整理します。
+        - generic [ref=e77]:
+          - generic [ref=e78]: "03"
+          - heading "関係を深めるヒントがわかる" [level=3] [ref=e82]
+          - paragraph [ref=e83]: 相手への伝え方や接し方を、具体的な行動に変えて紹介します。
+    - generic [ref=e85]:
+      - paragraph [ref=e86]: HOW IT WORKS
+      - heading "たった3ステップで診断" [level=2] [ref=e87]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: STEP 1
+          - paragraph [ref=e91]: 自分のタイプを選ぶ
+        - generic [ref=e92]:
+          - generic [ref=e93]: STEP 2
+          - paragraph [ref=e94]: 相手のタイプを選ぶ
+        - generic [ref=e95]:
+          - generic [ref=e96]: STEP 3
+          - paragraph [ref=e97]: 二人の結果を見る
+      - link "無料で診断を始める" [ref=e98] [cursor=pointer]:
+        - /url: /diagnosis
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - text: EXPLORE YOUR TYPE
+        - heading "あなたのMBTIタイプを探す" [level=2] [ref=e104]
+        - paragraph [ref=e105]: トップでは特徴を短く。詳しい性格・恋愛傾向は、それぞれのタイプ解説で読めます。
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - heading "分析家" [level=3] [ref=e108]
+          - generic [ref=e109]:
+            - link "INTJ 建築家" [ref=e110] [cursor=pointer]:
+              - /url: /articles/intj
+              - strong [ref=e111]: INTJ
+              - generic [ref=e112]: 建築家
+            - link "INTP 論理学者" [ref=e113] [cursor=pointer]:
+              - /url: /articles/intp
+              - strong [ref=e114]: INTP
+              - generic [ref=e115]: 論理学者
+            - link "ENTJ 指揮官" [ref=e116] [cursor=pointer]:
+              - /url: /articles/entj
+              - strong [ref=e117]: ENTJ
+              - generic [ref=e118]: 指揮官
+            - link "ENTP 討論者" [ref=e119] [cursor=pointer]:
+              - /url: /articles/entp
+              - strong [ref=e120]: ENTP
+              - generic [ref=e121]: 討論者
+        - generic [ref=e122]:
+          - heading "外交官" [level=3] [ref=e123]
+          - generic [ref=e124]:
+            - link "INFJ 提唱者" [ref=e125] [cursor=pointer]:
+              - /url: /articles/infj
+              - strong [ref=e126]: INFJ
+              - generic [ref=e127]: 提唱者
+            - link "INFP 仲介者" [ref=e128] [cursor=pointer]:
+              - /url: /articles/infp
+              - strong [ref=e129]: INFP
+              - generic [ref=e130]: 仲介者
+            - link "ENFJ 主人公" [ref=e131] [cursor=pointer]:
+              - /url: /articles/enfj
+              - strong [ref=e132]: ENFJ
+              - generic [ref=e133]: 主人公
+            - link "ENFP 運動家" [ref=e134] [cursor=pointer]:
+              - /url: /articles/enfp
+              - strong [ref=e135]: ENFP
+              - generic [ref=e136]: 運動家
+        - generic [ref=e137]:
+          - heading "番人" [level=3] [ref=e138]
+          - generic [ref=e139]:
+            - link "ISTJ 管理者" [ref=e140] [cursor=pointer]:
+              - /url: /articles/istj
+              - strong [ref=e141]: ISTJ
+              - generic [ref=e142]: 管理者
+            - link "ISFJ 擁護者" [ref=e143] [cursor=pointer]:
+              - /url: /articles/isfj
+              - strong [ref=e144]: ISFJ
+              - generic [ref=e145]: 擁護者
+            - link "ESTJ 幹部" [ref=e146] [cursor=pointer]:
+              - /url: /articles/estj
+              - strong [ref=e147]: ESTJ
+              - generic [ref=e148]: 幹部
+            - link "ESFJ 領事" [ref=e149] [cursor=pointer]:
+              - /url: /articles/esfj
+              - strong [ref=e150]: ESFJ
+              - generic [ref=e151]: 領事
+        - generic [ref=e152]:
+          - heading "探検家" [level=3] [ref=e153]
+          - generic [ref=e154]:
+            - link "ISTP 巨匠" [ref=e155] [cursor=pointer]:
+              - /url: /articles/istp
+              - strong [ref=e156]: ISTP
+              - generic [ref=e157]: 巨匠
+            - link "ISFP 冒険家" [ref=e158] [cursor=pointer]:
+              - /url: /articles/isfp
+              - strong [ref=e159]: ISFP
+              - generic [ref=e160]: 冒険家
+            - link "ESTP 起業家" [ref=e161] [cursor=pointer]:
+              - /url: /articles/estp
+              - strong [ref=e162]: ESTP
+              - generic [ref=e163]: 起業家
+            - link "ESFP エンターテイナー" [ref=e164] [cursor=pointer]:
+              - /url: /articles/esfp
+              - strong [ref=e165]: ESFP
+              - generic [ref=e166]: エンターテイナー
+      - link "16タイプの解説を見る" [ref=e168] [cursor=pointer]:
+        - /url: /articles#types
+    - generic [ref=e172]:
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - paragraph [ref=e175]: JOURNAL
+          - heading "恋愛を、もう少し深く理解する。" [level=2] [ref=e176]
+          - paragraph [ref=e177]: 相性・会話・距離感を、タイプだけで決めつけずに考えるコラム。
+        - link "恋愛コラムをすべて見る" [ref=e178] [cursor=pointer]:
+          - /url: /articles
+      - generic [ref=e181]:
+        - link "理論・解説 診断結果をそのまま信じないための読み解きガイド MBTIとラブタイプの結果を、決めつけではなく会話の材料として使うための見方を整理します。 約5分" [ref=e182] [cursor=pointer]:
+          - /url: /articles/diagnosis-guide
+          - generic [ref=e183]: 理論・解説
+          - heading "診断結果をそのまま信じないための読み解きガイド" [level=3] [ref=e184]
+          - paragraph [ref=e185]: MBTIとラブタイプの結果を、決めつけではなく会話の材料として使うための見方を整理します。
+          - generic [ref=e186]: 約5分
+        - link "相性の真実 MBTI×ラブキャラで見直す、相性の考え方 性格が似ていても恋愛でズレる理由を、会話・距離感・安心ポイントの観点から整理します。 約5分" [ref=e193] [cursor=pointer]:
+          - /url: /articles/truth-of-compatibility
+          - generic [ref=e194]: 相性の真実
+          - heading "MBTI×ラブキャラで見直す、相性の考え方" [level=3] [ref=e195]
+          - paragraph [ref=e196]: 性格が似ていても恋愛でズレる理由を、会話・距離感・安心ポイントの観点から整理します。
+          - generic [ref=e197]: 約5分
+        - link "恋愛攻略・実戦 相性が悪いと感じたときに先に確認したい5つのこと 本当に相性が悪いのか、それとも距離感や伝え方のズレなのかを切り分けるための確認ポイントを紹介します。 約5分" [ref=e204] [cursor=pointer]:
+          - /url: /articles/relationship-checkpoints
+          - generic [ref=e205]: 恋愛攻略・実戦
+          - heading "相性が悪いと感じたときに先に確認したい5つのこと" [level=3] [ref=e206]
+          - paragraph [ref=e207]: 本当に相性が悪いのか、それとも距離感や伝え方のズレなのかを切り分けるための確認ポイントを紹介します。
+          - generic [ref=e208]: 約5分
+    - generic [ref=e221]:
+      - paragraph [ref=e222]: OUR POLICY
+      - heading "診断結果は、二人を決めつけるものではありません。" [level=2] [ref=e223]
+      - paragraph [ref=e224]: 性格タイプや恋愛傾向を、相手を理解するための「会話のきっかけ」として提供しています。
+    - generic [ref=e226]:
+      - paragraph [ref=e227]: あの人との違いは、相性の悪さではないかもしれません。
+      - paragraph [ref=e228]: 二人の考え方と愛情表現を、一度整理してみませんか？
+      - link "二人の相性を診断する" [ref=e229] [cursor=pointer]:
+        - /url: /diagnosis
+  - contentinfo [ref=e232]:
+    - generic [ref=e233]:
+      - generic [ref=e234]: © 2026 AI Love Matcher. All rights reserved.
+      - generic [ref=e235]:
+        - link "ホーム" [ref=e236] [cursor=pointer]:
+          - /url: /
+        - link "運営者情報" [ref=e237] [cursor=pointer]:
+          - /url: /about
+        - link "利用規約" [ref=e238] [cursor=pointer]:
+          - /url: /terms
+        - link "プライバシーポリシー" [ref=e239] [cursor=pointer]:
+          - /url: /policy
+        - link "お問い合わせ" [ref=e240] [cursor=pointer]:
+          - /url: /contact
+    - paragraph [ref=e242]: ※記事の企画・構成・編集補助にAIツールを利用する場合がありますが、公開前に内容確認と表現調整を行っています。診断結果や記事内容は一般的な傾向を紹介するものであり、特定の結果や事実を保証するものではありません。
